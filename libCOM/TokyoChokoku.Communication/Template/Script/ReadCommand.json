@@ -1,0 +1,249 @@
+﻿[
+  {
+    "Comment": [ "Command survival" ],
+    "Title": "ReadCommandSurvival",
+    "Arguments": [ "WritingCommandBuilder builder" ],
+    "Address": "new MemoryAddress(builder.DataType, builder.Addr)",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "Response"
+  },
+  {
+    "Comment"  : [ "ROMのRevisionを取得します." ],
+    "Title"    : "ReadRevision",
+    "Arguments": [ "" ],
+    "Address"  : "Addresses.Revision",
+    "Data"     : "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment"  : [ "ROMのVersionを取得します." ],
+    "Title"    : "ReadVersion",
+    "Arguments": [ "" ],
+    "Address"  : "Addresses.Versions",
+    "Data"     : "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Alert" ],
+    "Title": "ReadAlert",
+    "Arguments": [ "" ],
+    "Address": "Addresses.Alert",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ 
+      "Marking status",
+      "打刻中, ポーズ中かを確認するためのコマンド",
+      "スタート or ストップの状態を確認できる.",
+      "Pauseは MarkingPausingStatus を見ること.",
+      "cf. MBMarkingStatus"
+    ],
+    "Title": "ReadMarkingStatus",
+    "Arguments": [ "" ],
+    "Address": "Addresses.MarkingStatus",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ 
+      "Marking pausing status",
+      "ポーズ中かどうかを取得するコマンド",
+      "None, Pause, Resume, Stop の3状態がある",
+      "初めてPauseするまではなぜか None のままなので",
+      "Marking statusを読んでから Pausing Status を読むことが必要となる.",
+      "cf. MBMarkingPausingStatus"
+    ],
+    "Title": "ReadMarkingPausingStatus",
+    "Arguments": [ "" ],
+    "Address": "Addresses.MarkingPausingStatus",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseByte"
+  },
+  {
+    "Comment": [ "Marking result" ],
+    "Title": "ReadMarkingResult",
+    "Arguments": [ "" ],
+    "Address": "Addresses.MarkingResult",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Excusion Settings" ],
+    "Title": "ReadExclusion",
+    "Arguments": [ "" ],
+    "Address": "Addresses.Exclusion",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Num of field in current file" ],
+    "Title": "ReadNumOfFieldInCurrentFile",
+    "Arguments": [ "" ],
+    "Address": "Addresses.NumOfFieldOfCurrentFile",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Field of current file" ],
+    "Title": "ReadFieldOfCurrentFile",
+    "Arguments": [ "int indexOfField" ],
+    "Address": "Addresses.CurrentFile.Increment(indexOfField * MBDataFileSize.WordCount)",
+    "Data": "(short)MBDataFileSize.WordCount",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseMBData"
+  },
+  {
+    "Comment": [ "Permanent marking file number" ],
+    "Title": "ReadPermanentMarkingFileNo",
+    "Arguments": [ "" ],
+    "Address": "Addresses.PermanentMarkingFileNo",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Remote file map" ],
+    "Title": "ReadFlagFileLoadedFromSdCard",
+    "Arguments": [ "" ],
+    "Address": "Addresses.FilesDidLoadFromSdCard",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Remote file map" ],
+    "Title": "ReadRemoteFileMap",
+    "Arguments": [ "int fileIndex" ],
+    "Address": "Addresses.RemoteFileMaps.Increment(fileIndex)",
+    "Data": "(short)1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Remote file maps" ],
+    "Title": "ReadRemoteFileMaps",
+    "Arguments": [ "" ],
+    "Address": "Addresses.RemoteFileMaps",
+    "Data": "(short)Sizes.NumOfRemoteFile",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShorts"
+  },
+  {
+    "Comment": [ "Remote file names" ],
+    "Title": "ReadRemoteFileNames",
+    "Arguments": [ "" ],
+    "Address": "Addresses.RemoteFileNames",
+    "Data": "(short)(Sizes.NumOfRemoteFile * Sizes.BytesOfRemoteFileName)",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseRemoteFileNames"
+  },
+  {
+    "Comment": [ "Machine model number" ],
+    "Title": "ReadMachineModelNo",
+    "Arguments": [ "" ],
+    "Address": "Addresses.MachineModelNo",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Marking head pin is at origin" ],
+    "Title": "ReadMarkingHeadPinIsAtOrigin",
+    "Arguments": [ "" ],
+    "Address": "Addresses.MarkingHeadPinIsAtOrigin",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "BSD Enabled" ],
+    "Title": "ReadBSDEnabled",
+    "Arguments": [ "" ],
+    "Address": "Addresses.BSDEnabled",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "Calendar day" ],
+    "Title": "ReadCalendarDayReplacements",
+    "Arguments": [ "" ],
+    "Address": "Addresses.CalendarDayReplacements",
+    "Data": "TokyoChokoku.MarkinBox.MBCalendar.CharsOfDayReplacements",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseAscii"
+  },
+  {
+    "Comment": [ "Calendar month" ],
+    "Title": "ReadCalendarMonthReplacements",
+    "Arguments": [ "" ],
+    "Address": "Addresses.CalendarMonthReplacements",
+    "Data": "TokyoChokoku.MarkinBox.MBCalendar.CharsOfMonthReplacements",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseAscii"
+  },
+  {
+    "Comment": [ "Calendar year" ],
+    "Title": "ReadCalendarYearReplacements",
+    "Arguments": [ "" ],
+    "Address": "Addresses.CalendarYearReplacements",
+    "Data": "TokyoChokoku.MarkinBox.MBCalendar.CharsOfYearReplacements",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseAscii"
+  },
+  {
+    "Comment": [ "Calendar shift" ],
+    "Title": "ReadCalendarShiftReplacements",
+    "Arguments": [ "" ],
+    "Address": "Addresses.CalendarShiftReplacements",
+    "Data": "TokyoChokoku.MarkinBox.MBCalendar.TotalBytesOfShifts",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseMBCalendarShiftData"
+  },
+  {
+    "Comment": [ "SerialData" ],
+    "Title": "ReadSerialSettings",
+    "Arguments": [ "" ],
+    "Address": "Addresses.SerialSettings",
+    "Data": "MarkinBox.MBSerial.NumOfSerial * MarkinBox.MBSerial.WordsOfSerialSetting",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseMBSerialSettingData"
+  },
+  {
+    "Comment": [ "SerialCounterData" ],
+    "Title": "ReadSerialCounters",
+    "Arguments": [ "" ],
+    "Address": "Addresses.SerialCounters",
+    "Data": "MarkinBox.MBSerial.NumOfSerial * MarkinBox.MBSerial.WordsOfSerialCounter",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseMBSerialCounterData"
+  },
+  {
+    "Comment": [ "ReadTextValidationStart" ],
+    "Title": "ReadTextValidationStart",
+    "Arguments": [ "" ],
+    "Address": "Addresses.TextValidationStart",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  },
+  {
+    "Comment": [ "ReadTextValidationError" ],
+    "Title": "ReadTextValidationError",
+    "Arguments": [ "" ],
+    "Address": "Addresses.TextValidationError",
+    "Data": "1",
+    "Timeout": 2000,
+    "ReturnValueClass": "ResponseShort"
+  }
+]

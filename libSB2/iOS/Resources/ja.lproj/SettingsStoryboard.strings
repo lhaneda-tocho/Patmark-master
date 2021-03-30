@@ -1,0 +1,27 @@
+﻿/* Japanese */
+
+/*--------- Tanaka ---------*/
+/* Preferences */
+
+"dHi-vb-nlD.text" = "Wifi設定";
+"Z2Z-IX-21r.text" = "MBコントローラへの接続は、本体の wifi 接続設定画面で行います";
+"ixi-2k-SCz.text" = "機種設定";
+"5sc-Y7-bse.text" = "2Dコード打刻方向";
+"1248.text" = "操作モード設定";
+"Oma-4b-nG5.text" = "このアプリについて";
+"066-L7-Rdo.text" = "終了する";
+
+/* About this app */
+
+"7555.text" = "バージョン";
+"99b-CG-OdO.text" = "開発者";
+"7599.text" = "東京彫刻工業株式会社";
+"LJk-UN-zXq.normalTitle" = "www.tokyo-chokoku.co.jp";
+"pRG-Nd-2Op.text" = "〒130-0014 東京都墨田区亀沢3-23-12";
+"RSB-5R-KTM.text" = "TEL:03-5611-7771 / FAX:03-3625-6550";
+"6HU-S0-8I1.text" = "MAIL:sales@tokyo-chokoku.co.jp";
+
+
+/* ---- Fukai ---- */
+/* Solenoid type */
+"7614.text" = "ソレノイドの種類";

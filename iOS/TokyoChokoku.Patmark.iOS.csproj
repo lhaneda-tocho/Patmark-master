@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{52C80098-BA06-4CF6-BABE-5B552FDBE03C}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TokyoChokoku.Patmark.iOS</RootNamespace>
+    <AssemblyName>TokyoChokoku.Patmark.iOS</AssemblyName>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>Apple Development: ATSUTOSHI HANAWA (B3646V7BN4)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <IOSDebuggerPort>33056</IOSDebuggerPort>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchI18n>cjk</MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>Apple Development: ATSUTOSHI HANAWA (B3646V7BN4)</CodesignKey>
+    <MtouchFloat32>false</MtouchFloat32>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>Full</MtouchLink>
+    <MtouchArch>ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>anycpu</PlatformTarget>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <MtouchI18n>cjk</MtouchI18n>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+<MtouchDebug>false</MtouchDebug>
+<MtouchNoSymbolStrip>false</MtouchNoSymbolStrip>
+<MtouchUseLlvm>true</MtouchUseLlvm>
+<MtouchUseThumb>true</MtouchUseThumb>
+<CodesignProvision>VS: WildCard Development</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>Apple Development: ATSUTOSHI HANAWA (B3646V7BN4)</CodesignKey>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+<MtouchI18n>cjk</MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignKey>Apple Development: ATSUTOSHI HANAWA (B3646V7BN4)</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <IOSDebuggerPort>20973</IOSDebuggerPort>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <PlatformTarget>x86</PlatformTarget>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+    <MtouchI18n>cjk</MtouchI18n>
+    <DeviceSpecificBuild>true</DeviceSpecificBuild>
+    <MtouchNoSymbolStrip>true</MtouchNoSymbolStrip>
+    <MtouchFastDev>true</MtouchFastDev>
+    <MtouchFloat32>true</MtouchFloat32>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="CSharpMonad">
+      <HintPath>..\packages\csharp-monad.1.0.1\lib\netstandard1.3\CSharpMonad.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="EndianBitConverter">
+      <HintPath>..\packages\EndianBitConverter.1.1.0\lib\netstandard1.0\EndianBitConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West" />
+    <Reference Include="I18N.Rare" />
+    <Reference Include="I18N.Other" />
+    <Reference Include="I18N.CJK" />
+    <Reference Include="I18N.MidEast" />
+    <Reference Include="I18N" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="IQKeyboardManager">
+      <HintPath>..\packages\Xamarin.IQKeyboardManager.1.4.1\lib\Xamarin.iOS10\IQKeyboardManager.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.4.9.0\lib\netstandard2.0\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="Sprache">
+      <HintPath>..\packages\Sprache.2.2.0\lib\netstandard2.0\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="Toast">
+      <HintPath>..\packages\Toast.iOS.1.2.0\lib\xamarinios10\Toast.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.7.4\lib\xamarinios10\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="mscorlib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\AppIcon.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small%403x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-83.5%402x.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Send.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerWeak.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PageNext.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PagePrevious.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerMedium.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerStrong.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeSmall.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeMedium.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeLarge.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityDot.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityMedium.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityLine.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Send.imageset\send%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Send.imageset\send%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Send.imageset\send%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PagePrevious.imageset\page_previous%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PagePrevious.imageset\page_previous%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PagePrevious.imageset\page_previous%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerWeak.imageset\power_weak%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerWeak.imageset\power_weak%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerWeak.imageset\power_weak%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PageNext.imageset\page_next%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PageNext.imageset\page_next%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PageNext.imageset\page_next%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerMedium.imageset\power_medium%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerMedium.imageset\power_medium%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerMedium.imageset\power_medium%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerStrong.imageset\power_strong%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerStrong.imageset\power_strong%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\PowerStrong.imageset\power_strong%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeSmall.imageset\size_small%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeSmall.imageset\size_small%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeSmall.imageset\size_small%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeMedium.imageset\size_medium%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeMedium.imageset\size_medium%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeMedium.imageset\size_medium%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeLarge.imageset\size_large%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeLarge.imageset\size_large%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\TextSizeLarge.imageset\size_large%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityDot.imageset\quality_dot%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityDot.imageset\quality_dot%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityDot.imageset\quality_dot%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityMedium.imageset\quality_medium%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityMedium.imageset\quality_medium%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityMedium.imageset\quality_medium%403.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityLine.imageset\quality_line%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityLine.imageset\quality_line%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\QualityLine.imageset\quality_line%403.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Horizontal_1920-1080.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_750-1334.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_1242-2208.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Horizontal_2208-1242.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_2048-2732.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_640-1136.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_640-960.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_768-1024.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_1536-2048.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Horizontal_1024-768.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Horizontal_2048-1536.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_320-480.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_768-1004.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Vertical_1536-2008.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Horizontal_1024-748.png" />
+    <ImageAsset Include="Resources\Splash.xcassets\LaunchImage.launchimage\Horizontal_2048-1496.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Next.imageset\Contents.json" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Next.imageset\next%401.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Next.imageset\next%402.png" />
+    <ImageAsset Include="Resources\AppUI.xcassets\Next.imageset\next%403.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Notification%403x.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\Icon-Notification.png" />
+    <ImageAsset Include="Resources\AppIcon.xcassets\AppIcon.appiconset\iTunesArtwork%402x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+    <Folder Include="Presenter\" />
+    <Folder Include="Presenter\FieldEditor\" />
+    <Folder Include="Presenter\FieldPreview\" />
+    <Folder Include="Presenter\Embossment\" />
+    <Folder Include="Injection\" />
+    <Folder Include="RenderKitForIOS\" />
+    <Folder Include="Presenter\Implementation\" />
+    <Folder Include="Presenter\Ruler\" />
+    <Folder Include="Resources\Assets.xcassets\" />
+    <Folder Include="Resources\AppUI.xcassets\Send.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\PowerWeak.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\PageNext.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\PagePrevious.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\PowerMedium.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\PowerStrong.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\TextSizeSmall.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\TextSizeMedium.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\TextSizeLarge.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\QualityDot.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\QualityMedium.imageset\" />
+    <Folder Include="Resources\AppUI.xcassets\QualityLine.imageset\" />
+    <Folder Include="Presenter\Component\" />
+    <Folder Include="Presenter\Utility\" />
+    <Folder Include="Presenter\Loading\" />
+    <Folder Include="Presenter\Localization\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Logging\" />
+    <Folder Include="Resources\ja.lproj\" />
+    <Folder Include="Resources\Base.lproj\" />
+    <Folder Include="Resources\AppUI.xcassets\Next.imageset\" />
+    <Folder Include="Models\Storage\" />
+    <Folder Include="Presenter\Settings\" />
+    <Folder Include="Models\KeyValueStore\" />
+    <Folder Include="FieldCanvasForIOS\" />
+    <Folder Include="FieldCanvasForIOS\Drawable\" />
+    <Folder Include="FieldCanvasForIOS\notready\" />
+    <Folder Include="Presenter\Files\" />
+    <Folder Include="Presenter\Alert\" />
+    <Folder Include="Models\Files\" />
+    <Folder Include="Models\Utility\" />
+    <Folder Include="Strings\" />
+    <Folder Include="Presenter\FieldList\" />
+    <Folder Include="Presenter\TextInputFilter\" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\Base.lproj\Patmark.storyboard">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </InterfaceDefinition>
+    <InterfaceDefinition Include="Resources\Base.lproj\FieldPreviewController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\FieldEditorController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\EmbossmentUIController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\EmbossmentController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\DefaultMarkingParameterController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\LocalFile.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\RemoteFile.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\FieldListController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\EmbossmentFieldListController.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\MachineModelNoView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+    <None Include="LICENSE.EndianBitConverter.txt" />
+    <None Include="FieldCanvasForIOS\Readme.md" />
+    <None Include="NLog.xsd" />
+    <None Include="NLog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Presenter\FieldEditor\FieldEditorController.cs" />
+    <Compile Include="Presenter\FieldEditor\FieldEditorController.designer.cs">
+      <DependentUpon>FieldEditorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\FieldPreview\FieldPreviewController.cs" />
+    <Compile Include="Presenter\FieldPreview\FieldPreviewController.designer.cs">
+      <DependentUpon>FieldPreviewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\FieldEditor\FieldAccepter.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentController.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentController.designer.cs">
+      <DependentUpon>EmbossmentController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\Embossment\EmbossmentUIController.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentUIController.designer.cs">
+      <DependentUpon>EmbossmentUIController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\FieldPreview\FieldPreView.cs" />
+    <Compile Include="Presenter\FieldPreview\IPreviewData.cs" />
+    <Compile Include="Injection\iOSScreenUtil.cs" />
+    <Compile Include="Injection\Injecter.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentUIItems.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentPreviewData.cs" />
+    <Compile Include="RenderKitForIOS\CanvasForiOS.cs" />
+    <Compile Include="RenderKitForIOS\Extension.cs" />
+    <Compile Include="Presenter\Implementation\Implementation.cs" />
+    <Compile Include="Presenter\Ruler\RulerView.cs" />
+    <Compile Include="Presenter\FieldPreview\RulerContent.cs" />
+    <Compile Include="RenderKitForIOS\iOSFontFactory.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Presenter\Component\SendButton.cs" />
+    <Compile Include="Presenter\Component\ParameterSelector.cs" />
+    <Compile Include="Presenter\Utility\ControllerUtils.cs" />
+    <Compile Include="Presenter\Loading\LoadingOverlay.cs" />
+    <Compile Include="Presenter\Localization\StringLocalizer.cs" />
+    <Compile Include="Models\Communication\CommunicationClient.cs" />
+    <Compile Include="Models\Communication\CommunicationClientFactory.cs" />
+    <Compile Include="Models\Communication\CommunicationManager.cs" />
+    <Compile Include="Models\Logging\LogPlatform.cs" />
+    <Compile Include="Presenter\Component\FlashButton.cs" />
+    <Compile Include="Models\Storage\FieldStorageForiOS.cs" />
+    <Compile Include="Presenter\Settings\DefaultMarkingParameterController.cs" />
+    <Compile Include="Presenter\Settings\DefaultMarkingParameterController.designer.cs">
+      <DependentUpon>DefaultMarkingParameterController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FieldCanvasForIOS\Drawable\HorizontalText.cs" />
+    <Compile Include="FieldCanvasForIOS\FieldCanvas.cs" />
+    <Compile Include="FieldCanvasForIOS\BasePointSize.cs" />
+    <Compile Include="FieldCanvasForIOS\notready\FCContext.cs" />
+    <Compile Include="FieldCanvasForIOS\notready\FCFieldTextSequence.cs" />
+    <Compile Include="FieldCanvasForIOS\notready\FCHorizontalPlaceRule.cs" />
+    <Compile Include="FieldCanvasForIOS\notready\FCRenderable.cs" />
+    <Compile Include="FieldCanvasForIOS\Drawable\MatrixCompat.cs" />
+    <Compile Include="Presenter\Files\LocalFileMenuController.designer.cs" />
+    <Compile Include="Presenter\Files\RemoteFileMenuController.cs" />
+    <Compile Include="Presenter\Files\RemoteFileMenuController.designer.cs" />
+    <Compile Include="Presenter\Alert\FileControlSheetBuilder.cs" />
+    <Compile Include="Presenter\Alert\RenameAlertBuilder.cs" />
+    <Compile Include="Presenter\Alert\SaveAsAlertBuilder.cs" />
+    <Compile Include="Presenter\Alert\SaveOverAlertBuilder.cs" />
+    <Compile Include="Presenter\Files\FileMenuController.cs" />
+    <Compile Include="Presenter\Files\FileMenuController.designer.cs">
+      <DependentUpon>FileMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Utility\Holder.cs" />
+    <Compile Include="Models\Files\LocalFilePathGenerator.cs" />
+    <Compile Include="Strings\CommonStringsImpl.cs" />
+    <Compile Include="Models\KeyValueStore\KeyValueStore.cs" />
+    <Compile Include="Presenter\FieldList\FieldListController.cs" />
+    <Compile Include="Presenter\FieldList\FieldListController.designer.cs">
+      <DependentUpon>FieldListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\Embossment\EmbossmentFieldListController.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentFieldListController.designer.cs">
+      <DependentUpon>EmbossmentFieldListController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenter\Settings\SettingsController.cs" />
+    <Compile Include="Presenter\Settings\SettingsController.designer.cs">
+      <DependentUpon>SettingsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CommunicationClientController.cs" />
+    <Compile Include="Presenter\Settings\Setting.cs" />
+    <Compile Include="Presenter\Settings\ModelNoSheetBuilder.cs" />
+    <Compile Include="Presenter\Settings\MachineModelNoCell.cs" />
+    <Compile Include="Presenter\Loading\LoadingMaskView.cs" />
+    <Compile Include="Presenter\Alert\DoYouChangeMachineModelAlertBuilder.cs" />
+    <Compile Include="Presenter\TextInputFilter\RemoteFileNameInputFilter.cs" />
+    <Compile Include="Presenter\MyToast.cs" />
+    <Compile Include="Presenter\Files\LocalFileMenuController.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\ja.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ja.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\Base.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ja.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ja.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ja.lproj\RemoteFile.strings" />
+    <BundleResource Include="Resources\ja.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ja.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libBPPG\LibBinaryPPGFile\LibBinaryPPGFile.csproj">
+      <Project>{239C9664-34F4-4D18-92FE-F8704A0497DE}</Project>
+      <Name>LibBinaryPPGFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TokyoChokoku.PatmarkStd\TokyoChokoku.Patmark.csproj">
+      <Project>{3DE4D17C-E3A0-408C-9154-C95B3D595433}</Project>
+      <Name>TokyoChokoku.Patmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Modules\TokyoChokoku.Modules.csproj">
+      <Project>{AD3037F2-D18B-4C54-B473-EA6680D847B7}</Project>
+      <Name>TokyoChokoku.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libSB2\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants.csproj">
+      <Project>{E161979D-C149-4043-AABC-B21D42220D1D}</Project>
+      <Name>TokyoChokoku.MarkinBox.Sketchbook.SharedConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libSB2\TokyoChokoku.MarkinBox.SB2\TokyoChokoku.MarkinBox.SB2.csproj">
+      <Project>{2E902B62-B156-43F5-B434-4BC556F21EBC}</Project>
+      <Name>TokyoChokoku.MarkinBox.SB2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TokyoChokoku.iOS.Custom\TokyoChokoku.iOS.Custom.csproj">
+      <Project>{F85F11B9-5D78-4F1C-AEF8-601073864996}</Project>
+      <Name>TokyoChokoku.iOS.Custom</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication.Shared\TokyoChokoku.Communication.Shared.csproj">
+      <Project>{FD790F5C-ABF0-409F-8DE7-1D61559C0FAC}</Project>
+      <Name>TokyoChokoku.Communication.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication\TokyoChokoku.Communication.csproj">
+      <Project>{ED3B1134-DC06-499D-95C9-4B4CC10F8953}</Project>
+      <Name>TokyoChokoku.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku\TokyoChokoku.csproj">
+      <Project>{5EE77018-D89F-4CB7-B3A2-F50A81098A76}</Project>
+      <Name>TokyoChokoku</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+</Project>

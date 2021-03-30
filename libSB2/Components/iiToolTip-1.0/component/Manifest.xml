@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="iiToolTip">
+  <name>iiToolTip</name>
+  <publisher>invertedi</publisher>
+  <publisher-url>http://invertedi.com</publisher-url>
+  <version>1.0</version>
+  <summary>A lightweight and easy to use tooltip component that helps users be more informed about your app screens</summary>
+  <samples>
+    <sample id="iiToolTip.Unified">
+      <name>iOS Unified Sample</name>
+      <summary>iOS Unified Sample</summary>
+    </sample>
+    <sample id="iiToolTip.Classic">
+      <name>iOS Classic Sample</name>
+      <summary>iOS Classic Sample</summary>
+    </sample>
+  </samples>
+</component>

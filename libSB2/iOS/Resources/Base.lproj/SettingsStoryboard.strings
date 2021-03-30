@@ -1,0 +1,29 @@
+﻿/* English */
+
+/*--------- Tanaka ---------*/
+/* Preferences */
+
+"dHi-vb-nlD.text" = "Wifi";
+"Z2Z-IX-21r.text" = 'Open the "Settings" in the device.';
+"ixi-2k-SCz.text" = "Machine model";
+"5sc-Y7-bse.text" = "2DCode direction";
+"1248.text" = "Operator mode";
+"Oma-4b-nG5.text" = "Application information";
+"066-L7-Rdo.text" = "Quit";
+
+
+
+/* About this app */
+
+"7555.text" = "Version";
+"99b-CG-OdO.text" = "Developer";
+"7599.text" = "Tokyo Chokoku Marking Products Co.,Ltd.";
+"LJk-UN-zXq.normalTitle" = "www.tokyo-chokoku.co.jp";
+"pRG-Nd-2Op.text" = "3-23-12 Kamezawa, Sumidaku, Tokyo, Japan 130-0014";
+"RSB-5R-KTM.text" = "TEL:+81-3-5611-7771 FAX:+81-3-3625-6550";
+"6HU-S0-8I1.text" = "MAIL:sales@tokyo-chokoku.co.jp";
+
+
+/* ---- Fukai ---- */
+/* Solenoid type */
+"7614.text"  = "Solenoid Type";

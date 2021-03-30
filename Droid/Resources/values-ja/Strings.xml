@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="save">保存</string>
+    <string name="cancel">キャンセル</string>
+    <string name="fit">合わせる</string>
+    <string name="ignore">無視</string>
+    <string name="apply">適用</string>
+
+    <!-- titles -->
+    <string name="fieldEditorActivity_name">テキスト入力</string>
+    <string name="embossmentActivity_name">プレビュー</string>
+    <string name="settingsActivity_name">設定</string>
+    <string name="defaultMarkingParameterActivity_name">打刻パラメータ</string>
+    <string name="fileCategorySelectionActivity_name">ファイル</string>
+    <string name="localFileMenuActivity_name">ローカルファイル</string>
+    <string name="remoteFileMenuActivity_name">Patmarkファイル</string>
+
+    <!-- 機種 -->
+    <string name="patmark_80x20">Patmark plus</string>
+    <string name="patmark_33x15">Patmark</string>
+    <string name="patmark_15x15">Patmark mini</string>
+    
+    <!-- labels --> 
+    <string name="label_textSize">文字の大きさ</string>
+    <string name="label_force">打刻力</string>
+    <string name="label_quality">品質</string>
+
+    <string name="label_clear_preview_file">クリア</string>
+    <string name="label_files">ファイル</string>
+    <string name="label_settings">設定</string>
+    <string name="label_wifi">Wifi</string>
+
+    <string name="label_reload">再読み込み</string>
+    
+    <string name="label_changeOfMachineModel">確認</string>
+
+    <!-- message -->
+    <string name="label_doYouChangeMachineModel">打刻領域が異なる機種と接続しました。プレビューの大きさをこの機種に合わせますか。</string>
+
+    <!-- ファイルメニュー -->
+    <string name="label_file_menu_local">ローカルファイル</string>
+    <string name="label_file_menu_remote">Patmarkファイル</string>
+    <string name="label_file_menu_latest">最新打刻データを読み込む</string>
+    <string name="msg_serialField_writeFileSelectorLocal">シリアルが含まれているファイルは、ローカルには保存できません。</string>
+
+    <string name="RemoteFileMenuDialogManager_ErrorMessage">{0}, {1}, {2}, {3} または {4} の半角文字のみ入力可能です。</string>
+    <string name="RemoteFileMenuDialogManager_Space">スペース</string>
+
+    <!--  file action  -->
+    <string name="label_saveas">名前をつけて保存</string>
+    <string name="label_replace">上書き保存</string>
+    <string name="label_rename">名前の変更</string>
+    <string name="label_clear">削除</string>
+    <string name="label_retrieve">読み込み</string>
+    <string name="message_saveas">ファイル名を入力してください。</string>
+    <string name="message_editName">ファイル名を入力してください。</string>
+    <string name="hint_saveas_textField">ファイル名</string>
+    <string name="label_saveOverCheck">同じ名前のファイルがあります</string>
+    <string name="message_saveOverCheck">上書きしますか？</string>
+
+<!-- 設定の選択肢 -->
+    <string-array name="settings_menu">
+        <item>MarkingParameter | 打刻パラメータ</item>
+        <item>AppVersion       | アプリのバージョン</item>
+        <item>RomVersion       | ROMのバージョン</item>
+        <item>MachineModel     | 機種</item>
+    </string-array>
+
+    <!-- 設定 -->
+    <string name="label_machine_model_no_title">機種</string>
+    <string name="label_machine_model_no_message">機種を選択してください。</string>
+
+    
+<!-- ロード済みファイルの種類 -->
+    <string name="file_source_label_local">ローカルファイル</string>
+    <string name="file_source_label_remote">Patmarkファイル</string>
+    <string name="file_source_label_latest">最新打刻ファイル</string>
+
+
+    <!--
+    フィールドタイプ
+    -->
+
+    <string name="FieldTypeName_Text">テキスト</string>
+    <string name="FieldTypeName_OuterArcText">テキスト（外円弧）</string>
+    <string name="FieldTypeName_InnerArcText">テキスト（内円弧）</string>
+    <string name="FieldTypeName_XVerticalText">縦書きテキスト（X方向）</string>
+    <string name="FieldTypeName_YVerticalText">縦書きテキスト（Y方向）</string>
+    <string name="FieldTypeName_QrCode">QRコード</string>
+    <string name="FieldTypeName_DataMatrix">データマトリクス</string>
+    <string name="FieldTypeName_Rectangle">矩形</string>
+    <string name="FieldTypeName_Circle">円</string>
+    <string name="FieldTypeName_Line">線</string>
+    <string name="FieldTypeName_Ellipse">楕円</string>
+    <string name="FieldTypeName_Triangle">三角</string>
+    <string name="FieldTypeName_Bypass">バイパス</string>
+    <string name="FieldTypeName_Unknown">不明</string>
+
+    
+    <!--
+    Toast
+    -->
+
+    <!-- 通信 -->
+    <string name="toast_communication_required">Patmarkに接続してください。</string>
+    <string name="toast_communication_excluded_me">他のデバイスがこのPatmarkを使用しています。</string>
+    <string name="toast_communication_started">通信を開始します。</string>
+    <string name="toast_communication_terminated">通信を終了します。</string>
+    <string name="toast_communication_timed_out">Patmarkとうまく通信できませんでした。接続を確認してください。</string>
+    <string name="toast_font_error">\"{0}\" のフォントがPatmarkにありません。PC版ソフトからフォントデータをインストールしてください。</string>
+    <string name="toast_send_protected">打刻中は打刻データを送信できません。</string>
+    <string name="toast_communication_protected">打刻中はファイルを送受信できません。</string>
+
+    <!-- 打刻 -->
+    <!--<string name="toast_marking_succeed">打刻が完了しました。</string>-->
+    <!--<string name="toast_marking_failed">打刻が異常終了しました。</string>-->
+    <string name="toast_ready_to_mark">Patmarkの打刻ボタンで打刻開始します。</string>
+    <string name="toast_marking_file_is_empty">打刻データがありません。</string>
+    <string name="toast_failed_to_send_marking_file">打刻データを送信できませんでした。</string>
+
+    <!-- ファイル編集 -->
+    <string name="toast_cleared">削除しました。</string>
+    <string name="toast_saved">保存しました。</string>
+    <string name="toast_edited">変更しました。</string>
+    <string name="toast_read">読み込みました。</string>
+    <string name="toast_failed_to_clear">削除できませんでした。</string>
+    <string name="toast_failed_to_save">保存できませんでした。</string>
+    <string name="toast_failed_to_edit">変更できませんでした。</string>
+    <string name="toast_failed_to_read">読み込めませんでした。</string>
+
+    <string name="toast_file_is_empty">ファイルが空です。</string>
+    <string name="toast_current_file_cleared">プレビューをクリアしました。</string>
+
+    <string name="toast_invalidFileName">ファイル名に使用できない文字があります。</string>
+    <string name="toast_advance_mode_file_can_not_be_edited">Patmarkファイルは編集できません。</string>
+
+    <!-- 設定 -->
+    <string name="toast_appsetting_controller_fail_to_hold">機種設定の保存に失敗しました。</string>
+    <string name="toast_appsetting_controller_fail_to_check">接続された機種の確認に失敗しました。</string>
+    <string name="toast_appsetting_controller_different">接続中のデバイスは、現在の設定とは異なるモデルです。</string>
+    
+    <!-- バリデーション -->
+    <string name="toast_validation_on_text_sizes_too_large">文字の大きさを {0}mm 以下にしてください。</string>
+
+    <!--
+    処理中オーバーレイ
+    -->
+
+    <string name="overlay_now_processing">処理中です。</string>    
+
+</resources>

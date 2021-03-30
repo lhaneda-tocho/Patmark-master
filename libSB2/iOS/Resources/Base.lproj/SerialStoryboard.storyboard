@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="5">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Serial Settings Controller-->
+        <scene sceneID="4">
+            <objects>
+                <navigationController storyboardIdentifier="SerialSettingsController" definesPresentationContext="YES" id="5" customClass="SerialSettingsController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8">
+                        <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="28" kind="relationship" relationship="rootViewController" id="8528"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-755" y="-47"/>
+        </scene>
+        <!--シリアル-->
+        <scene sceneID="27">
+            <objects>
+                <viewController id="28" customClass="SerialSettingsEditorController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="25"/>
+                        <viewControllerLayoutGuide type="bottom" id="26"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="29">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvd-L5-K6L">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="フォーマット" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8393" misplaced="YES">
+                                        <rect key="frame" x="20" y="20" width="102" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8418">
+                                        <rect key="frame" x="142" y="17" width="149" height="29"/>
+                                        <segments>
+                                            <segment title="0001"/>
+                                            <segment title="・・・1"/>
+                                            <segment title="1・・・"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8423" misplaced="YES">
+                                        <rect key="frame" x="142" y="70" width="163" height="29"/>
+                                        <segments>
+                                            <segment title="月"/>
+                                            <segment title="日"/>
+                                            <segment title="時刻"/>
+                                            <segment title="中止"/>
+                                        </segments>
+                                    </segmentedControl>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="リセット条件" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8394" misplaced="YES">
+                                        <rect key="frame" x="20" y="73" width="102" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="リセット時間" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8395" misplaced="YES">
+                                        <rect key="frame" x="20" y="126" width="102" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8410" customClass="MyTextField" misplaced="YES" placeholder="00">
+                                        <rect key="frame" x="142" y="121" width="39" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="8496"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="00" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8411" customClass="MyTextField" misplaced="YES" placeholder="00">
+                                        <rect key="frame" x="219" y="122" width="39" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="8497"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8412" customClass="MyTextField" misplaced="YES" placeholder="0000">
+                                        <rect key="frame" x="142" y="175" width="56" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="8498"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text=" : " lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8438" misplaced="YES">
+                                        <rect key="frame" x="193" y="126" width="14" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8413" customClass="MyTextField" misplaced="YES" placeholder="0000">
+                                        <rect key="frame" x="142" y="228" width="56" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="8500"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="最大値" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8396" misplaced="YES">
+                                        <rect key="frame" x="20" y="179" width="51" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="最小値" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8397" misplaced="YES">
+                                        <rect key="frame" x="20" y="232" width="51" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" textAlignment="center" lineBreakMode="wordWrap" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8399" misplaced="YES">
+                                        <rect key="frame" x="20" y="277" width="68" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">繰り返し
+(1~10)</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="1" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8415" customClass="MyTextField" misplaced="YES" placeholder="1">
+                                        <rect key="frame" x="142" y="273" width="39" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="39" id="8501"/>
+                                            <constraint firstAttribute="width" constant="39" id="frr-tv-u6K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="8501"/>
+                                            </mask>
+                                        </variation>
+                                    </textField>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="現在値" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="8398" misplaced="YES">
+                                        <rect key="frame" x="20" y="322" width="51" height="21"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8540" customClass="BorderButton" misplaced="YES">
+                                        <rect key="frame" x="250" y="383" width="101" height="47"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="101" id="8549"/>
+                                            <constraint firstAttribute="height" constant="47" id="8550"/>
+                                        </constraints>
+                                        <state key="normal" title="OK">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="CornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="Insert_TouchUpInside:" destination="28" eventType="touchUpInside" id="8569"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0000" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8414" customClass="MyTextField" misplaced="YES" placeholder="0">
+                                        <rect key="frame" x="142" y="318" width="56" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="56" id="8499"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8395" firstAttribute="top" secondItem="8394" secondAttribute="bottom" constant="32" id="2aO-AZ-aHN"/>
+                                    <constraint firstItem="8414" firstAttribute="leading" secondItem="8415" secondAttribute="leading" id="4t3-rJ-dQT"/>
+                                    <constraint firstItem="8410" firstAttribute="centerY" secondItem="8395" secondAttribute="centerY" id="5eB-9j-P3D"/>
+                                    <constraint firstItem="8423" firstAttribute="centerY" secondItem="8394" secondAttribute="centerY" id="7ha-cz-CpB"/>
+                                    <constraint firstItem="8415" firstAttribute="centerY" secondItem="8399" secondAttribute="centerY" id="82V-9G-4wy"/>
+                                    <constraint firstItem="8393" firstAttribute="top" secondItem="kvd-L5-K6L" secondAttribute="top" constant="20" id="Ahh-5l-ruV"/>
+                                    <constraint firstItem="8397" firstAttribute="leading" secondItem="8396" secondAttribute="leading" id="CU4-xm-DJX"/>
+                                    <constraint firstItem="8410" firstAttribute="leading" secondItem="8423" secondAttribute="leading" id="DXk-c6-bvF"/>
+                                    <constraint firstItem="8394" firstAttribute="top" secondItem="8393" secondAttribute="bottom" constant="32" id="Egy-nX-hTO"/>
+                                    <constraint firstItem="8397" firstAttribute="top" secondItem="8396" secondAttribute="bottom" constant="32" id="FT4-Bb-O0E"/>
+                                    <constraint firstItem="8412" firstAttribute="centerY" secondItem="8396" secondAttribute="centerY" id="Fth-FR-nn6"/>
+                                    <constraint firstItem="8394" firstAttribute="leading" secondItem="8393" secondAttribute="leading" id="I8a-a6-FUU"/>
+                                    <constraint firstItem="8413" firstAttribute="centerY" secondItem="8397" secondAttribute="centerY" id="L4r-Uh-ieR"/>
+                                    <constraint firstItem="8411" firstAttribute="leading" secondItem="8438" secondAttribute="trailing" constant="12" id="NBX-bR-Tyg"/>
+                                    <constraint firstItem="8438" firstAttribute="centerY" secondItem="8410" secondAttribute="centerY" id="QNx-tg-tVI"/>
+                                    <constraint firstItem="8540" firstAttribute="top" secondItem="8398" secondAttribute="bottom" constant="40" id="Rd8-ca-liz"/>
+                                    <constraint firstItem="8418" firstAttribute="centerY" secondItem="8393" secondAttribute="centerY" id="S3D-2T-JYE"/>
+                                    <constraint firstItem="8398" firstAttribute="leading" secondItem="8399" secondAttribute="leading" id="SGO-9D-FfD"/>
+                                    <constraint firstItem="8411" firstAttribute="centerY" secondItem="8438" secondAttribute="centerY" id="Ubf-HN-0DL"/>
+                                    <constraint firstAttribute="bottom" secondItem="8540" secondAttribute="bottom" constant="20" id="WGY-Th-CHb"/>
+                                    <constraint firstItem="8393" firstAttribute="leading" secondItem="kvd-L5-K6L" secondAttribute="leading" constant="20" id="X98-MF-AdU"/>
+                                    <constraint firstItem="8399" firstAttribute="leading" secondItem="8397" secondAttribute="leading" id="aAS-WN-bgY"/>
+                                    <constraint firstItem="8413" firstAttribute="leading" secondItem="8412" secondAttribute="leading" id="b64-mx-HF8"/>
+                                    <constraint firstItem="8396" firstAttribute="leading" secondItem="8395" secondAttribute="leading" id="bS3-Re-BSD"/>
+                                    <constraint firstAttribute="trailing" secondItem="8418" secondAttribute="trailing" constant="20" id="cwQ-SB-qkp"/>
+                                    <constraint firstItem="8398" firstAttribute="top" secondItem="8399" secondAttribute="bottom" constant="24" id="fMq-bd-FfF"/>
+                                    <constraint firstItem="8412" firstAttribute="leading" secondItem="8410" secondAttribute="leading" id="mW0-1f-jax"/>
+                                    <constraint firstItem="8415" firstAttribute="leading" secondItem="8413" secondAttribute="leading" id="mjJ-oF-bDz"/>
+                                    <constraint firstItem="8418" firstAttribute="leading" secondItem="8393" secondAttribute="trailing" constant="20" id="nCX-0A-cNP"/>
+                                    <constraint firstItem="8414" firstAttribute="centerY" secondItem="8398" secondAttribute="centerY" id="o7b-Dx-sS2"/>
+                                    <constraint firstItem="8395" firstAttribute="leading" secondItem="8394" secondAttribute="leading" id="pjV-en-MuM"/>
+                                    <constraint firstItem="8396" firstAttribute="top" secondItem="8395" secondAttribute="bottom" constant="32" id="pz9-qx-KE5"/>
+                                    <constraint firstItem="8399" firstAttribute="top" secondItem="8397" secondAttribute="bottom" constant="24" id="rQV-vN-m2D"/>
+                                    <constraint firstItem="8438" firstAttribute="leading" secondItem="8410" secondAttribute="trailing" constant="12" id="sDa-xv-HWD"/>
+                                    <constraint firstItem="8540" firstAttribute="centerX" secondItem="kvd-L5-K6L" secondAttribute="centerX" id="wct-ge-F2l"/>
+                                    <constraint firstItem="8423" firstAttribute="leading" secondItem="8418" secondAttribute="leading" id="xXY-I2-ooC"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kvd-L5-K6L" firstAttribute="width" secondItem="29" secondAttribute="width" id="E0X-R4-03v"/>
+                            <constraint firstItem="26" firstAttribute="top" secondItem="kvd-L5-K6L" secondAttribute="bottom" id="Gab-ZO-MMA"/>
+                            <constraint firstItem="kvd-L5-K6L" firstAttribute="leading" secondItem="29" secondAttribute="leadingMargin" constant="225" id="SjJ-n1-pVe"/>
+                            <constraint firstItem="kvd-L5-K6L" firstAttribute="centerX" secondItem="29" secondAttribute="centerX" id="Sk1-n1-yoz"/>
+                            <constraint firstItem="kvd-L5-K6L" firstAttribute="top" secondItem="25" secondAttribute="bottom" id="iNA-tf-eS0"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="SjJ-n1-pVe"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" title="シリアル" id="8527">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="8581">
+                            <connections>
+                                <action selector="CancelButton_Activated:" destination="28" id="8582"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CancelButton" destination="8581" id="name-outlet-8581"/>
+                        <outlet property="ClearingTimeHHTextField" destination="8410" id="name-outlet-8410"/>
+                        <outlet property="ClearingTimeMMTextField" destination="8411" id="name-outlet-8411"/>
+                        <outlet property="CounterClearingConditionSelector" destination="8423" id="name-outlet-8423"/>
+                        <outlet property="CurrentValueTextField" destination="8414" id="name-outlet-8414"/>
+                        <outlet property="FormatSelector" destination="8418" id="name-outlet-8418"/>
+                        <outlet property="Insert" destination="8540" id="name-outlet-8540"/>
+                        <outlet property="MaxValueTextField" destination="8412" id="name-outlet-8412"/>
+                        <outlet property="MinValueTextField" destination="8413" id="name-outlet-8413"/>
+                        <outlet property="RepeatingCountTextField" destination="8415" id="name-outlet-8415"/>
+                        <outlet property="TextFieldInputAccessoryView" destination="8613" id="name-outlet-8613"/>
+                        <outlet property="ScrollView" destination="kvd-L5-K6L" id="name-outlet-kvd-L5-K6L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="30" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="8613" customClass="DoneKeyboardAccessoryView" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="396" y="511" width="240" height="128"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="54" y="-40"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ico_model_1010.png" width="124" height="124"/>
+        <image name="ico_model_3315.png" width="124" height="124"/>
+        <image name="ico_model_8020.png" width="124" height="124"/>
+        <image name="TabIcon/field.png" width="25" height="25"/>
+        <image name="TabIcon/file.png" width="25" height="25"/>
+        <image name="TabIcon/marking.png" width="25" height="25"/>
+        <image name="TabIcon/preference.png" width="25" height="25"/>
+    </resources>
+</document>

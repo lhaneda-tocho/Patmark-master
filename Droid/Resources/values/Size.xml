@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <dimen name="embossment_ui_height">22pt</dimen>
+    <dimen name="action_sheet_button_textsize">16dp</dimen>
+</resources>

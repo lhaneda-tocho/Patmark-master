@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info.hoang8f.android.segmented.SegmentedGroup xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/segment"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    auto:sc_border_width="1dp"
+    auto:sc_corner_radius="5dp"
+    auto:sc_tint_color="@color/patmark_main">
+    <TokyoChokoku.Patmark.Droid.Custom.ImageRadioButton
+        android:id="@+id/segmentOf_small"
+        auto:image="@drawable/patmark_segment_text_small"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        style="@style/RadioButton" />
+    <TokyoChokoku.Patmark.Droid.Custom.ImageRadioButton
+        android:id="@+id/segmentOf_medium"
+        auto:image="@drawable/patmark_segment_text_medium"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        style="@style/RadioButton"
+        android:checked="true" />
+    <TokyoChokoku.Patmark.Droid.Custom.ImageRadioButton
+        android:id="@+id/segmentOf_large"
+        auto:image="@drawable/patmark_segment_text_large"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        style="@style/RadioButton" />
+</info.hoang8f.android.segmented.SegmentedGroup>

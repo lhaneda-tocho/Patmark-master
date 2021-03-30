@@ -1,0 +1,525 @@
+[
+  {
+    "Comment": [
+      " Load field from SDCard"
+    ],
+    "Title": "LoadFieldFromSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(151)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Load file names from SDCard"
+    ],
+    "Title": "LoadFileNamesFromSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(19)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Load file map from SDCard"
+    ],
+    "Title": "LoadFileMapFromSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(13)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Load file map block from SDCard",
+      " 事前に下記の設定を行ってください。",
+      " L[100]=ブロック開始アドレス",
+      " L[101]=6010",
+      " L[103]=512"
+    ],
+    "Title": "LoadFileMapBlockFromSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(2)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Load value from SDCard"
+    ],
+    "Title": "LoadValueFromSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(3)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Move marking head to origin"
+    ],
+    "Title": "MoveMarkingHeadToOrigin",
+    "Arguments": [],
+    "Address": "Addresses.MovingHeadToOrigin",
+    "Data": "WordOf(0x0014)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " Save file name to SDCard"
+    ],
+    "Title": "SaveFileNameToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(18)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 500,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [],
+    "Title": "SetFileMapToWorkSpace",
+    "Arguments": [ "int fileIndex", "byte numOfField" ],
+    "Address": "Addresses.FileMapWorkSpace.Increment(fileIndex % Sizes.SdCard.FileMapBlock.NumOfMapInBlock)",
+    "Data": "WordOf((ushort)numOfField)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " Save file map to SDCard",
+      " 事前に下記の設定を行ってください。",
+      " C[6010+n]=フィールド数セット",
+      " L[100]=ブロック開始アドレス",
+      " L[101]=6010",
+      " L[103]=512"
+    ],
+    "Title": "SaveFileMapBlockToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(4)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Save basic settings to SDCard",
+      " serial, calendar, marking direction ... "
+    ],
+    "Title": "SaveBasiceSettingsToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(10)",
+    "NeedsResponse": false,
+    "Timeout": 5000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Set serial settings of file from SDCard"
+    ],
+    "Title": "SetSerialSettingsFileNo",
+    "Arguments": [ "short no" ],
+    "Address": "Addresses.SerialSettingsFileNo",
+    "Data": "WordOf(no)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " Load serial settings of file from SDCard"
+    ],
+    "Title": "LoadSerialSettingsOfFileFromSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(22)",
+    "NeedsResponse": false,
+    "Timeout": 10000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Save serial settings of file to SDCard"
+    ],
+    "Title": "SaveSerialSettingsOfFileToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(23)",
+    "NeedsResponse": false,
+    "Timeout": 10000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Save value to SDCard",
+      " Have to set preferences to L[100]〜[103] before."
+    ],
+    "Title": "SaveValueToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.CommonOperation",
+    "Data": "ByteOf(20)",
+    "NeedsResponse": false,
+    "Timeout": 10000,
+    "Delay": 200,
+    "WaitToFinishWriting": true
+
+  },
+  {
+    "Comment": [
+      " Set alert"
+    ],
+    "Title": "SetAlert",
+    "Arguments": [ "MBAlert alert" ],
+    "Address": "Addresses.Alert",
+    "Data": "WordOf( (short)alert )",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetCurrentMarkingField",
+    "Arguments": [ "int index", "MBData field" ],
+    "Address": "Addresses.CurrentFile.Increment(index * MBDataFileSize.WordCount)",
+    "Data": "CreateMBDataBinarizer(field).Data",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetFieldIndexOfRemoteSdCardFile",
+    "Arguments": [ "short fieldIndex" ],
+    "Address": "Addresses.FieldIndexOfRemoteSdCardFile",
+    "Data": "WordOf(fieldIndex)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetFlagFileLoadedFromSdCard",
+    "Arguments": [ "short value" ],
+    "Address": "Addresses.FilesDidLoadFromSdCard",
+    "Data": "WordOf(value)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetFileToSdCardDataExchangeArea",
+    "Arguments": [ "int fieldIndex", "MBData field" ],
+    "Address": "Addresses.SdCardDataExchangeArea.Field(fieldIndex)",
+    "Data": "CreateMBDataBinarizer(field).Data",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetHeadButtonMarkingAbility",
+    "Arguments": [ "MBHeadButtonMarkingAbility ability" ],
+    "Address": "Addresses.HeadButtonMarkingAbility",
+    "Data": "WordOf((short)ability)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMachineModelNo",
+    "Arguments": [ "short number" ],
+    "Address": "Addresses.MachineModelNo",
+    "Data": "WordOf(number)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMachineModelNoToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.SettingMachineModelNoToSdCard",
+    "Data": "WordOf(0x0001)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMarkingMode",
+    "Arguments": [ "MBMarkingMode mode" ],
+    "Address": "Addresses.MarkingMode",
+    "Data": "ByteOf( (byte)mode )",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMarkingPausingStatus",
+    "Arguments": [ "MBMarkingPausingStatus status" ],
+    "Address": "Addresses.MarkingPausingStatus",
+    "Data": "ByteOf( (byte)status )",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMarkingPowerOfCurrentMarkingField",
+    "Arguments": [ "int index", "short power" ],
+    "Address": "Addresses.CurrentFile.Increment((index * MBDataFileSize.WordCount) + Addresses.MarkingPowerIndexInField)",
+    "Data": "WordOf(power)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMarkingSpeedOfCurrentMarkingField",
+    "Arguments": [ "int index", "short speed" ],
+    "Address": "Addresses.CurrentFile.Increment((index * MBDataFileSize.WordCount) + Addresses.MarkingSpeedIndexInField)",
+    "Data": "WordOf(speed)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetMarkingStatus",
+    "Arguments": [ "MBMarkingStatus status" ],
+    "Address": "Addresses.MarkingStatus",
+    "Data": "WordOf((short)status)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetPermanentMarkingFileNo",
+    "Arguments": [ "short number" ],
+    "Address": "Addresses.PermanentMarkingFileNo",
+    "Data": "WordOf(number)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "ClearPermanentMarkingFileNo",
+    "Arguments": [],
+    "Address": "Addresses.PermanentMarkingFileNo",
+    "Data": "WordOf(0)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " clear D[98]"
+    ],
+    "Title": "SetPermanentMarkingFileNoToSdCard",
+    "Arguments": [],
+    "Address": "Addresses.SettingPermanentMarkingFileNoToSdCard",
+    "Data": "WordOf((short)11)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetNumOfFieldOfCurrentMarkingFile",
+    "Arguments": [ "short number" ],
+    "Address": "Addresses.NumOfFieldOfCurrentFile",
+    "Data": "WordOf(number)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetNumOfFieldToSdCardDataExchangeArea",
+    "Arguments": [ "int fileIndex", "short numOfField" ],
+    "Address": "Addresses.SdCardDataExchangeArea.FileMap.Increment(Sizes.SdCard.FileMapBlock.FileMapIndexInBlock(fileIndex) * Sizes.BytesOfMemoryUnitC)",
+    "Data": "RevWordOf(numOfField)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetRemoteFileMap",
+    "Arguments": [ "int fileIndex", "short num" ],
+    "Address": "Addresses.RemoteFileMaps.Increment(fileIndex)",
+    "Data": "WordOf(num)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetRemoteFileName",
+    "Arguments": [ "short fileIndex", "string name" ],
+    "Address": "Addresses.RemoteFileNames.Increment(fileIndex * Sizes.BytesOfRemoteFileName)",
+    "DataLines": [ "WideTextNoStrideOf(name, 8)" ],
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetRemoteMarkingFileNo",
+    "Arguments": [ "short no" ],
+    "Address": "Addresses.RemoteMarkingFileNo",
+    "Data": "WordOf(no)",
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " L[100]SDカード内アドレス",
+      " L[101]コントローラ上の作業領域アドレス(C[?]) "
+    ],
+    "Title": "SetSdCardDataWritingInfo",
+    "Arguments": [ "int addressOfSdCard", "int addressOfWorkingSpace", "int writingSize" ],
+    "Address": "Addresses.SdCardDataWritingInfo",
+    "DataLines": [
+      "DWordsOf(addressOfSdCard, addressOfWorkingSpace, 0, writingSize)"
+    ],
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [],
+    "Title": "SetBarcode1WayMarkingMode",
+    "Arguments": [ "bool is1Way" ],
+    "Address": "Addresses.Barcode1WayMarkingMode",
+    "DataLines": [
+      "ByteOf(",
+      "    (byte) ((is1Way) ? 0x1 : 0x0 )",
+      ")"
+    ],
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " BSD Enabled"
+    ],
+    "Title": "SetBSDEnabled",
+    "Arguments": [ "bool isEnabled" ],
+    "Address": "Addresses.BSDEnabled",
+    "DataLines": [
+      "WordOf (",
+      "    (short)(isEnabled ? 0x1 : 0x0)",
+      ")"
+    ],
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " Excusion Settings"
+    ],
+    "Title": "SetExclusion",
+    "Arguments": [ "bool isEnabled" ],
+    "Address": "Addresses.Exclusion",
+    "DataLines": [
+      "WordOf(",
+      "    (short)(isEnabled ? 0x1 : 0x0)",
+      ")"
+    ],
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " Set options of pin moving."
+    ],
+    "Title": "SetOptionsOfPinMoving",
+    "Arguments": [ "short xPulse", "short yPulse", "short speed", "short mode = 1", "short interval = 0" ],
+    "Address": "Addresses.OptionsOfPinMoving",
+    "DataLines": [ "WordsOf(xPulse, yPulse, speed, mode, interval)" ],
+    "Timeout": 5000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      " Start to move pin"
+    ],
+    "Title": "StartToMovePin",
+    "Arguments": [],
+    "Address": "Addresses.PinIsMoving",
+    "Data": "WordOf( (short)14 )",
+    "Timeout": 2000,
+    "Delay": 10
+  },
+  {
+    "Comment": [
+      "Shift設定の送信"
+    ],
+    "Title": "SetCalendarShiftReplacements",
+    "Arguments": [ "MarkinBox.MBCalendarData cdata" ],
+    "Address": "Addresses.NumOfCalendarShiftReplacements",
+    "Data": "CreateMBCalendarShiftDataBinarizer(cdata).Data",
+    "Timeout": 5000
+  },
+  {
+    "Comment": [
+      "YMD置換設定の送信"
+    ],
+    "Title": "SetCalendarYmdReplacements",
+    "Arguments": [ "MarkinBox.MBCalendarData cdata" ],
+    "Address": "Addresses.CalendarYmdReplacements",
+    "Data": "CreateMBCalendarYmdDataBinarizer(cdata).Data",
+    "Timeout": 5000
+  },
+  {
+    "Comment": [
+      "シリアルカウンター値の送信"
+    ],
+    "Title": "SetSerialCounters",
+    "Arguments": [ "IEnumerable<MarkinBox.MBSerialCounterData> sdata" ],
+    "Address": "Addresses.SerialCounters",
+    "Data": "CreateMBSerialCounterDataBinarizer(sdata).Data",
+    "Timeout": 5000
+  },
+  {
+    "Comment": [],
+    "Title": "SetSerialSettings",
+    "Arguments": [ "IEnumerable<MarkinBox.MBSerialData> sdata" ],
+    "Address": "Addresses.SerialSettings",
+    "Data": "CreateMBSerialSettingDataBinarizer(sdata).Data",
+    "Timeout": 5000
+  },
+  {
+    "Comment": [
+      "打刻可能な文字かを確認する. フォーマットは2byte文字. 一度に9文字まで確認できる.",
+      "引数に与えられた文字列の9文字以降は無視されます.",
+      "(packed) struct {",
+      "    uint16_t store[9];",
+      "    uint16_t size;",
+      "    uint16_t start;",
+      "    uint16_t error;",
+      "};"
+    ],
+    "Title": "StartTextValidation",
+    "Arguments": [ "string text" ],
+    "Address": "Addresses.TextValidationStore",
+    "Data": "OnControllerTextValidation.TextValidationMemory.From(Formatter, text);",
+    "Timeout": 5000
+  }
+]

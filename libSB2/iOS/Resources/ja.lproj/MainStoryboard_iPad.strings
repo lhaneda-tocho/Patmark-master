@@ -1,0 +1,59 @@
+/* Japanese */
+
+/*--------- Tanaka ---------*/
+
+/* Progress overlay */
+
+/* General dialog */
+
+/* Tabs */
+
+"j37-QO-Fgp.title" = "ファイル";
+"ZEm-Tb-fa2.title" = "フィールド";
+"CaJ-sI-oRW.title" = "打刻";
+"Nfc-Ib-FtZ.title" = "設定";
+
+/* File */
+
+"uuh-tz-f2G.normalTitle" = "最新打刻\nファイル";
+"235-Cq-5Ss.normalTitle" = "コントローラ\nファイル";
+"Sno-7m-WXQ.normalTitle" = "ローカル\nファイル";
+
+// Local file
+"KaW-gi-LgF.normalTitle" = "読込み";
+"50K-mf-Aut.normalTitle" = "保存";
+"UMY-Fl-kaq.normalTitle" = "名前の変更";
+
+// Controller file
+"6618.normalTitle" = "読込み";
+"6623.normalTitle" = "保存";
+"6628.normalTitle" = "名前の変更";
+
+/* Field */
+
+"xzo-gG-B9K.normalTitle" = "ダッシュ\nボード";
+"aP6-o7-prY.normalTitle" = "追加";
+"7II-9Z-MWl.normalTitle" = "全て\n削除";
+"Ai1-Kt-4Ad.normalTitle" = "キャンセル";
+
+
+/* Marking */
+
+"5112.normalTitle" = "原点\n復帰";
+"4684.normalTitle" = "打刻";
+"5045.normalTitle" = "一時\n停止";
+"5048.normalTitle" = "再開";
+"5042.normalTitle" = "中止";
+"4987.normalTitle" = "テスト\n打刻";
+"4676.normalTitle" = "MB\nモード";
+
+
+/* Calendar */
+
+/* Serial */
+
+/*--------- Fukai ---------*/
+/* File */
+"RJS-fk-9B1.normalTitle" = "データ\nマトリクス";
+"r20-hG-NCh.normalTitle" = "QR コード";
+"5LQ-Og-7i7.normalTitle" = "テキスト";

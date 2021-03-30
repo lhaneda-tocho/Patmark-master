@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wpa81+wp8</AssetTargetFallback>
+    <RootNamespace>TokyoChokoku.Patmark</RootNamespace>
+    <PackageId>TokyoChokoku.PatmarkStd</PackageId>
+    <PackageVersion>0.1</PackageVersion>
+    <Authors>TokyoChokoku</Authors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>NETSTANDARD1_6;TRACE;DEBUG;NETSTANDARD;NETSTANDARD2_1; </DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType></DebugType>
+    <DefineConstants>NETSTANDARD1_6;TRACE;RELEASE;</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="csharp-monad" Version="1.0.1" />
+    <PackageReference Include="EndianBitConverter" Version="1.1.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="MathNet.Numerics" Version="4.9.0" />
+    <PackageReference Include="Sprache" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
+    <Folder Include="Common\" />
+    <Folder Include="EmbossmentKit\" />
+    <Folder Include="FieldRenderer\" />
+    <Folder Include="Presenter\" />
+    <Folder Include="RenderKit\" />
+    <Folder Include="TextData\" />
+    <Folder Include="UnitKit\" />
+    <Folder Include="StorageUtil\" />
+    <Folder Include="Settings\" />
+    <Folder Include="FieldCanvasModule\" />
+    <Folder Include="FileKit\" />
+    <Folder Include="FileKit\FileSource\" />
+    <Folder Include="FileKit\FileManager\" />
+    <Folder Include="FileKit\FileIO\" />
+    <Folder Include="FileKit\FilePath\" />
+    <Folder Include="Strings\" />
+    <Folder Include="Presenter\Embossment\" />
+    <Folder Include="Presenter\FileMenu\" />
+    <Folder Include="KeyValueStoreKit\" />
+    <Folder Include="Presenter\Send\" />
+    <Folder Include="AvailableCharacters\" />
+    <Folder Include="MachineModel\" />
+    <Folder Include="FileKit\FileIO\Local\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="RuleKit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="FieldRenderer\BypassDrawable.cs" />
+    <Compile Remove="FieldRenderer\CircleDrawable.cs" />
+    <Compile Remove="FieldRenderer\DataMatrixDrawable.cs" />
+    <Compile Remove="FieldRenderer\EllipseDrawable.cs" />
+    <Compile Remove="FieldRenderer\FieldDrawable.cs" />
+    <Compile Remove="FieldRenderer\HorizontalTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\InnerArcTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\LineDrawable.cs" />
+    <Compile Remove="FieldRenderer\OuterArcTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\QrCodeDrawable.cs" />
+    <Compile Remove="FieldRenderer\RectangleDrawable.cs" />
+    <Compile Remove="FieldRenderer\TriangleDrawable.cs" />
+    <Compile Remove="FieldRenderer\XVerticalTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\YVerticalTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\BypassDrawable.cs" />
+    <Compile Remove="FieldRenderer\CircleDrawable.cs" />
+    <Compile Remove="FieldRenderer\DataMatrixDrawable.cs" />
+    <Compile Remove="FieldRenderer\EllipseDrawable.cs" />
+    <Compile Remove="FieldRenderer\FieldDrawable.cs" />
+    <Compile Remove="FieldRenderer\HorizontalTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\InnerArcTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\LineDrawable.cs" />
+    <Compile Remove="FieldRenderer\OuterArcTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\QrCodeDrawable.cs" />
+    <Compile Remove="FieldRenderer\RectangleDrawable.cs" />
+    <Compile Remove="FieldRenderer\TriangleDrawable.cs" />
+    <Compile Remove="FieldRenderer\XVerticalTextDrawable.cs" />
+    <Compile Remove="FieldRenderer\YVerticalTextDrawable.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FieldRenderer\BypassDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\CircleDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\DataMatrixDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\EllipseDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\FieldDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\HorizontalTextDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\InnerArcTextDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\LineDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\OuterArcTextDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\QrCodeDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\RectangleDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\TriangleDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\XVerticalTextDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+    <None Include="FieldRenderer\YVerticalTextDrawable.cs" Condition=" '$(EnableDefaultCompileItems)' == 'true' " />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libBPPG\LibBinaryPPGFile\LibBinaryPPGFile.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku\TokyoChokoku.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication\TokyoChokoku.Communication.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication.Shared\TokyoChokoku.Communication.Shared.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Modules\TokyoChokoku.Modules.csproj" />
+  </ItemGroup>
+</Project>

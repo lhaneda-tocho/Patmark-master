@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <declare-styleable name="DynamicHeightView">
+        <attr name="aspectRatio"   format="float"/>
+    </declare-styleable>
+    <declare-styleable name="ErasticSizeFrameLayout">
+        <attr name="aspectRatio"   format="float"/>
+        <attr name="maxHeightRate" format="float"/>
+        <attr name="maxWidthRate"  format="float"/>
+    </declare-styleable>
+    <declare-styleable name="FixedAspectFrameLayout">
+        <attr name="aspectRatio"   format="float"/>
+    </declare-styleable>
+    <declare-styleable name="ImageRadioButton">
+        <attr name="image"         format="integer"/>
+    </declare-styleable>
+</resources>

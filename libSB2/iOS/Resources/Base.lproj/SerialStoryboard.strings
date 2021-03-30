@@ -1,0 +1,36 @@
+/* English */
+
+/*--------- Tanaka ---------*/
+
+"You can't add serial anymore." = "Unable to add a serial setting anymore.";
+
+/* Menu */
+
+"138.text" = "Put a symbol to text";
+"139.text" = "Serial 1";
+"140.text" = "Serial 2";
+"141.text" = "Serial 3";
+"142.text" = "Serial 4";
+
+
+/* Insertion */
+
+"8360.text" = "Serial";
+"8366.text" = "Insertion text";
+
+
+/* Edit */
+
+"8393.text" = "Format";
+"8394.text" = "Reset";
+"8395.text" = "Time";
+"8396.text" = "Max";
+"8397.text" = "Min";
+"8398.text" = "Current";
+"8399.text" = "Repeat";
+
+
+
+/*--------- Fukai ---------*/
+"8527.title" = "Serial";
+"8540.normalTitle" = "Insert";

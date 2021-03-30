@@ -1,0 +1,23 @@
+/* English */
+
+/*--------- Tanaka ---------*/
+
+/* Menu */
+
+"5513.text" = "Put a symbol to text";
+"5514.text" = "Shift";
+"5515.text" = "Year";
+"5516.text" = "Month";
+"5517.text" = "Day";
+
+/* Shift */
+
+"5809.text" = "Shift";
+"5810.text" = "Day";
+"5811.text" = "Month";
+"5812.text" = "Year";
+"5813.text" = "Time";
+"5814.text" = "Insertion text";
+
+
+/*--------- Fukai ---------*/

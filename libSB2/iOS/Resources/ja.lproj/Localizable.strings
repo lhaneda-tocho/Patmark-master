@@ -1,0 +1,180 @@
+/* Japanese */
+
+/*--------- Tanaka ---------*/
+
+/* Progress overlay */
+
+"Now in process." = "処理中です。";
+
+/* General dialog */
+
+"OK" = "OK";
+"Back" = "戻る";
+"Cancel" = "キャンセル";
+"Save" = "保存";
+"Save as" = "名前をつけて保存";
+"Rename" = "名前の変更";
+"Edit name" = "名前の変更";
+"Read" = "読込み";
+"Overwrite" = "上書き";
+"Clear" = "削除";
+"Confirm" = "確認";
+"Error" = "エラー";
+"Saved successfully." = "保存しました。";
+"Edited successfully." = "変更しました。";
+"Read successfully." = "読込みました。";
+"Choose your operation." = "選択してください。";
+
+/* Tabs */
+
+/* File */
+
+"ctrl-file-local.title" = "ローカルファイル";
+"ctrl-file-remote.title" = "コントローラファイル";
+
+"Now loading files on flash memory." = "ファイル情報を読み込んでいます。";
+"File is empty." = "ファイルがありません。";
+
+"Enter a file name." = "ファイル名を入力してください。";
+"This name is not available." = "この名前は利用できません。";
+"Failed to edit name." = "名前の変更に失敗しました。";
+"An file has same name is already exists. Are you sure to overwrite?" = "同じ名前のファイルがあります。上書きしますか？";
+
+
+"RemoteFileMenuController.ErrorMessageFormat" = "{0}, {1}, {2}, {3} または {4} の半角文字のみ入力可能です。";
+"RemoteFileMenuController.Space" = "スペース";
+
+/* Field */
+
+"Copied on the same position." = "同じ位置にコピーしました。";
+"Clear the field" = "フィールド削除";
+"Are you sure to clear this field?" = "選択しているフィールドを削除します。\nこの操作は取り消せません。よろしいですか？";
+"Clear all fields" = "全フィールド削除";
+"Are you sure to clear all fields?" = "全てのフィールドを削除します。\nこの操作は取り消せません。よろしいですか？";
+
+"Text" = "テキスト";
+"MB Font" = "MBフォント";
+"PC Font" = "PCフォント";
+"X" = "X";
+"Y" = "Y";
+"Angle" = "角度";
+"Pitch" = "間隔";
+"Height" = "高さ";
+"Aspect" = "比率";
+"Base Point" = "基準点";
+"Radius" = "半径";
+"Time" = "タイム";
+"Jogging" = "ジョグ";
+"Reverse" = "リバース";
+"Pause" = "ポーズ";
+"Speed" = "速度";
+"Power" = "打刻力";
+"Mirror" = "ミラー";
+"DotCount" = "次元数";
+"Bezier" = "曲線";
+"Type" = "タイプ";
+"Pivot" = "回転";
+"Other" = "その他";
+
+"ctrl-field-calendar.title" = "カレンダー";
+"ctrl-field-serial.title" = "シリアル";
+"ctrl-field-pivot-cw.title" = "時計回り";
+"ctrl-field-pivot-ccw.title" = "反時計回り";
+"ctrl-field-preview-replication.title" = "コピー";
+"ctrl-field-preview-deletion.title" = "削除";
+
+
+/* Marking */
+
+"Completed marking successfully." = "打刻が完了しました。";
+"Terminated marking abnormally." = "打刻が異常終了しました。";
+"Push the start button on the marking head." = "打刻ヘッドのボタンで打刻開始します。";
+"Marking file is empty." = "打刻データがありません。";
+"Failed to send marking file." = "打刻ファイルを送信できませんでした。";
+
+/* Preferences */
+
+"ctrl-preferences.title" = "設定";
+"ctrl-preferences-table-section-1.title" = "アプリ動作設定";
+"ctrl-preferences-table-section-2.title" = "その他";
+
+"ctrl-preferences-models-segment-1.title" = "管理者";
+"ctrl-preferences-models-segment-2.title" = "操作者";
+
+/* About this app */
+
+"ctrl-about-this-app.title" = "このアプリについて";
+"ctrl-about-this-app-table-section-1.title" = "バージョン";
+"ctrl-about-this-app-table-section-2.title" = "製造元";
+
+/* Calendar */
+
+"ctrl-calendar.title" = "カレンダー";
+"ctrl-calendar-insertion.title" = "シンボル挿入";
+"ctrl-calendar-shifts.title" = "シフト";
+"ctrl-calendar-shift.title" = "シフト";
+"ctrl-calendar-year.title" = "年";
+"ctrl-calendar-month.title" = "月";
+"ctrl-calendar-day.title" = "日";
+
+/* Serial */
+
+"ctrl-serial-menu.title" = "シリアル";
+
+"ctrl-serial-insertion.title" = "シンボル挿入";
+
+"ctrl-serial-editor-formats-segment-1.title" = "0001";
+"ctrl-serial-editor-formats-segment-2.title" = "・・・1";
+"ctrl-serial-editor-formats-segment-3.title" = "1・・・";
+
+"ctrl-serial-editor-counter-clearing-conditions-segment-1.title" = "最大";
+"ctrl-serial-editor-counter-clearing-conditions-segment-2.title" = "年";
+"ctrl-serial-editor-counter-clearing-conditions-segment-3.title" = "月";
+"ctrl-serial-editor-counter-clearing-conditions-segment-4.title" = "日";
+
+
+/*--------- Fukai ---------*/
+/* validation errors */
+"validation.undefined" = "未定義のエラー";
+
+"validation.qr-code.invalid-character" = "Qrcodeで使えない文字が入力されました";
+"validation.qr-code.text-length-out-of-range" = "制限の80文字を超えます";
+
+"validation.data-matrix.invalid-character" = "DataMatrixで使えない文字が入力されました";
+"validation.data-matrix.text-length-out-of-range" = "制限の80文字を超えます";
+
+"validation.common.text-length-out-of-range" = "制限の50文字を超えます";
+
+
+/* font title */
+"field-font.tc-font"  = "MB フォント";
+"field-font.5x7-font" = "5x7 フォント";
+"field-font.pc-font"  = "PC フォント";
+"field-font.barcode"  = "2D コード";
+
+
+/* ファイル名表記 */
+"file-category.autosave" = "自動保存";
+"file-category.latest-marking-file" = "最新打刻ファイル";
+"file-category.local" = "ローカル";
+"file-category.remote" = "コントローラ";
+
+
+/* 設定 - ソレノイドの種類 */
+"ctrl-preferences-solenoid-type-0" = "標準";
+"ctrl-preferences-solenoid-type-1" = "BSD";
+
+/* ナビゲーションバー / 戻るボタンの設定 */
+"navi.back" = "戻る";
+
+/* wifi 接続できたが，他の端末が使用している状態 */
+"communication.excluded-me" = "他のコンピュータがこのコントローラを使用しています。";
+
+/* 通信開始 */
+"communication.start"="通信を開始します";
+
+/* 通信終了 */
+"communication.terminate"="通信を終了します";
+
+/* 通信エラー */
+"communication.abort"="通信失敗{0}";

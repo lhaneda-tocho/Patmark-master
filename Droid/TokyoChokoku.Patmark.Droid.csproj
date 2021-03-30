@@ -1,0 +1,356 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props" Condition="Exists('..\packages\Xamarin.Build.Download.0.4.3\build\Xamarin.Build.Download.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D950D3EB-11E4-4291-BF6E-C544271C3842}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TokyoChokoku.Patmark.Droid</RootNamespace>
+    <AssemblyName>TokyoChokoku.Patmark.Droid</AssemblyName>
+    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <AndroidSupportedAbis>arm64-v8a;x86_64;armeabi-v7a;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+<EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
+<MandroidI18n>cjk</MandroidI18n>
+<LangVersion>Latest</LangVersion>
+<AndroidLinkMode>Full</AndroidLinkMode>
+<AndroidSupportedAbis>armeabi-v7a</AndroidSupportedAbis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <LangVersion>Latest</LangVersion>
+    <MandroidI18n>cjk</MandroidI18n>
+    <AndroidKeyStore>True</AndroidKeyStore>
+    <AndroidSigningKeyStore>/Users/daiki/workspace/android/unicastandroid.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>u2cas10admindev</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>unicastandroid</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>u2cas10admindev</AndroidSigningKeyPass>
+    <AndroidSupportedAbis>arm64-v8a;armeabi-v7a;x86_64;x86</AndroidSupportedAbis>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="EndianBitConverter">
+      <HintPath>..\packages\EndianBitConverter.1.1.0\lib\netstandard1.0\EndianBitConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpMonad">
+      <HintPath>..\packages\csharp-monad.1.0.1\lib\netstandard1.3\CSharpMonad.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net" />
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.4.9.0\lib\netstandard2.0\MathNet.Numerics.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.7.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="Sprache">
+      <HintPath>..\packages\Sprache.2.2.0\lib\netstandard2.0\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.CJK" />
+    <Reference Include="I18N" />
+    <Reference Include="I18N.MidEast" />
+    <Reference Include="I18N.Other" />
+    <Reference Include="I18N.Rare" />
+    <Reference Include="I18N.West" />
+    <Reference Include="Xamarin.Android.Support.Annotations">
+      <HintPath>..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.3\lib\monoandroid90\Xamarin.Android.Arch.Core.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Core.Runtime">
+      <HintPath>..\packages\Xamarin.Android.Arch.Core.Runtime.1.1.1.3\lib\monoandroid90\Xamarin.Android.Arch.Core.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Common">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.1.1.3\lib\monoandroid90\Xamarin.Android.Arch.Lifecycle.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Arch.Lifecycle.Runtime">
+      <HintPath>..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.1.1.3\lib\monoandroid90\Xamarin.Android.Arch.Lifecycle.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Collections">
+      <HintPath>..\packages\Xamarin.Android.Support.Collections.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.VersionedParcelable">
+      <HintPath>..\packages\Xamarin.Android.Support.VersionedParcelable.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.VersionedParcelable.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Compat">
+      <HintPath>..\packages\Xamarin.Android.Support.Compat.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.Compat.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Percent">
+      <HintPath>..\packages\Xamarin.Android.Support.Percent.28.0.0.3\lib\monoandroid90\Xamarin.Android.Support.Percent.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Android" />
+    <Reference Include="Mono.Android.Export" />
+    <Reference Include="Xamarin.Android.Support.Constraint.Layout.Solver">
+      <HintPath>..\packages\Xamarin.Android.Support.Constraint.Layout.Solver.1.1.2\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.Solver.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Android.Support.Constraint.Layout">
+      <HintPath>..\packages\Xamarin.Android.Support.Constraint.Layout.1.1.2\lib\MonoAndroid70\Xamarin.Android.Support.Constraint.Layout.dll</HintPath>
+    </Reference>
+    <Reference Include="AndroidSegmentedControl.Droid">
+      <HintPath>..\packages\AndroidSegmentedControl.Droid.Binding.1.0.8\lib\MonoAndroid\AndroidSegmentedControl.Droid.dll</HintPath>
+    </Reference>
+    <Reference Include="NLog">
+      <HintPath>..\packages\NLog.4.7.4\lib\monoandroid44\NLog.dll</HintPath>
+    </Reference>
+    <Reference Include="Java.Interop" />
+    <Reference Include="mscorlib" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Resources\Resource.designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Presenter\FieldPreview\FieldPreView.cs" />
+    <Compile Include="Custom\DynamicHeightView.cs" />
+    <Compile Include="RenderKitForDroid\CanvasForDroid.cs" />
+    <Compile Include="RenderKitForDroid\ContextStack.cs" />
+    <Compile Include="RenderKitForDroid\PaintContext.cs" />
+    <Compile Include="RenderKitForDroid\Extension.cs" />
+    <Compile Include="Presenter\Implementation\DroidViewProperties.cs" />
+    <Compile Include="Presenter\FieldPreview\IPreviewData.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentPreviewData.cs" />
+    <Compile Include="Custom\FixedAspectFrameLayout.cs" />
+    <Compile Include="Presenter\Ruler\RulerView.cs" />
+    <Compile Include="RenderKitForDroid\DroidFontFactory.cs" />
+    <Compile Include="Injecter.cs" />
+    <Compile Include="PatmarkApplication.cs" />
+    <Compile Include="Presenter\FieldEditor\FieldEditorActivity.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentActivity.cs" />
+    <Compile Include="Presenter\FieldEditor\FieldEditorContent.cs" />
+    <Compile Include="Custom\ErasticSizeFrameLayout.cs" />
+    <Compile Include="Custom\AspectRatio.cs" />
+    <Compile Include="Presenter\Embossment\Selectors.cs" />
+    <Compile Include="Presenter\Embossment\EmbossmentPreviewer.cs" />
+    <Compile Include="Communication\CommunicationClient.cs" />
+    <Compile Include="Communication\CommunicationClientFactory.cs" />
+    <Compile Include="Communication\CommunicationManager.cs" />
+    <Compile Include="Logging\LogPlatform.cs" />
+    <Compile Include="Custom\LoadingOverlayView.cs" />
+    <Compile Include="Presenter\Embossment\WifiButtonColor.cs" />
+    <Compile Include="Custom\ImageRadioButton.cs" />
+    <Compile Include="Presenter\Ruler\DroidRulerContent.cs" />
+    <Compile Include="Models\Files\LocalFilePathGenerator.cs" />
+    <Compile Include="Strings\CommonStringsImpl.cs" />
+    <Compile Include="Presenter\Settings\SettingsActivity.cs" />
+    <Compile Include="Presenter\Settings\DefaultMarkingParameterActivity.cs" />
+    <Compile Include="Presenter\FileMenu\LocalFileMenuActivity.cs" />
+    <Compile Include="Presenter\FileMenu\FileCategorySelectionActivity.cs" />
+    <Compile Include="Presenter\Alert\SaveOverDialogFragment.cs" />
+    <Compile Include="Presenter\Alert\SaveAsFragment.cs" />
+    <Compile Include="Presenter\Alert\FileActionDialogFragment.cs" />
+    <Compile Include="Presenter\Alert\DialogManager.cs" />
+    <Compile Include="Presenter\FileMenu\PathNameAdapter.cs" />
+    <Compile Include="Presenter\Alert\RenameFragment.cs" />
+    <Compile Include="Presenter\FileMenu\BaseFileMenuActivity.cs" />
+    <Compile Include="Presenter\FileMenu\RemoteFileMenuActivity.cs" />
+    <Compile Include="Presenter\FileMenu\FileMenuDialogManager.cs" />
+    <Compile Include="Presenter\FileMenu\RemoteFileInfoAdapter.cs" />
+    <Compile Include="Models\KeyValueStore\KeyValueStore.cs" />
+    <Compile Include="Models\Files\FieldTypeNameExt.cs" />
+    <Compile Include="Custom\ProgressDialog.cs" />
+    <Compile Include="Util\FragmentMessageHandler.cs" />
+    <Compile Include="CommunicationClientController.cs" />
+    <Compile Include="Presenter\Settings\Setting.cs" />
+    <Compile Include="Presenter\Alert\MachineModelSelectionDialogFragment.cs" />
+    <Compile Include="Presenter\Alert\DoYouChangeMachineModelDialog.cs" />
+    <Compile Include="ProgressAPIAndroid\ProgressAPIAndroid.cs" />
+    <Compile Include="ProgressAPIAndroid\ProgressViewControllerAndroid.cs" />
+    <Compile Include="MachineModelExt\PatmarkMachineModel.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+    <None Include="Assets\AboutAssets.txt" />
+    <None Include="packages.config" />
+    <None Include="LICENSE.EndianBitConverter.txt" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="NLog.xsd" />
+    <None Include="NLog.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libBPPG\LibBinaryPPGFile\LibBinaryPPGFile.csproj">
+      <Project>{239C9664-34F4-4D18-92FE-F8704A0497DE}</Project>
+      <Name>LibBinaryPPGFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku\TokyoChokoku.csproj">
+      <Project>{5EE77018-D89F-4CB7-B3A2-F50A81098A76}</Project>
+      <Name>TokyoChokoku</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication\TokyoChokoku.Communication.csproj">
+      <Project>{ED3B1134-DC06-499D-95C9-4B4CC10F8953}</Project>
+      <Name>TokyoChokoku.Communication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication.Shared\TokyoChokoku.Communication.Shared.csproj">
+      <Project>{FD790F5C-ABF0-409F-8DE7-1D61559C0FAC}</Project>
+      <Name>TokyoChokoku.Communication.Shared</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libSB2\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants.csproj">
+      <Project>{E161979D-C149-4043-AABC-B21D42220D1D}</Project>
+      <Name>TokyoChokoku.MarkinBox.Sketchbook.SharedConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libSB2\TokyoChokoku.MarkinBox.SB2\TokyoChokoku.MarkinBox.SB2.csproj">
+      <Project>{2E902B62-B156-43F5-B434-4BC556F21EBC}</Project>
+      <Name>TokyoChokoku.MarkinBox.SB2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Modules\TokyoChokoku.Modules.csproj">
+      <Project>{AD3037F2-D18B-4C54-B473-EA6680D847B7}</Project>
+      <Name>TokyoChokoku.Modules</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TokyoChokoku.PatmarkStd\TokyoChokoku.Patmark.csproj">
+      <Project>{3DE4D17C-E3A0-408C-9154-C95B3D595433}</Project>
+      <Name>TokyoChokoku.Patmark</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unicast.ProgressKit\Unicast.ProgressKit.csproj">
+      <Project>{4E2EC0CD-AC53-4D2C-9DE6-3F6FED5182F2}</Project>
+      <Name>Unicast.ProgressKit</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Presenter\" />
+    <Folder Include="Presenter\FieldPreview\" />
+    <Folder Include="Custom\" />
+    <Folder Include="RenderKitForDroid\" />
+    <Folder Include="Presenter\Implementation\" />
+    <Folder Include="Presenter\Embossment\" />
+    <Folder Include="Presenter\Ruler\" />
+    <Folder Include="Presenter\FieldEditor\" />
+    <Folder Include="Communication\" />
+    <Folder Include="Logging\" />
+    <Folder Include="Resources\values-ja\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Files\" />
+    <Folder Include="Strings\" />
+    <Folder Include="Presenter\Settings\" />
+    <Folder Include="Resources\menu\" />
+    <Folder Include="Presenter\FileMenu\" />
+    <Folder Include="Presenter\Alert\" />
+    <Folder Include="Models\KeyValueStore\" />
+    <Folder Include="ProgressAPIAndroid\" />
+    <Folder Include="MachineModelExt\" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\button_border.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_button_forward.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_button_previous.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_button_send.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_gray_send.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_force_medium.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_force_strong.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_force_weak.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_forward.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_previous.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_quality_dot.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_quality_line.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_quality_medium.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_send.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_text_large.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_text_medium.png" />
+    <AndroidResource Include="Resources\drawable\patmark_orange_text_small.png" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_force_medium.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_force_strong.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_force_weak.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_quality_dot.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_quality_line.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_quality_medium.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_text_large.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_text_medium.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_segment_text_small.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_white_force_medium.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_force_strong.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_force_weak.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_forward.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_previous.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_quality_dot.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_quality_line.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_quality_medium.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_text_large.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_text_medium.png" />
+    <AndroidResource Include="Resources\drawable\patmark_white_text_small.png" />
+    <AndroidResource Include="Resources\layout\Embossment.axml" />
+    <AndroidResource Include="Resources\layout\EmbossmentPreviewUI.axml" />
+    <AndroidResource Include="Resources\layout\EmbossmentUI.axml" />
+    <AndroidResource Include="Resources\layout\FieldEditor.axml" />
+    <AndroidResource Include="Resources\layout\ForceSegment.axml" />
+    <AndroidResource Include="Resources\layout\Main.axml" />
+    <AndroidResource Include="Resources\layout\PreviewArea.axml" />
+    <AndroidResource Include="Resources\layout\QualitySegment.axml" />
+    <AndroidResource Include="Resources\layout\TextSizeSegment.axml" />
+    <AndroidResource Include="Resources\layout-land\Embossment.axml" />
+    <AndroidResource Include="Resources\layout-land\EmbossmentUI.axml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-ldpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
+    <AndroidResource Include="Resources\values\Attrs.xml" />
+    <AndroidResource Include="Resources\values\Color.xml" />
+    <AndroidResource Include="Resources\values\Size.xml" />
+    <AndroidResource Include="Resources\values\Strings.xml" />
+    <AndroidResource Include="Resources\drawable\patmark_gray_forward.png" />
+    <AndroidResource Include="Resources\drawable\patmark_gray_previous.png" />
+    <AndroidResource Include="Resources\values-ja\Strings.xml" />
+    <AndroidResource Include="Resources\layout\DefaultMarkingParameter.axml" />
+    <AndroidResource Include="Resources\values\Style.xml" />
+    <AndroidResource Include="Resources\layout\Settings.axml" />
+    <AndroidResource Include="Resources\menu\DefaultMarkingParameterMenu.axml" />
+    <AndroidResource Include="Resources\layout\FileMenu.axml" />
+    <AndroidResource Include="Resources\layout\FileCategorySelection.axml" />
+    <AndroidResource Include="Resources\menu\FileAddMenu.axml" />
+    <AndroidResource Include="Resources\layout\FileActionList.axml" />
+    <AndroidResource Include="Resources\drawable\actionsheet_button.xml" />
+    <AndroidResource Include="Resources\layout\SaveAsDialog.axml" />
+    <AndroidResource Include="Resources\layout\RemoteFileActionList.axml" />
+    <AndroidResource Include="Resources\menu\RemoteReloadMenu.axml" />
+    <AndroidResource Include="Resources\layout\LoadingOverlay.axml" />
+    <AndroidResource Include="Resources\layout\EmbossmentFieldListUI.axml" />
+    <AndroidResource Include="Resources\layout\FieldList.axml" />
+    <AndroidResource Include="Resources\layout\ProgressDialog.axml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.0.0.1\build\MonoAndroid80\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.0.3.1\build\MonoAndroid80\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Percent.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Percent.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Percent.27.0.2.1\build\MonoAndroid81\Xamarin.Android.Support.Percent.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Annotations.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Annotations.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Core.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Common.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Core.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Core.Runtime.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Core.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Core.Runtime.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Core.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Lifecycle.Common.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Common.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Lifecycle.Common.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Lifecycle.Runtime.targets" Condition="Exists('..\packages\Xamarin.Android.Arch.Lifecycle.Runtime.1.1.1.3\build\monoandroid90\Xamarin.Android.Arch.Lifecycle.Runtime.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Collections.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Collections.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Collections.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Collections.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.VersionedParcelable.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.VersionedParcelable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.VersionedParcelable.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.VersionedParcelable.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Compat.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Compat.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Compat.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Compat.targets')" />
+  <Import Project="..\packages\Xamarin.Android.Support.Percent.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Percent.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Percent.28.0.0.3\build\monoandroid90\Xamarin.Android.Support.Percent.targets')" />
+</Project>

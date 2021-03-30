@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TokyoChokoku.Patmark.Droid.Presenter.Ruler.RulerView
+        android:id="@+id/rulerView"
+        android:background="#ffffff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <TokyoChokoku.Patmark.Droid.Presenter.FieldPreview.FieldPreView
+        android:id="@+id/fieldPreview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="25dp"
+        android:background="#ffffff"
+        auto:aspectRatio="1.00" />
+</merge>

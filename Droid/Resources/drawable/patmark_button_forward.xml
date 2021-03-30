@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Buttonが押された時 -->
+    <item android:state_pressed="true">
+        <bitmap
+            android:gravity="center|bottom|clip_vertical"
+            android:src="@drawable/patmark_orange_forward" />
+    </item>
+    
+    <!-- Buttonが押されてない時 -->
+    <item android:state_pressed="false">
+        <bitmap
+            android:gravity="center|bottom|clip_vertical"
+            android:src="@drawable/patmark_gray_forward" />
+	</item>
+
+    <!-- Buttonにフォーカスがあたった時 -->
+    <item android:state_focused="true">
+		<bitmap
+            android:gravity="center|bottom|clip_vertical"
+            android:src="@drawable/patmark_gray_forward" />
+	</item> 
+
+</selector>

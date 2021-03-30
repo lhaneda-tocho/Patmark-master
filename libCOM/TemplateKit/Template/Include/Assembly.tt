@@ -1,0 +1,5 @@
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(SolutionDir)/packages/System.Runtime.4.3.0/lib/net462/System.Runtime.dll"#>
+<#@ assembly name="$(SolutionDir)/packages/Newtonsoft.Json.10.0.3/lib/net45/Newtonsoft.Json.dll" #>
+<#@ assembly name="$(SolutionDir)/TokyoChokoku.Communication.Shared/bin/Debug/netstandard1.5/TokyoChokoku.Communication.Shared.dll" #>
+<#@ assembly name="$(SolutionDir)/TokyoChokoku.Communication.CommandGenerateKit/bin/debug/netstandard1.5/TokyoChokoku.Communication.CommandGenerateKit.dll" #>

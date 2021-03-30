@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+    <RootNamespace>TokyoChokoku.Patmark.Test</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="nunit" Version="3.12.0" />
+    <PackageReference Include="NUnit3TestAdapter" Version="3.16.1"><IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+<PrivateAssets>all</PrivateAssets>
+</PackageReference>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.5.0" />
+    <PackageReference Include="System.Text.Encoding.CodePages" Version="4.7.0" />
+    <PackageReference Include="NLog" Version="4.7.4" />
+    <PackageReference Include="NLog.Config" Version="4.7.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="EmbossmentKit\" />
+    <Folder Include="FieldIOTest\" />
+    <Folder Include="MachineModel\" />
+    <Folder Include="FileKit\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="RuleKit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\libBPPG\LibBinaryPPGFile\LibBinaryPPGFile.csproj" />
+    <ProjectReference Include="..\Test.TokyoChokoku\Test.TokyoChokoku.csproj" />
+    <ProjectReference Include="..\Test.TokyoChokoku.Communication\Test.TokyoChokoku.Communication.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku\TokyoChokoku.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication\TokyoChokoku.Communication.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication.CommandGenerateKit\TokyoChokoku.Communication.CommandGenerateKit.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Communication.Shared\TokyoChokoku.Communication.Shared.csproj" />
+    <ProjectReference Include="..\libSB2\TokyoChokoku.MarkinBox.SB2\TokyoChokoku.MarkinBox.SB2.csproj" />
+    <ProjectReference Include="..\libSB2\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants.csproj" />
+    <ProjectReference Include="..\libCOM\TokyoChokoku.Modules\TokyoChokoku.Modules.csproj" />
+    <ProjectReference Include="..\TokyoChokoku.PatmarkStd\TokyoChokoku.Patmark.csproj" />
+  </ItemGroup>
+</Project>

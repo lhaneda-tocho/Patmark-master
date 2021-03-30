@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wpa81+wp8</AssetTargetFallback>
+    <PackageVersion>0.1</PackageVersion>
+    <Authors>TokyoChokoku</Authors>
+    <Description>Communication Library for MarkinBox</Description>
+    <PackageId>TokyoChokoku.Communication</PackageId>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DefineConstants>TRACE;DEBUG;NETSTANDARD1_6</DefineConstants>
+    <DocumentationFile></DocumentationFile>
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+    <DebugType></DebugType>
+    <DefineConstants>TRACE;RELEASE;NETSTANDARD1_6</DefineConstants>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="Properties\log4net.config" />
+    <None Remove="Response\.DS_Store" />
+    <None Remove="FieldsConcreted\.DS_Store" />
+    <None Remove="FieldsConcreted\HorizontalText\HorizontalTextParameter.cs.orig" />
+    <None Remove="FieldStructure\.DS_Store" />
+    <None Remove="Calendar\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="FieldsConcreted\Bypass\Bypass.cs" />
+    <Compile Remove="FieldsConcreted\Circle\CircleCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\Circle\CircleParameter.cs" />
+    <Compile Remove="FieldsConcreted\Circle\CircleValidator.cs" />
+    <Compile Remove="FieldsConcreted\Circle\IBaseCircleParameter.cs" />
+    <Compile Remove="FieldsConcreted\DataMatrix\DataMatrix.cs" />
+    <Compile Remove="FieldsConcreted\DataMatrix\DataMatrixCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\DataMatrix\DataMatrixParameter.cs" />
+    <Compile Remove="FieldsConcreted\DataMatrix\DataMatrixTextValidator.cs" />
+    <Compile Remove="FieldsConcreted\DataMatrix\DataMatrixValidator.cs" />
+    <Compile Remove="FieldsConcreted\DataMatrix\IBaseDataMatrixParameter.cs" />
+    <Compile Remove="FieldsConcreted\Ellipse\EllipseCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\Ellipse\EllipseParameter.cs" />
+    <Compile Remove="FieldsConcreted\Ellipse\EllipseValidator.cs" />
+    <Compile Remove="FieldsConcreted\Ellipse\IBaseEllipseParameter.cs" />
+    <Compile Remove="FieldsConcreted\HorizontalText\HorizontalTextParameter.cs" />
+    <Compile Remove="FieldsConcreted\HorizontalText\HorizontalTextValidator.cs" />
+    <Compile Remove="FieldsConcreted\HorizontalText\IBaseHorizontalTextParameter.cs" />
+    <Compile Remove="FieldsConcreted\InnerArcText\IBaseInnerArcTextParameter.cs" />
+    <Compile Remove="FieldsConcreted\InnerArcText\InnerArcText.cs" />
+    <Compile Remove="FieldsConcreted\InnerArcText\InnerArcTextCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\InnerArcText\InnerArcTextParameter.cs" />
+    <Compile Remove="FieldsConcreted\InnerArcText\InnerArcTextValidator.cs" />
+    <Compile Remove="FieldsConcreted\InnerArcText\MutableInnerArcTextParameter.cs" />
+    <Compile Remove="FieldsConcreted\Line\IBaseLineParameter.cs" />
+    <Compile Remove="FieldsConcreted\Line\Line.cs" />
+    <Compile Remove="FieldsConcreted\Line\LineCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\OuterArcText\OuterArcTextParameter.cs" />
+    <Compile Remove="FieldsConcreted\OuterArcText\OuterArcTextValidator.cs" />
+    <Compile Remove="FieldsConcreted\QrCode\IBaseQrCodeParameter.cs" />
+    <Compile Remove="FieldsConcreted\QrCode\QrCode.cs" />
+    <Compile Remove="FieldsConcreted\QrCode\QrCodeCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\QrCode\QrCodeParameter.cs" />
+    <Compile Remove="FieldsConcreted\QrCode\QrCodeTextValidator.cs" />
+    <Compile Remove="FieldsConcreted\QrCode\QrCodeValidator.cs" />
+    <Compile Remove="FieldsConcreted\Rectangle\IBaseRectangleParameter.cs" />
+    <Compile Remove="FieldsConcreted\Rectangle\Rectangle.cs" />
+    <Compile Remove="FieldsConcreted\Rectangle\RectangleCollisionProductor.cs" />
+    <Compile Remove="FieldsConcreted\Rectangle\RectangleParameter.cs" />
+    <Compile Remove="FieldsConcreted\Rectangle\RectangleValidator.cs" />
+    <Compile Remove="FieldsConcreted\Triangle\IBaseTriangleParameter.cs" />
+    <Compile Remove="FieldsConcreted\Triangle\Triangle.cs" />
+    <Compile Remove="FieldStructure\CommonField.cs" />
+    <Compile Remove="FieldStructure\Field\CommonField.designer.cs" />
+    <Compile Remove="Calendar\CalendarSettingsManager.cs" />
+    <Compile Remove="Calendar\Stores\CalendarStores.designer.cs" />
+    <Compile Remove="Files\CurrentFileNumberManager.cs" />
+    <Compile Remove="FieldUtilizer\BaseFieldManager.cs" />
+    <Compile Remove="FieldUtilizer\FieldContext.cs" />
+    <Compile Remove="FieldUtilizer\IFieldEditBoxBuilder.cs" />
+    <Compile Remove="Template\Script\Test.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="CommandExe\" />
+    <Folder Include="Command\" />
+    <Folder Include="Utility\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Client\" />
+    <Folder Include="Response\" />
+    <Folder Include="CommandExe\Operation\" />
+    <Folder Include="Structure.Binary\" />
+    <Folder Include="Binalizer\" />
+    <Folder Include="Binalizer\DataType\" />
+    <Folder Include="Text\" />
+    <Folder Include="Template\" />
+    <Folder Include="Template\Include\" />
+    <Folder Include="Template\Script\" />
+    <Folder Include="RomVersion\" />
+    <Folder Include="OnControllerTextValidation\" />
+    <Folder Include="ClientLifecycle\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="EndianBitConverter" Version="1.1.0" />
+    <PackageReference Include="csharp-monad" Version="1.0.1" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
+    <PackageReference Include="System.Threading.Thread" Version="4.3.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Template\Script\Test.cs">
+      <DependentUpon>Test.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Template\Script\Test.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Test.cs</LastGenOutput>
+    </None>
+    <None Update="CommandExe\GenReadCommand.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GenReadCommand.cs</LastGenOutput>
+    </None>
+    <None Update="CommandExe\GenWriteCommand.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GenWriteCommand.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="CommandExe\GenReadCommand.cs">
+      <DependentUpon>GenReadCommand.tt</DependentUpon>
+    </Compile>
+    <Compile Condition=" '$(EnableDefaultCompileItems)' == 'true' " Update="CommandExe\GenWriteCommand.cs">
+      <DependentUpon>GenWriteCommand.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TokyoChokoku\TokyoChokoku.csproj" />
+    <ProjectReference Include="..\TokyoChokoku.Communication.Shared\TokyoChokoku.Communication.Shared.csproj" />
+    <ProjectReference Include="..\..\libSB2\TokyoChokoku.MarkinBox.SB2\TokyoChokoku.MarkinBox.SB2.csproj" />
+  </ItemGroup>
+</Project>

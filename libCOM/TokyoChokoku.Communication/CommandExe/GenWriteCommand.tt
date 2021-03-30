@@ -1,0 +1,31 @@
+﻿<#@ include file="$(ProjectDir)/Template/Include/CommandTemplate.tt" #>
+<# GenerateHeader(); #>
+<# GenerateCommandExecutor(()=>{#>
+        // Write Commands
+<#
+   Generate(CommandLoad.File(WriteCommandFile), (cmd)=>{
+#>
+        public async Task<WriteResponse> <#= cmd.Title #>(<#= cmd.GenArguments() #>)
+        {
+            Console.WriteLine("CoreCommand: <#= cmd.Title #>");
+
+            // data 
+            MemoryAddress address = <#= cmd.Address #>;
+            var     needsResponse = true <!--#= cmd.NeedsResponse.ToString().ToLower() #-->;
+            var           timeout = <#= cmd.Timeout #>;
+            var        retryCount = <#= cmd.NumOfRetry #>;
+            Programmer       data = <#= cmd.GenData(36) #>;
+
+            var builder = readyWrite(address, data);
+            var res     = await Write(
+                builder.Build( needsResponse, timeout, retryCount, enableBeforeExcluding: enableBeforeExcluding)
+            );
+<# if(cmd.Delay > 0) { #>
+            await Task.Delay(<#= cmd.Delay #>);
+<#  } #>
+<# if(cmd.WaitToFinishWriting) { #>
+            await WaitToFinishWriting(builder);
+<# } #>
+            return res;
+        }
+<# }); });#>

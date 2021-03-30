@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Buttonが押された時 -->
+    <item android:state_checked="true">
+        <bitmap
+            android:gravity="center|fill"
+            android:src="@drawable/patmark_white_text_medium" />
+    </item>
+    
+    <!-- Buttonが押されてない時 -->
+    <item android:state_checked="false">
+        <bitmap
+            android:gravity="center|fill"
+            android:src="@drawable/patmark_orange_text_medium" />
+    </item>    
+</selector>

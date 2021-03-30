@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+
+    <style name="AppTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+        <item name="android:colorPrimary">@color/patmark_main</item>
+    </style>
+    
+    
+    <style name="DefaultMarkingParameterSettingsRow">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">40dp</item>
+        <item name="android:layout_marginStart">0dp</item>
+    </style>
+    
+    <style name="DefaultMarkingParameterSettingsImage">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_marginStart">4dp</item>
+        <item name="android:scaleType">centerInside</item>
+    </style>
+
+    <style name="DefaultMarkingParameterSettingsSpinner">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">3</item>
+        <item name="android:layout_marginStart">6dp</item>
+    </style>
+
+</resources>

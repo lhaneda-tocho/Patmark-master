@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:backgroundTint="@android:color/white">
+
+    <!-- レイアウトガイド -->
+    <android.support.constraint.Guideline
+        android:id="@+id/preview_bottom_limit_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        />
+
+    <android.support.constraint.Guideline
+        android:id="@+id/tab_top_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="18pt"
+        />
+    
+    <!-- ======== プレビュー領域　======== -->
+    <FrameLayout
+        android:id="@+id/preview_area_group"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constrainedWidth="true"
+        app:layout_constrainedHeight="true"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/preview_bottom_limit_guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintDimensionRatio="W,1000:1000">
+
+        <!-- Field Preview / RulerView -->
+        <FrameLayout
+            android:id="@+id/previewAreaFrame"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true">
+                <TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout
+                    android:layout_height="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentBottom="true"
+                    app:aspectRatio="1.00"
+                    android:padding="5dp">
+                    <include
+                        layout="@layout/previewarea"
+                        android:id="@+id/includePreviewArea" />
+                </TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout>
+            </RelativeLayout>
+        </FrameLayout>
+        
+
+        <!-- Field List -->
+        <FrameLayout
+            android:id="@+id/field_list_area_frame"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true">
+            <include
+                layout="@layout/fieldlist"
+                android:id="@+id/includedFieldListArea" />
+        </FrameLayout>
+    </FrameLayout>
+    
+
+    <android.support.constraint.Group
+        android:id="@+id/preview_ui_area_group"
+        android:layout_width="0dp"
+        android:layout_height="24pt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preview_area_group" />
+
+    <android.support.constraint.Group
+        android:id="@+id/middle_area_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@id/tab_top_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/preview_ui_area_group"/>
+
+    <android.support.constraint.Group
+        android:id="@+id/bottom_ui_area_group"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/middle_area_group" />
+
+
+    
+    
+    
+    <!-- ======== プレビューコントロール　======== -->
+
+    <!-- Embossment Preview UI -->
+    <FrameLayout
+        android:id="@+id/embossment_preview_ui"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/preview_ui_area_group"
+        app:layout_constraintBottom_toBottomOf="@id/preview_ui_area_group"
+        app:layout_constraintEnd_toEndOf="@id/preview_ui_area_group"
+        app:layout_constraintStart_toStartOf="@id/preview_ui_area_group">
+
+        <include
+            layout="@layout/embossmentpreviewui"
+            android:id="@+id/includeEmbossmentPreviewUI" />
+    </FrameLayout>
+    
+    <!-- Field List UI -->
+    <FrameLayout
+        android:id="@+id/embossment_field_list_ui"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/preview_ui_area_group"
+        app:layout_constraintBottom_toBottomOf="@id/preview_ui_area_group"
+        app:layout_constraintEnd_toEndOf="@id/preview_ui_area_group"
+        app:layout_constraintStart_toStartOf="@id/preview_ui_area_group">
+
+        <include
+            layout="@layout/embossmentfieldlistui"
+            android:id="@+id/includedEmbossmentFieldListUI" />
+    </FrameLayout>
+
+    
+    <!-- ======== 打刻コントロール ======== -->
+    
+    <!-- Embossment UI -->
+    <FrameLayout
+        android:id="@+id/embossment_ui_frame"
+        android:padding="4dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/middle_area_group"
+        app:layout_constraintBottom_toBottomOf="@id/middle_area_group"
+        app:layout_constraintEnd_toEndOf="@id/middle_area_group"
+        app:layout_constraintStart_toStartOf="@id/middle_area_group">
+        <include
+            layout="@layout/embossmentui"
+            android:id="@+id/includeEmbossmentUI" />
+    </FrameLayout>
+
+    
+    <!-- ======== メニュー ======== -->
+    
+    <!-- Menu UI -->
+    <LinearLayout
+        android:id="@+id/menu_buttons"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="@id/bottom_ui_area_group"
+        app:layout_constraintBottom_toBottomOf="@id/bottom_ui_area_group"
+        app:layout_constraintEnd_toEndOf="@id/bottom_ui_area_group">
+        <Button
+            android:text="@string/label_clear_preview_file"
+            android:id="@+id/clear_button"
+            android:background="@android:color/white"
+            android:textColor="@color/patmark_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="false" />
+        <Button
+            android:text="@string/label_files"
+            android:id="@+id/files_button"
+            android:background="@android:color/white"
+            android:textColor="@color/patmark_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="false" />
+        <Button
+            android:text="@string/label_settings"
+            android:id="@+id/settings_button"
+            android:background="@android:color/white"
+            android:textColor="@color/patmark_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="false" />
+        <Button
+            android:text="@string/label_wifi"
+            android:id="@+id/wifi_button"
+            android:background="@android:color/white"
+            android:textColor="@color/patmark_sub"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+    
+    <!-- ======== オーバーレイ ======== -->
+
+    <!-- Overlay -->
+    <TokyoChokoku.Patmark.Droid.Custom.LoadingOverlayView
+        android:id="@+id/progressBarView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</android.support.constraint.ConstraintLayout>

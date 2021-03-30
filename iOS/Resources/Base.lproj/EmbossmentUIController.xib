@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmbossmentUIController">
+            <connections>
+                <outlet property="ForceSegment" destination="127" id="name-outlet-127"/>
+                <outlet property="QualitySegment" destination="132" id="name-outlet-132"/>
+                <outlet property="TextSizeSegment" destination="122" id="name-outlet-122"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <segmentedControl opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" segmentControlStyle="bordered" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="122">
+                    <rect key="frame" x="125" y="0.0" width="250" height="216.5"/>
+                    <segments>
+                        <segment title="" image="TextSizeSmall"/>
+                        <segment title="" image="TextSizeMedium"/>
+                        <segment title="" image="TextSizeLarge"/>
+                    </segments>
+                    <color key="tintColor" red="0.85098039215686272" green="0.31372549019607843" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="TextSizeChanged:" destination="-1" eventType="valueChanged" id="183"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="127">
+                    <rect key="frame" x="125" y="225.5" width="250" height="217"/>
+                    <segments>
+                        <segment title="" image="PowerWeak"/>
+                        <segment title="" image="PowerMedium"/>
+                        <segment title="" image="PowerStrong"/>
+                    </segments>
+                    <color key="tintColor" red="0.85098039215686272" green="0.31372549019607843" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="ForceChanged:" destination="-1" eventType="valueChanged" id="180"/>
+                    </connections>
+                </segmentedControl>
+                <segmentedControl opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="1" translatesAutoresizingMaskIntoConstraints="NO" id="132">
+                    <rect key="frame" x="125" y="451.5" width="250" height="216.5"/>
+                    <segments>
+                        <segment title="" image="QualityDot"/>
+                        <segment title="" image="QualityMedium"/>
+                        <segment title="" image="QualityLine"/>
+                    </segments>
+                    <color key="tintColor" red="0.85098039215686272" green="0.31372549019607843" blue="0.035294117647058823" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="QualityChanged:" destination="-1" eventType="valueChanged" id="184"/>
+                    </connections>
+                </segmentedControl>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Force" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="136">
+                    <rect key="frame" x="0.0" y="225.5" width="44" height="217"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quality" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="137">
+                    <rect key="frame" x="0.0" y="451.5" width="54" height="216.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" text="Text Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="135">
+                    <rect key="frame" x="0.0" y="0.0" width="69" height="216.5"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="215"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <exclude reference="215"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="215"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="215"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="215"/>
+                        </mask>
+                    </variation>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="135" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="138"/>
+                <constraint firstItem="135" firstAttribute="top" secondItem="2" secondAttribute="top" id="139"/>
+                <constraint firstItem="122" firstAttribute="top" secondItem="135" secondAttribute="bottom" id="140"/>
+                <constraint firstItem="122" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="141"/>
+                <constraint firstItem="136" firstAttribute="top" secondItem="122" secondAttribute="bottom" constant="10" id="145"/>
+                <constraint firstItem="136" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="146"/>
+                <constraint firstItem="127" firstAttribute="top" secondItem="136" secondAttribute="bottom" id="147"/>
+                <constraint firstItem="127" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="148"/>
+                <constraint firstItem="137" firstAttribute="top" secondItem="127" secondAttribute="bottom" constant="10" id="150"/>
+                <constraint firstItem="137" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="151"/>
+                <constraint firstItem="132" firstAttribute="top" secondItem="137" secondAttribute="bottom" id="152"/>
+                <constraint firstItem="132" firstAttribute="leading" secondItem="2" secondAttribute="leading" id="153"/>
+                <constraint firstItem="122" firstAttribute="width" secondItem="127" secondAttribute="width" id="156"/>
+                <constraint firstItem="122" firstAttribute="width" secondItem="132" secondAttribute="width" id="157"/>
+                <constraint firstItem="122" firstAttribute="height" secondItem="127" secondAttribute="height" id="162"/>
+                <constraint firstItem="122" firstAttribute="height" secondItem="132" secondAttribute="height" id="163"/>
+                <constraint firstAttribute="trailing" secondItem="122" secondAttribute="trailing" id="196"/>
+                <constraint firstAttribute="bottom" secondItem="132" secondAttribute="bottom" id="210"/>
+                <constraint firstItem="137" firstAttribute="height" secondItem="136" secondAttribute="height" id="213"/>
+                <constraint firstItem="136" firstAttribute="height" secondItem="135" secondAttribute="height" id="214"/>
+                <constraint firstItem="122" firstAttribute="top" secondItem="2" secondAttribute="top" id="5874"/>
+                <constraint firstItem="122" firstAttribute="width" secondItem="2" secondAttribute="width" multiplier="2:3" id="5903"/>
+                <constraint firstItem="135" firstAttribute="bottom" secondItem="122" secondAttribute="bottom" constant="1" id="5906"/>
+                <constraint firstItem="127" firstAttribute="trailing" secondItem="2" secondAttribute="trailing" id="5907"/>
+                <constraint firstItem="127" firstAttribute="top" secondItem="122" secondAttribute="bottom" constant="10" id="5908">
+                    <variation key="widthClass=compact" constant="10"/>
+                </constraint>
+                <constraint firstItem="132" firstAttribute="trailing" secondItem="2" secondAttribute="trailing" id="5909"/>
+                <constraint firstItem="132" firstAttribute="top" secondItem="127" secondAttribute="bottom" constant="10" id="6488"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="5906"/>
+                    <exclude reference="5874"/>
+                    <exclude reference="5903"/>
+                    <exclude reference="5907"/>
+                    <exclude reference="5908"/>
+                    <exclude reference="6488"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <include reference="5906"/>
+                    <exclude reference="140"/>
+                    <exclude reference="141"/>
+                    <include reference="5874"/>
+                    <include reference="5903"/>
+                    <exclude reference="147"/>
+                    <exclude reference="148"/>
+                    <include reference="5907"/>
+                    <include reference="5908"/>
+                    <exclude reference="152"/>
+                    <exclude reference="153"/>
+                    <include reference="6488"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <include reference="5906"/>
+                    <exclude reference="140"/>
+                    <exclude reference="141"/>
+                    <include reference="5874"/>
+                    <include reference="5903"/>
+                    <exclude reference="147"/>
+                    <exclude reference="148"/>
+                    <include reference="5907"/>
+                    <include reference="5908"/>
+                    <exclude reference="152"/>
+                    <exclude reference="153"/>
+                    <include reference="6488"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="5906"/>
+                    <include reference="140"/>
+                    <include reference="141"/>
+                    <exclude reference="5874"/>
+                    <exclude reference="5903"/>
+                    <include reference="147"/>
+                    <include reference="148"/>
+                    <exclude reference="5908"/>
+                    <include reference="152"/>
+                    <include reference="153"/>
+                    <exclude reference="6488"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="5907"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="5906"/>
+                    <include reference="140"/>
+                    <include reference="141"/>
+                    <exclude reference="5874"/>
+                    <exclude reference="5903"/>
+                    <include reference="147"/>
+                    <include reference="148"/>
+                    <exclude reference="5907"/>
+                    <exclude reference="5908"/>
+                    <include reference="152"/>
+                    <include reference="153"/>
+                    <exclude reference="5909"/>
+                    <exclude reference="6488"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="PowerMedium" width="36" height="36"/>
+        <image name="PowerStrong" width="36" height="36"/>
+        <image name="PowerWeak" width="36" height="36"/>
+        <image name="QualityDot" width="36" height="36"/>
+        <image name="QualityLine" width="36" height="36"/>
+        <image name="QualityMedium" width="36" height="36"/>
+        <image name="TextSizeLarge" width="36" height="36"/>
+        <image name="TextSizeMedium" width="36" height="36"/>
+        <image name="TextSizeSmall" width="36" height="36"/>
+    </resources>
+</document>

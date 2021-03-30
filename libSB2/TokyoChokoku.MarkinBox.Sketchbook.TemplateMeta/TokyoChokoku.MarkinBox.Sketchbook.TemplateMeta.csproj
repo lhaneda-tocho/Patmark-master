@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9FE8A326-72B2-4EA4-878E-A01F4B7B1AAE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>TokyoChokoku.MarkinBox.Sketchbook.TemplateMeta</RootNamespace>
+    <AssemblyName>TokyoChokoku.MarkinBox.Sketchbook.TemplateMeta</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Models\ParameterDef\MetaParameters.cs" />
+    <Compile Include="Models\FieldDef\MetaHorizontalText.cs" />
+    <Compile Include="Models\FieldDef\MetaXVerticalText.cs" />
+    <Compile Include="Models\FieldDef\MetaYVerticalText.cs" />
+    <Compile Include="Models\FieldDef\MetaInnerArcText.cs" />
+    <Compile Include="Models\FieldDef\MetaOuterArcText.cs" />
+    <Compile Include="Models\FieldDef\MetaQrCode.cs" />
+    <Compile Include="Models\FieldDef\MetaDataMatrix.cs" />
+    <Compile Include="Models\FieldDef\MetaRectangle.cs" />
+    <Compile Include="Models\FieldDef\MetaTriangle.cs" />
+    <Compile Include="Models\FieldDef\MetaCircle.cs" />
+    <Compile Include="Models\FieldDef\MetaLine.cs" />
+    <Compile Include="Models\FieldDef\MetaBypass.cs" />
+    <Compile Include="Models\FieldDef\MetaFields.cs" />
+    <Compile Include="Models\FieldDef\MetaEllipse.cs" />
+    <Compile Include="Models\Elements\FieldDefinition.cs" />
+    <Compile Include="Models\Elements\ParameterDefinition.cs" />
+    <Compile Include="Models\Elements\PropertyDefinition.cs" />
+    <Compile Include="Models\Elements\StoreTypeDefinition.cs" />
+    <Compile Include="Models\Elements\TypeDefinition.cs" />
+    <Compile Include="Models\StoreDef\MetaStores.cs" />
+    <Compile Include="Models\StoreDef\MetaCalendarStores.cs" />
+    <Compile Include="Constants\TextValidationClass.cs" />
+    <Compile Include="Constants\ValidationCategory.cs" />
+    <Compile Include="Models\Validators\NoValidation.cs" />
+    <Compile Include="Models\Validators\MetaGeometryValidator.cs" />
+    <Compile Include="Models\Validators\MetaMakingValidator.cs" />
+    <Compile Include="Models\Validators\MetaTextValidator.cs" />
+    <Compile Include="Models\Validators\MetaValidator.cs" />
+    <Compile Include="Models\Validators\ValidationCategories.cs" />
+    <Compile Include="Models\Validators\GeometryValidatorDefinitions.cs" />
+    <Compile Include="Models\Validators\TextValidatorDefinitions.cs" />
+    <Compile Include="Models\StoreDef\MetaSerialStores.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Models\" />
+    <Folder Include="Models\FieldDef\" />
+    <Folder Include="Models\StoreDef\" />
+    <Folder Include="Models\Elements\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Models\Validators\" />
+  </ItemGroup>
+</Project>

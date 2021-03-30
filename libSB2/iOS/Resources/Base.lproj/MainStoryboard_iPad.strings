@@ -1,0 +1,62 @@
+/* English */
+
+/*--------- Tanaka ---------*/
+
+/* Progress overlay */
+
+/* General dialog */
+
+/* Tabs */
+
+"j37-QO-Fgp.title" = "File";
+"ZEm-Tb-fa2.title" = "Field";
+"CaJ-sI-oRW.title" = "Marking";
+"Nfc-Ib-FtZ.title" = "Preferences";
+
+/* File */
+
+"uuh-tz-f2G.normalTitle" = "Latest\nfile";
+"235-Cq-5Ss.normalTitle" = "Controller\nfile";
+"Sno-7m-WXQ.normalTitle" = "Local\nfile";
+
+// Local file
+"KaW-gi-LgF.normalTitle" = "Retrieve";
+"50K-mf-Aut.normalTitle" = "Save";
+"UMY-Fl-kaq.normalTitle" = "Edit name";
+
+// Controller file
+"6618.normalTitle" = "Retrieve";
+"6623.normalTitle" = "Save";
+"6628.normalTitle" = "Edit name";
+
+
+/* Field */
+
+"xzo-gG-B9K.normalTitle" = "Dashboard";
+"aP6-o7-prY.normalTitle" = "Add";
+"7II-9Z-MWl.normalTitle" = "Delete\nall";
+"Ai1-Kt-4Ad.normalTitle" = "Cancel";
+
+/* Dashboard */
+
+/* Marking */
+
+"5112.normalTitle" = "Home";
+"4684.normalTitle" = "Marking";
+"5045.normalTitle" = "Pause";
+"5048.normalTitle" = "Restart";
+"5042.normalTitle" = "Stop";
+"4987.normalTitle" = "Simulation";
+"4676.normalTitle" = "MB\nmode";
+
+
+/* Calendar */
+
+/* Serial */
+
+
+/*--------- Fukai ---------*/
+/* File */
+"RJS-fk-9B1.normalTitle" = "Data\nMatrix";
+"r20-hG-NCh.normalTitle" = "QR Code";
+"5LQ-Og-7i7.normalTitle" = "Text";

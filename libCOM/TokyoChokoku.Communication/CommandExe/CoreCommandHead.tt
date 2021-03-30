@@ -1,0 +1,17 @@
+﻿<#@ include file="$(ProjectDir)/Template/Include/CommandTemplate.tt" #>
+<#@ include file="$(ProjectDir)/Template/Include/Header.tt" #>
+namespace TokyoChokoku.Communication
+{
+
+using System;
+using System.Linq;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using TokyoChokoku.Communication;
+using TokyoChokoku.Text;
+using TokyoChokoku.Structure;
+using TokyoChokoku.Structure.Binary.FileFormat;
+using TokyoChokoku.MarkinBox.Sketchbook;
+
+public partial class CommandExecutor
+{

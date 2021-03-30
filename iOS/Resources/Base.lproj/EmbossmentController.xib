@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EmbossmentController">
+            <connections>
+                <outlet property="ClearButton" destination="5154" id="name-outlet-5154"/>
+                <outlet property="FieldListContainer" destination="bzz-fa-98g" id="name-outlet-bzz-fa-98g"/>
+                <outlet property="FilesButton" destination="4707" id="name-outlet-4707"/>
+                <outlet property="PreviewContainer" destination="8" id="name-outlet-8"/>
+                <outlet property="SettingsButton" destination="3900" id="name-outlet-3900"/>
+                <outlet property="UIContainer" destination="12" id="name-outlet-12"/>
+                <outlet property="WifiStatusButton" destination="820" id="name-outlet-820"/>
+                <outlet property="view" destination="2" id="RRd-Eg-VrN"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" id="2">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8">
+                    <rect key="frame" x="10" y="10" width="263" height="300"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="8" secondAttribute="height" multiplier="7:8" id="73"/>
+                        <constraint firstAttribute="width" secondItem="8" secondAttribute="height" multiplier="7:8" id="2046"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="2046"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular">
+                        <mask key="constraints">
+                            <exclude reference="73"/>
+                            <include reference="2046"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="73"/>
+                            <include reference="2046"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=compact-widthClass=compact">
+                        <mask key="constraints">
+                            <include reference="73"/>
+                            <exclude reference="2046"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="73"/>
+                            <exclude reference="2046"/>
+                        </mask>
+                    </variation>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzz-fa-98g" userLabel="FieldListContainer">
+                    <rect key="frame" x="9.5" y="10" width="262.5" height="300"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <view contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="12">
+                    <rect key="frame" x="283" y="10" width="187" height="262.5"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="12" secondAttribute="height" multiplier="8:7" priority="750" id="PY9-Pr-Wln"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="PY9-Pr-Wln"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="PY9-Pr-Wln"/>
+                        </mask>
+                    </variation>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="820">
+                    <rect key="frame" x="440" y="277" width="30" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Wifi">
+                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="WifiStatusButton_TouchUpInside:" destination="-1" eventType="touchUpInside" id="1566"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3900">
+                    <rect key="frame" x="376" y="277" width="54" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Settings">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4707">
+                    <rect key="frame" x="336" y="277" width="30" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="File">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5154">
+                    <rect key="frame" x="292" y="277" width="34" height="29"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <state key="normal" title="Clear">
+                        <color key="titleShadowColor" white="0.33333333333333298" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="8" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="9"/>
+                <constraint firstAttribute="bottom" secondItem="8" secondAttribute="bottom" constant="10" id="10"/>
+                <constraint firstAttribute="trailing" secondItem="12" secondAttribute="trailing" constant="10" id="16"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="8" secondAttribute="trailing" constant="10" id="17"/>
+                <constraint firstItem="12" firstAttribute="height" secondItem="8" secondAttribute="height" multiplier="7:8" id="98"/>
+                <constraint firstItem="12" firstAttribute="trailing" secondItem="820" secondAttribute="trailing" id="822"/>
+                <constraint firstItem="8" firstAttribute="bottom" secondItem="820" secondAttribute="bottom" constant="4" id="1162"/>
+                <constraint firstAttribute="trailing" secondItem="8" secondAttribute="trailing" constant="10" id="1912"/>
+                <constraint firstItem="12" firstAttribute="leading" secondItem="2" secondAttribute="leading" constant="10" id="1953">
+                    <variation key="heightClass=regular" constant="10"/>
+                    <variation key="widthClass=compact" constant="10"/>
+                </constraint>
+                <constraint firstAttribute="trailing" secondItem="820" secondAttribute="trailing" constant="16" id="1996">
+                    <variation key="heightClass=regular" constant="10"/>
+                </constraint>
+                <constraint firstAttribute="bottom" secondItem="820" secondAttribute="bottom" constant="8" id="1997">
+                    <variation key="heightClass=regular" constant="10"/>
+                </constraint>
+                <constraint firstItem="820" firstAttribute="top" secondItem="12" secondAttribute="bottom" constant="10" id="2021">
+                    <variation key="heightClass=regular" constant="5"/>
+                    <variation key="widthClass=compact" constant="5"/>
+                </constraint>
+                <constraint firstItem="12" firstAttribute="top" secondItem="8" secondAttribute="bottom" constant="10" id="2047">
+                    <variation key="heightClass=regular" constant="5"/>
+                    <variation key="widthClass=compact" constant="10"/>
+                </constraint>
+                <constraint firstItem="8" firstAttribute="top" secondItem="2" secondAttribute="top" constant="10" id="3649"/>
+                <constraint firstItem="12" firstAttribute="top" secondItem="2" secondAttribute="top" constant="10" id="3675"/>
+                <constraint firstItem="820" firstAttribute="bottom" secondItem="3900" secondAttribute="bottom" id="4176"/>
+                <constraint firstItem="820" firstAttribute="leading" secondItem="3900" secondAttribute="trailing" constant="10" id="4183"/>
+                <constraint firstItem="3900" firstAttribute="leading" secondItem="4707" secondAttribute="trailing" constant="10" id="4726"/>
+                <constraint firstItem="3900" firstAttribute="bottom" secondItem="4707" secondAttribute="bottom" id="4733"/>
+                <constraint firstItem="bzz-fa-98g" firstAttribute="width" secondItem="8" secondAttribute="width" id="3sR-K7-iNh"/>
+                <constraint firstItem="bzz-fa-98g" firstAttribute="centerY" secondItem="8" secondAttribute="centerY" id="A7w-m5-yQV"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="8" secondAttribute="bottom" constant="10" id="FGd-A2-pdq"/>
+                <constraint firstItem="5154" firstAttribute="bottom" secondItem="4707" secondAttribute="bottom" id="O09-3p-Iuo"/>
+                <constraint firstItem="bzz-fa-98g" firstAttribute="centerX" secondItem="8" secondAttribute="centerX" id="lYM-cf-1UC"/>
+                <constraint firstItem="bzz-fa-98g" firstAttribute="height" secondItem="8" secondAttribute="height" id="zIU-zf-LNR"/>
+                <constraint firstItem="4707" firstAttribute="leading" secondItem="5154" secondAttribute="trailing" constant="10" id="zbX-SD-SR0"/>
+            </constraints>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="1912"/>
+                    <exclude reference="FGd-A2-pdq"/>
+                    <exclude reference="1953"/>
+                    <exclude reference="2047"/>
+                    <exclude reference="1996"/>
+                    <exclude reference="1997"/>
+                    <exclude reference="2021"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular">
+                <mask key="constraints">
+                    <exclude reference="10"/>
+                    <exclude reference="1162"/>
+                    <include reference="1912"/>
+                    <include reference="3649"/>
+                    <exclude reference="17"/>
+                    <exclude reference="98"/>
+                    <exclude reference="822"/>
+                    <include reference="1953"/>
+                    <include reference="2047"/>
+                    <exclude reference="3675"/>
+                    <include reference="1996"/>
+                    <include reference="1997"/>
+                    <include reference="2021"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="constraints">
+                    <exclude reference="10"/>
+                    <exclude reference="1162"/>
+                    <include reference="1912"/>
+                    <include reference="3649"/>
+                    <exclude reference="17"/>
+                    <exclude reference="98"/>
+                    <exclude reference="822"/>
+                    <include reference="1953"/>
+                    <include reference="2047"/>
+                    <exclude reference="3675"/>
+                    <include reference="1996"/>
+                    <include reference="1997"/>
+                    <include reference="2021"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=compact-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="10"/>
+                    <include reference="1162"/>
+                    <exclude reference="1912"/>
+                    <include reference="3649"/>
+                    <include reference="17"/>
+                    <include reference="98"/>
+                    <include reference="822"/>
+                    <exclude reference="1953"/>
+                    <exclude reference="2047"/>
+                    <include reference="3675"/>
+                    <exclude reference="1996"/>
+                    <exclude reference="1997"/>
+                    <exclude reference="2021"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="10"/>
+                    <include reference="1162"/>
+                    <exclude reference="1912"/>
+                    <include reference="3649"/>
+                    <include reference="FGd-A2-pdq"/>
+                    <include reference="17"/>
+                    <include reference="98"/>
+                    <include reference="822"/>
+                    <exclude reference="1953"/>
+                    <exclude reference="2047"/>
+                    <include reference="3675"/>
+                    <exclude reference="1996"/>
+                    <exclude reference="1997"/>
+                    <exclude reference="2021"/>
+                </mask>
+            </variation>
+        </view>
+    </objects>
+    <resources>
+        <image name="Send" width="42" height="15"/>
+        <image name="PagePrevious" width="36" height="36"/>
+        <image name="PowerWeak" width="36" height="36"/>
+        <image name="PageNext" width="36" height="36"/>
+        <image name="PowerMedium" width="36" height="36"/>
+        <image name="PowerStrong" width="36" height="36"/>
+        <image name="TextSizeSmall" width="36" height="36"/>
+        <image name="TextSizeMedium" width="36" height="36"/>
+        <image name="TextSizeLarge" width="36" height="36"/>
+        <image name="QualityDot" width="36" height="36"/>
+        <image name="QualityMedium" width="36" height="36"/>
+        <image name="QualityLine" width="36" height="36"/>
+        <image name="Next" width="38.6666679" height="15"/>
+    </resources>
+</document>

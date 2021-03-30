@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.percent.PercentRelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:paddingLeft="6dp">
+    <TextView
+        android:id="@+id/label_currentPage"
+        android:text="-"
+        android:textSize="10pt"
+        android:gravity="center_vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/label_pageCountSeparator"
+        android:text="/"
+        android:textSize="10pt"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/label_currentPage"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textColor="#000000" />
+    <TextView
+        android:id="@+id/label_totalPage"
+        android:text="-"
+        android:textSize="10pt"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/label_pageCountSeparator"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:textColor="#000000" />
+    <Space
+        android:id="@+id/blankBetweenPageChangers"
+        app:layout_widthPercent="2%"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true" />
+    <TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:padding="6dp"
+        app:aspectRatio="1.73"
+        android:layout_toLeftOf="@id/blankBetweenPageChangers">
+    <!--  android:text="&lt;"  -->
+        <ImageButton
+            android:id="@+id/button_pageBack"
+            android:scaleType="fitCenter"
+            android:src="@drawable/patmark_button_previous"
+            android:background="@null"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent" />
+    </TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout>
+    <TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:padding="6dp"
+        app:aspectRatio="1.73"
+        android:layout_toRightOf="@id/blankBetweenPageChangers">
+    <!--  android:text="&gt;"  -->
+        <ImageButton
+            android:id="@+id/button_pageForward"
+            android:scaleType="fitCenter"
+            android:src="@drawable/patmark_button_forward"
+            android:background="@null"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout>
+<!--  android:text="Send"  -->
+    <ImageButton
+        android:id="@+id/button_send"
+        android:scaleType="fitCenter"
+        android:src="@drawable/patmark_button_send"
+        android:background="@null"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        app:layout_widthPercent="25%"
+        android:layout_height="wrap_content" />
+</android.support.percent.PercentRelativeLayout>

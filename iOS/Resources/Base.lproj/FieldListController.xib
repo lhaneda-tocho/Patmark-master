@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FieldListController">
+            <connections>
+                <outlet property="FieldList" destination="rg3-6b-kfB" id="name-outlet-rg3-6b-kfB"/>
+                <outlet property="view" destination="rg3-6b-kfB" id="9AJ-iQ-69f"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="rg3-6b-kfB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <point key="canvasLocation" x="20" y="6"/>
+        </tableView>
+    </objects>
+    <resources>
+        <image name="Send" width="42" height="15"/>
+        <image name="PagePrevious" width="36" height="36"/>
+        <image name="PowerWeak" width="36" height="36"/>
+        <image name="PageNext" width="36" height="36"/>
+        <image name="PowerMedium" width="36" height="36"/>
+        <image name="PowerStrong" width="36" height="36"/>
+        <image name="TextSizeSmall" width="36" height="36"/>
+        <image name="TextSizeMedium" width="36" height="36"/>
+        <image name="TextSizeLarge" width="36" height="36"/>
+        <image name="QualityDot" width="36" height="36"/>
+        <image name="QualityMedium" width="36" height="36"/>
+        <image name="QualityLine" width="36" height="36"/>
+        <image name="Next" width="38.6666679" height="15"/>
+    </resources>
+</document>

@@ -1,0 +1,683 @@
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectGuid>{CC596051-A175-4F7D-9AEE-1027D0118EF3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TokyoChokoku.MarkinBox.Sketchbook.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>sketchbook</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer: inc unicast (9DQH252J5A)</CodesignKey>
+<MtouchI18n>cjk</MtouchI18n>
+<CodesignProvision>iOS Team Provisioning Profile: *</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType></DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: inc unicast (9DQH252J5A)</CodesignKey>
+    <CodesignProvision>sketchbook 2 touch - tokyo chokoku</CodesignProvision>
+    <MtouchI18n>cjk</MtouchI18n>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>i386, x86_64</MtouchArch>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <CodesignKey>iPhone Developer: inc unicast (9DQH252J5A)</CodesignKey>
+    <CodesignProvision>sketchbook 2 touch - tokyo chokoku</CodesignProvision>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchI18n>cjk</MtouchI18n>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="Portable.Text.Encoding">
+      <HintPath>..\packages\Portable.Text.Encoding.0.8.3.0\lib\portable-net45+win+wp80+MonoAndroid10+xamarinios10+MonoTouch10\Portable.Text.Encoding.dll</HintPath>
+    </Reference>
+    <Reference Include="ToastIOS">
+      <HintPath>..\Components\ToastIOS-1.6\lib\ios-unified\ToastIOS.dll</HintPath>
+    </Reference>
+    <Reference Include="CSharpMonad">
+      <HintPath>..\packages\csharp-monad.1.0.1\lib\netstandard1.3\CSharpMonad.dll</HintPath>
+    </Reference>
+    <Reference Include="Functional.Maybe">
+      <HintPath>..\packages\Functional.Maybe.1.1.1\lib\portable40-net40+win8\Functional.Maybe.dll</HintPath>
+    </Reference>
+    <Reference Include="Calabash">
+      <HintPath>..\packages\Xamarin.TestCloud.Agent.0.21.5\lib\Xamarin.iOS\Calabash.dll</HintPath>
+    </Reference>
+    <Reference Include="Toast">
+      <HintPath>..\packages\Toast.iOS.1.1.0\lib\xamarinios10\Toast.dll</HintPath>
+    </Reference>
+    <Reference Include="Sprache">
+      <HintPath>..\packages\Sprache.2.1.2\lib\netstandard2.0\Sprache.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable">
+      <HintPath>..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="MathNet.Numerics">
+      <HintPath>..\packages\MathNet.Numerics.4.5.1\lib\netstandard2.0\MathNet.Numerics.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Contents.json" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-60%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-76%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-40%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <ImageAsset Include="Resources\ico_model_1010.png" />
+    <ImageAsset Include="Resources\ico_model_3315.png" />
+    <ImageAsset Include="Resources\ico_model_8020.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small-50%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-72%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-167.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1920-1080.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ip6plus.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ip6.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ipad mini.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ipad retina.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1024-748.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\2048-1496.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\640-960.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ip5-portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ipad mini-portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ipad retina-portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\320-480.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\768-1004.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\1536-2008.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ip6plus-portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ip6-portrait.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ip6plus-landscape.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ipad mini-landscape.png" />
+    <ImageAsset Include="Resources\Images.xcassets\LaunchImage.launchimage\ipad retina-landscape.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Notification%403x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Notification.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\iTunesArtwork%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%402x.png" />
+    <ImageAsset Include="Resources\Images.xcassets\AppIcons.appiconset\Icon-Small%403x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Views\Calendar\CalendarSettingsYmdCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\UpDownTextBoxCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\PivotCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\ToggleSwitchCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\TextBoxCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\PreviewContextCell.xib" />
+    <InterfaceDefinition Include="Resources\Base.lproj\CalendarStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\MainStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\SerialStoryboard.storyboard" />
+    <InterfaceDefinition Include="Views\EditBoxCells\PickerViewCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\DropdownListCell.xib" />
+    <InterfaceDefinition Include="Views\EditBoxCells\TextBoxOptional.xib" />
+    <InterfaceDefinition Include="Views\UISpringView.xib" />
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\SettingsStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\DashboardStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\LocalFileStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\RemoteFileStoryboard.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\MainStoryboard_iPad.storyboard" />
+    <InterfaceDefinition Include="Resources\Base.lproj\CanvasViewController.storyboard" />
+    <InterfaceDefinition Include="Views\Components\DoneKeyboardAccessoryView.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Info.plist" />
+    <None Include="Entitlements.plist" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Utils\LogPlatform.cs" />
+    <Compile Include="Controllers\TopViewController.cs" />
+    <Compile Include="Controllers\TopViewController.designer.cs">
+      <DependentUpon>TopViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\TimerPlatform.cs" />
+    <Compile Include="Views\FieldTab\RootFieldView.cs" />
+    <Compile Include="Views\FieldTab\RootFieldView.designer.cs">
+      <DependentUpon>RootFieldView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\FieldTab\FieldMenuController.cs" />
+    <Compile Include="Controllers\FieldTab\FieldMenuController.designer.cs">
+      <DependentUpon>FieldMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Communication\CommunicationClient.cs" />
+    <Compile Include="Models\Communication\CommunicationClientFactory.cs" />
+    <Compile Include="Views\FileMenu\FileMenuView.cs" />
+    <Compile Include="Views\FileMenu\FileMenuView.designer.cs">
+      <DependentUpon>FileMenuView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\FileTab\FileMenuController.cs" />
+    <Compile Include="Controllers\FileTab\FileMenuController.designer.cs">
+      <DependentUpon>FileMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\FileTab\LocalFileMenuController.cs" />
+    <Compile Include="Controllers\FileTab\LocalFileMenuController.designer.cs">
+      <DependentUpon>LocalFileMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\MarkingTab\MarkingMenuController.cs" />
+    <Compile Include="Controllers\MarkingTab\MarkingMenuController.designer.cs">
+      <DependentUpon>MarkingMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\SettingsTab\SettingsViewController.cs" />
+    <Compile Include="Controllers\SettingsTab\SettingsViewController.designer.cs">
+      <DependentUpon>SettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Extentions\UIViewGonablizer.cs" />
+    <Compile Include="Views\Extentions\ViewGoner.cs" />
+    <Compile Include="Controllers\SettingsTab\AppInformationViewController.cs" />
+    <Compile Include="Controllers\SettingsTab\AppInformationViewController.designer.cs">
+      <DependentUpon>AppInformationViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Constants\BasePointSize.cs" />
+    <Compile Include="Models\Communication\CommunicationManager.cs" />
+    <Compile Include="Models\Preferences\PreferenceAccessor.cs" />
+    <Compile Include="Controllers\PickerViewController.cs" />
+    <Compile Include="Controllers\PickerViewController.designer.cs">
+      <DependentUpon>PickerViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Preview\CanvasInfo.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsInsertionController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsInsertionController.designer.cs">
+      <DependentUpon>CalendarSettingsInsertionController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Calendar\CalendarSettingsYearController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsYearController.designer.cs">
+      <DependentUpon>CalendarSettingsYearController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar\CalendarSettingsYmdCell.cs" />
+    <Compile Include="Views\Calendar\CalendarSettingsYmdCell.designer.cs">
+      <DependentUpon>CalendarSettingsYmdCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Calendar\CalendarSettingsViewController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsViewController.designer.cs">
+      <DependentUpon>CalendarSettingsViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Calendar\CalendarSettingsMonthController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsMonthController.designer.cs">
+      <DependentUpon>CalendarSettingsMonthController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Calendar\CalendarSettingsYmdDataContainer.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsDayController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsDayController.designer.cs">
+      <DependentUpon>CalendarSettingsDayController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\GestureFactory.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsShiftController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsShiftController.designer.cs">
+      <DependentUpon>CalendarSettingsShiftController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Calendar\CalendarSettingsYmdDataSource.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsMenuController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsMenuController.designer.cs">
+      <DependentUpon>CalendarSettingsMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\FileTab\RemoteFileMenuController.cs" />
+    <Compile Include="Controllers\FileTab\RemoteFileMenuController.designer.cs">
+      <DependentUpon>RemoteFileMenuController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EditboxDelegate\IEditBoxCellDelegate.cs" />
+    <Compile Include="Views\EditBox\PropertyEditBoxSource.cs" />
+    <Compile Include="Views\EditBox\PropertyEditBox.cs" />
+    <Compile Include="Views\EditBox\PropertyEditorTable.designer.cs">
+      <DependentUpon>PropertyEditBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBox\UITableViewCellIndexContainer.cs" />
+    <Compile Include="Models\EditboxDelegate\UpDownTextBoxCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\PivotCellSource.cs" />
+    <Compile Include="Views\EditBoxCells\UpDownTextBoxCell.cs" />
+    <Compile Include="Views\EditBoxCells\UpDownTextBoxCell.designer.cs">
+      <DependentUpon>UpDownTextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBoxCells\PivotCell.cs" />
+    <Compile Include="Views\EditBoxCells\PivotCell.designer.cs">
+      <DependentUpon>PivotCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBoxCells\ToggleSwitchCell.cs" />
+    <Compile Include="Views\EditBoxCells\ToggleSwitchCell.designer.cs">
+      <DependentUpon>ToggleSwitchCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EditboxDelegate\ToggleSwitchCellSource.cs" />
+    <Compile Include="Models\iOSEditBoxBuilder.cs" />
+    <Compile Include="Models\EditboxDelegate\TextBoxCellSource.cs" />
+    <Compile Include="Views\EditBoxCells\TextBoxCell.cs" />
+    <Compile Include="Views\EditBoxCells\TextBoxCell.designer.cs">
+      <DependentUpon>TextBoxCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\PickerViewControllerDelegate.cs" />
+    <Compile Include="Views\EditBoxCells\PreviewContextCell.cs" />
+    <Compile Include="Views\EditBoxCells\PreviewContextCell.designer.cs">
+      <DependentUpon>PreviewContextCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\FieldTab\FieldListViewController.cs" />
+    <Compile Include="Controllers\FieldTab\FieldListViewController.designer.cs">
+      <DependentUpon>FieldListViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\ControllerUtils.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsShiftsController.cs" />
+    <Compile Include="Controllers\Calendar\CalendarSettingsShiftsController.designer.cs">
+      <DependentUpon>CalendarSettingsShiftsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\StringTableSource.cs" />
+    <Compile Include="Views\Components\AlartTextFieldAgency.cs" />
+    <Compile Include="Views\Components\BorderButton.cs" />
+    <Compile Include="Views\Components\LoadingOverlay.cs" />
+    <Compile Include="Views\Components\NeverHiddenTextField.cs" />
+    <Compile Include="Views\Components\NeverHiddenTextField.designer.cs">
+      <DependentUpon>NeverHiddenTextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\MessageBox.cs" />
+    <Compile Include="Views\Components\UITransparentView.cs" />
+    <Compile Include="Views\Components\UITransparentView.designer.cs">
+      <DependentUpon>UITransparentView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\KeyboardClosableTextField.cs" />
+    <Compile Include="Views\Components\KeyboardClosableTextField.designer.cs">
+      <DependentUpon>KeyboardClosableTextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Components\MyTextField.cs" />
+    <Compile Include="Views\Components\MyTextField.designer.cs">
+      <DependentUpon>MyTextField.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utils\StringLocalizer.cs" />
+    <Compile Include="Constants\ValidationErrorExt.cs" />
+    <Compile Include="Controllers\Serial\SerialSettingsController.cs" />
+    <Compile Include="Controllers\Serial\SerialSettingsController.designer.cs">
+      <DependentUpon>SerialSettingsController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\Serial\SerialSettingsEditorController.cs" />
+    <Compile Include="Controllers\Serial\SerialSettingsEditorController.designer.cs">
+      <DependentUpon>SerialSettingsEditorController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBoxCells\EditBoxCell.cs" />
+    <Compile Include="Constants\FontModeExt.cs" />
+    <Compile Include="Constants\TouchCircleRadius.cs" />
+    <Compile Include="Controllers\EditBoxCell\EditBoxCellController.cs" />
+    <Compile Include="Views\EditBoxCells\IEditBoxCell.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\BoolToggleSwitchCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\DecimalUpDownTextboxCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\SemiConcretedUpDownTextBoxCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\ShortUpDownTextBoxCellSource.cs" />
+    <Compile Include="Models\EditBox\IEditBoxCommonDelegate.cs" />
+    <Compile Include="Models\EditBox\EmptyEditBoxCommonDelegate.cs" />
+    <Compile Include="Views\Calendar\CalendarSettingsShiftTableSource.cs" />
+    <Compile Include="Views\EditBoxCells\PickerViewCell.cs" />
+    <Compile Include="Views\EditBoxCells\PickerViewCell.designer.cs">
+      <DependentUpon>PickerViewCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EditboxDelegate\IPickerViewCellDelegate.cs" />
+    <Compile Include="Views\EditBoxCells\DropdownListCell.cs" />
+    <Compile Include="Views\EditBoxCells\DropdownListCell.designer.cs">
+      <DependentUpon>DropdownListCell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EditboxDelegate\DropdownListCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\IEditBoxInteractionDelegate.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\SemiConcretedDropdownListCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\ByteDropdownListCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\ShortDropdownListCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\DotCountDropdownListCellSource.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\TypeDropdownListCellSource.cs" />
+    <Compile Include="Views\EditBoxCells\TextBoxOptional.cs" />
+    <Compile Include="Views\EditBoxCells\TextBoxOptional.designer.cs">
+      <DependentUpon>TextBoxOptional.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Preview\CanvasDelegate.cs" />
+    <Compile Include="Views\UISpringView.cs" />
+    <Compile Include="Views\UISpringView.designer.cs">
+      <DependentUpon>UISpringView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Preview\iOSFieldManager.cs" />
+    <Compile Include="Models\Preview\Event\TapField.cs" />
+    <Compile Include="Models\Preview\Event\PanField.cs" />
+    <Compile Include="Models\Preview\Event\AddField.cs" />
+    <Compile Include="Extensions\CGPointExt.cs" />
+    <Compile Include="Controllers\Preview\PreviewViewController.cs" />
+    <Compile Include="Controllers\Preview\PreviewViewController.designer.cs">
+      <DependentUpon>PreviewViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FileMenu\FileMenuDismissedEvent.cs" />
+    <Compile Include="Models\Util\PathName.cs" />
+    <Compile Include="Extensions\LocalFilePathExt.cs" />
+    <Compile Include="Constants\PpgPath.cs" />
+    <Compile Include="Models\FileMenu\CommonFileMenuSource.cs" />
+    <Compile Include="Controllers\Preview\ConcreteFieldActionSource.cs" />
+    <Compile Include="Models\Util\Holder.cs" />
+    <Compile Include="Models\FileMenu\FileMenuActionSource.cs" />
+    <Compile Include="Controllers\Alert\RenameAlertBuilder.cs" />
+    <Compile Include="Controllers\Alert\SaveAsAlertBuilder.cs" />
+    <Compile Include="Controllers\Alert\SaveOverAlertBuilder.cs" />
+    <Compile Include="Controllers\Alert\FileControlSheetBuilder.cs" />
+    <Compile Include="Models\FileMenu\LocalFileMenuSource.cs" />
+    <Compile Include="Models\FileMenu\RemoteFileMenuSource.cs" />
+    <Compile Include="Views\Components\UIViewWithSeparator.cs" />
+    <Compile Include="Extensions\StringToNSStringExt.cs" />
+    <Compile Include="Extensions\UIViewExt.cs" />
+    <Compile Include="Views\EditBox\EditBoxScroller.cs" />
+    <Compile Include="Views\EditBox\EditBoxScroller.designer.cs">
+      <DependentUpon>EditBoxScroller.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Preview\Ruler\HorizontalRulerView.cs" />
+    <Compile Include="Views\Preview\Ruler\HorizontalRulerView.designer.cs">
+      <DependentUpon>HorizontalRulerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Preview\Ruler\VerticalRulerView.cs" />
+    <Compile Include="Views\Preview\Ruler\VerticalRulerView.designer.cs">
+      <DependentUpon>VerticalRulerView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Preview\Ruler\RulerInfo.cs" />
+    <Compile Include="Controllers\Preview\CanvasViewController.cs" />
+    <Compile Include="Controllers\Preview\CanvasViewController.designer.cs">
+      <DependentUpon>CanvasViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\MatrixExt.cs" />
+    <Compile Include="Views\EditBoxFrame\CellFrameView.cs" />
+    <Compile Include="Views\EditBoxFrame\CellFrameView.designer.cs">
+      <DependentUpon>CellFrameView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditBox\KeyboardManager.cs" />
+    <Compile Include="Models\Preview\Ruler\RulerInfoBuilder.cs" />
+    <Compile Include="Views\Preview\Canvas\CanvasView.cs" />
+    <Compile Include="Views\Preview\Canvas\CanvasView.designer.cs">
+      <DependentUpon>CanvasView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Preview\Canvas\FieldCanvas.cs" />
+    <Compile Include="Views\Preview\Canvas\PreviewAreaViewLayer.cs" />
+    <Compile Include="Views\Preview\Drawables\BypassDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\CircleDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\DataMatrixDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\EllipseDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\FieldDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\HorizontalTextDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\InnerArcTextDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\LineDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\OuterArcTextDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\QrCodeDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\RectangleDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\TriangleDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\XVerticalTextDrawable.cs" />
+    <Compile Include="Views\Preview\Drawables\YVerticalTextDrawable.cs" />
+    <Compile Include="Views\Preview\CanvasPresentationManager.cs" />
+    <Compile Include="Models\FieldStructure\iOSEditor.cs" />
+    <Compile Include="Models\FieldStructure\iOSFieldContext.cs" />
+    <Compile Include="Models\FieldStructure\iOSOwner.cs" />
+    <Compile Include="Models\EditBox\iOSEditBoxManager.cs" />
+    <Compile Include="Models\EditboxDelegate\CopyRemoveCellDelegate.cs" />
+    <Compile Include="Models\FieldSource\AutoSaveFieldSource.cs" />
+    <Compile Include="Models\FieldSource\FieldSource.cs" />
+    <Compile Include="Models\FieldSource\FieldSourceFromLocalFile.cs" />
+    <Compile Include="Models\FieldSource\FieldSourceFromNewest.cs" />
+    <Compile Include="Models\FieldSource\FieldSourceFromRemoteFile.cs" />
+    <Compile Include="Models\FileMenu\LocalFileManager.cs" />
+    <Compile Include="Views\Preview\DrawableFactory\VisitorOfiOSDrawableFactory.cs" />
+    <Compile Include="Views\Preview\DrawableFactory\iOSDrawableFactoryExt.cs" />
+    <Compile Include="Models\Util\AutoSaveManager.cs" />
+    <Compile Include="Models\FieldSource\AutoSaveFieldSourceFromRemoteFile.cs" />
+    <Compile Include="Views\Components\DoneKeyboardAccessoryView.cs" />
+    <Compile Include="Views\Components\DoneKeyboardAccessoryView.designer.cs">
+      <DependentUpon>DoneKeyboardAccessoryView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Extensions\UITextFieldExt.cs" />
+    <Compile Include="Views\Components\ImageButton.cs" />
+    <Compile Include="Models\EditboxDelegate\Concreted\LabeledDropdownListCellSource.cs" />
+    <Compile Include="Extensions\Cartesian2DExt.cs" />
+    <Compile Include="Views\Preview\CollisionsDrawable\ConvexHullDrawable.cs" />
+    <Compile Include="Views\Preview\CollisionsDrawable\CollisionDrawableFactory.cs" />
+    <Compile Include="Views\Preview\CollisionsDrawable\ICollisionDrawable.cs" />
+    <Compile Include="Views\Preview\CollisionsDrawable\EmptyCollisionDrawable.cs" />
+    <Compile Include="Views\Preview\CollisionsDrawable\CombinedCollisionDrawable.cs" />
+    <Compile Include="AppMode.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+    <Folder Include="Views\" />
+    <Folder Include="Resources\Fields\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Preview\" />
+    <Folder Include="Views\FieldMenu\" />
+    <Folder Include="Views\FieldTab\" />
+    <Folder Include="Models\Preview\" />
+    <Folder Include="Controllers\FieldTab\" />
+    <Folder Include="Models\Communication\" />
+    <Folder Include="Views\FileMenu\" />
+    <Folder Include="Controllers\FileTab\" />
+    <Folder Include="Controllers\MarkingTab\" />
+    <Folder Include="Controllers\SettingsTab\" />
+    <Folder Include="Views\Extentions\" />
+    <Folder Include="Models\Preferences\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Controllers\Calendar\" />
+    <Folder Include="Views\Calendar\" />
+    <Folder Include="Models\EditboxDelegate\" />
+    <Folder Include="Views\EditBox\" />
+    <Folder Include="Views\EditBoxCells\" />
+    <Folder Include="Models\EditBox\" />
+    <Folder Include="Resources\Base.lproj\" />
+    <Folder Include="Views\Components\" />
+    <Folder Include="Resources\Fields\single\" />
+    <Folder Include="Controllers\Serial\" />
+    <Folder Include="Controllers\EditBoxCell\" />
+    <Folder Include="Models\EditboxDelegate\Concreted\" />
+    <Folder Include="Models\Preview\Event\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Controllers\Preview\" />
+    <Folder Include="Models\FileMenu\" />
+    <Folder Include="Models\Util\" />
+    <Folder Include="Controllers\Alert\" />
+    <Folder Include="Views\Preview\Ruler\" />
+    <Folder Include="Models\Preview\Ruler\" />
+    <Folder Include="Views\EditBoxCells\Base\" />
+    <Folder Include="Views\EditBoxFrame\" />
+    <Folder Include="Views\Preview\Canvas\" />
+    <Folder Include="Views\Preview\Drawables\" />
+    <Folder Include="Models\FieldStructure\" />
+    <Folder Include="Models\FieldSource\" />
+    <Folder Include="Views\Preview\DrawableFactory\" />
+    <Folder Include="Resources\TabIcon\" />
+    <Folder Include="Views\Preview\CollisionsDrawable\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Fields\default-text-normal.ppg" />
+    <BundleResource Include="Resources\Fields\debug-all.ppg" />
+    <BundleResource Include="Resources\Fields\debug.ppg" />
+    <BundleResource Include="Resources\Fields\debug-text-vertical.ppg" />
+    <BundleResource Include="Resources\Fields\debugs.ppg" />
+    <BundleResource Include="Resources\Fields\VerticalX.ppg" />
+    <BundleResource Include="Resources\Fields\VerticalY.ppg" />
+    <BundleResource Include="Resources\Fields\Text.ppg" />
+    <BundleResource Include="Resources\Fields\ArcText.ppg" />
+    <BundleResource Include="Resources\Fields\debug-bypass.ppg" />
+    <BundleResource Include="Resources\Fields\Test.ppg" />
+    <BundleResource Include="Resources\ja.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\ja.lproj\MainStoryboard.strings" />
+    <BundleResource Include="Resources\ja.lproj\CalendarStoryboard.strings" />
+    <BundleResource Include="Resources\Base.lproj\Localizable.strings" />
+    <BundleResource Include="Resources\Base.lproj\MainStoryboard.strings" />
+    <BundleResource Include="Resources\Base.lproj\CalendarStoryboard.strings" />
+    <BundleResource Include="Resources\Fields\single\htext.ppg" />
+    <BundleResource Include="Resources\Fields\single\outerarctext.ppg" />
+    <BundleResource Include="Resources\Fields\single\yvert.ppg" />
+    <BundleResource Include="Resources\Fields\single\qrcode.ppg" />
+    <BundleResource Include="Resources\Base.lproj\SerialStoryboard.strings" />
+    <BundleResource Include="Resources\ja.lproj\SerialStoryboard.strings" />
+    <BundleResource Include="Resources\Base.lproj\MainStoryboard_iPad.strings" />
+    <BundleResource Include="Resources\Base.lproj\SettingsStoryboard.strings" />
+    <BundleResource Include="Resources\ja.lproj\SettingsStoryboard.strings" />
+    <BundleResource Include="Resources\ja.lproj\MainStoryboard_iPad.strings" />
+    <BundleResource Include="Resources\Base.lproj\DashboardStoryboard.strings" />
+    <BundleResource Include="Resources\ja.lproj\DashboardStoryboard.strings" />
+    <BundleResource Include="Resources\TabIcon\field%401x.png" />
+    <BundleResource Include="Resources\TabIcon\field%402x.png" />
+    <BundleResource Include="Resources\TabIcon\field%403x.png" />
+    <BundleResource Include="Resources\TabIcon\file%401x.png" />
+    <BundleResource Include="Resources\TabIcon\file%402x.png" />
+    <BundleResource Include="Resources\TabIcon\file%403x.png" />
+    <BundleResource Include="Resources\TabIcon\marking%401x.png" />
+    <BundleResource Include="Resources\TabIcon\marking%402x.png" />
+    <BundleResource Include="Resources\TabIcon\marking%403x.png" />
+    <BundleResource Include="Resources\TabIcon\preference%401x.png" />
+    <BundleResource Include="Resources\TabIcon\preference%402x.png" />
+    <BundleResource Include="Resources\TabIcon\preference%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\add.png" />
+    <BundleResource Include="Resources\icons\menu\blue\add%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\add%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\controller1.png" />
+    <BundleResource Include="Resources\icons\menu\blue\controller1%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\controller1%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\controller2.png" />
+    <BundleResource Include="Resources\icons\menu\blue\controller2%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\controller2%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\dashboard.png" />
+    <BundleResource Include="Resources\icons\menu\blue\dashboard%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\dashboard%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\delete.png" />
+    <BundleResource Include="Resources\icons\menu\blue\delete%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\delete%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\local.png" />
+    <BundleResource Include="Resources\icons\menu\blue\local%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\local%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\mbmode.png" />
+    <BundleResource Include="Resources\icons\menu\blue\mbmode%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\mbmode%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\origin.png" />
+    <BundleResource Include="Resources\icons\menu\blue\origin%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\origin%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\start.png" />
+    <BundleResource Include="Resources\icons\menu\blue\start%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\start%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\test.png" />
+    <BundleResource Include="Resources\icons\menu\blue\test%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\test%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\add.png" />
+    <BundleResource Include="Resources\icons\menu\gray\add%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\add%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\controller1.png" />
+    <BundleResource Include="Resources\icons\menu\gray\controller1%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\controller1%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\controller2.png" />
+    <BundleResource Include="Resources\icons\menu\gray\controller2%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\controller2%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\dashboard.png" />
+    <BundleResource Include="Resources\icons\menu\gray\dashboard%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\dashboard%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\delete.png" />
+    <BundleResource Include="Resources\icons\menu\gray\delete%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\delete%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\local.png" />
+    <BundleResource Include="Resources\icons\menu\gray\local%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\local%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\mbmode.png" />
+    <BundleResource Include="Resources\icons\menu\gray\mbmode%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\mbmode%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\origin.png" />
+    <BundleResource Include="Resources\icons\menu\gray\origin%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\origin%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\start.png" />
+    <BundleResource Include="Resources\icons\menu\gray\start%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\start%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\test.png" />
+    <BundleResource Include="Resources\icons\menu\gray\test%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\test%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\DataMatrix.png" />
+    <BundleResource Include="Resources\icons\menu\blue\DataMatrix%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\DataMatrix%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Pause.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Pause%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Pause%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\QRCode.png" />
+    <BundleResource Include="Resources\icons\menu\blue\QRCode%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\QRCode%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Restart.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Restart%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Restart%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Stop.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Stop%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Stop%403x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Text.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Text%402x.png" />
+    <BundleResource Include="Resources\icons\menu\blue\Text%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\DataMatrix.png" />
+    <BundleResource Include="Resources\icons\menu\gray\DataMatrix%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\DataMatrix%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Pause.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Pause%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Pause%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\QRCode.png" />
+    <BundleResource Include="Resources\icons\menu\gray\QRCode%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\QRCode%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Restart.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Restart%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Restart%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Stop.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Stop%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Stop%403x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Text.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Text%402x.png" />
+    <BundleResource Include="Resources\icons\menu\gray\Text%403x.png" />
+    <BundleResource Include="Resources\Base.lproj\RemoteFileStoryboard.strings" />
+    <BundleResource Include="Resources\ja.lproj\RemoteFileStoryboard.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants.csproj">
+      <Project>{E161979D-C149-4043-AABC-B21D42220D1D}</Project>
+      <Name>TokyoChokoku.MarkinBox.Sketchbook.SharedConstants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TokyoChokoku.MarkinBox.SB2\TokyoChokoku.MarkinBox.SB2.csproj">
+      <Project>{BC66A029-8A57-4ACB-BE86-067565BE5317}</Project>
+      <Name>TokyoChokoku.MarkinBox.SB2</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+</Project>

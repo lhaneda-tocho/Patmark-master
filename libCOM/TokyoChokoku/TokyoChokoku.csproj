@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wpa81+wp8</AssetTargetFallback>
+    <PackOnBuild>true</PackOnBuild>
+    <PackageId>TokyoChokoku.MarkinBox.Core</PackageId>
+    <PackageVersion>0.1</PackageVersion>
+    <Description>MarkinBox Root Layer</Description>
+    <DevelopmentDependency>true</DevelopmentDependency>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <NoStdLib>false</NoStdLib>
+    <DebugType></DebugType>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="EndianBitConverter" Version="1.1.0" />
+    <PackageReference Include="Sprache" Version="2.2.0" />
+    <PackageReference Include="NuGet.Build.Packaging" Version="0.2.2" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.0" />
+    <PackageReference Include="NLog" Version="4.7.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Log\" />
+    <Folder Include="CalendarModule\" />
+    <Folder Include="MarkinBox\" />
+    <Folder Include="CalendarModule\Replacement\" />
+    <Folder Include="FieldTextKit\" />
+    <Folder Include="CalendarModule\Ast\" />
+    <Folder Include="SerialModule\" />
+    <Folder Include="SerialModule\Ast\" />
+    <Folder Include="SerialModule\Counter\" />
+    <Folder Include="FieldModel\" />
+    <Folder Include="Text\" />
+    <Folder Include="FieldTextStreamer\" />
+    <Folder Include="WorkerThread\" />
+    <Folder Include="TaskUtil\" />
+  </ItemGroup>
+</Project>

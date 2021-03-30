@@ -1,0 +1,176 @@
+/* English */
+
+/*--------- Tanaka ---------*/
+
+/* Progress overlay */
+
+"Now in process." = "Now in process.";
+
+/* General dialog */
+
+"OK" = "OK";
+"Cancel" = "Cancel";
+"Back" = "Back";
+"Save" = "Save";
+"Save as" = "Save as";
+"Rename" = "Rename";
+"Edit name" = "Edit name";
+"Read" = "Retrieve";
+"Overwrite" = "Replace";
+"Clear" = "Clear";
+"Confirm" = "Done";
+"Error" = "Error";
+"Saved successfully." = "Saved successfully.";
+"Edited successfully." = "Edited successfully.";
+"Read successfully." = "Retrieved successfully.";
+"Choose your operation." = "Choose your operation.";
+
+/* Tabs */
+
+/* File */
+
+"ctrl-file-local.title" = "Local files";
+"ctrl-file-remote.title" = "Controller files";
+
+"Now loading files on flash memory." = "Now loading files on flash memory.";
+"File is empty." = "No files.";
+
+"Enter a file name." = "Enter a file name.";
+"This name is not available." = "Unable to use this file name.";
+"Failed to edit name." = "Failed replacing the name.";
+"An file has same name is already exists. Are you sure to overwrite?" = "The destination has already the same file name.\nDo you continue to replace?";
+
+"RemoteFileMenuController.ErrorMessageFormat" = "{0}, {1}, {2}, {3} and {4} are available.";
+"RemoteFileMenuController.Space" = "space";
+
+/* Field */
+
+"Copied on the same position." = "Copied on the same position.";
+"Clear the field" = "Clear the field";
+"Are you sure to clear this field?" = "Are you sure to clear this field?";
+"Clear all fields" = "Clear all fields";
+"Are you sure to clear all fields?" = "Are you sure to clear all fields?";
+
+"Text" = "Text";
+"MB Font" = "MB Font";
+"PC Font" = "PC Font";
+"X" = "X";
+"Y" = "Y";
+"Angle" = "Angle";
+"Pitch" = "Pitch";
+"Height" = "Height";
+"Aspect" = "Aspect";
+"Base Point" = "Reference Point";
+"Radius" = "Radius";
+"Time" = "Time";
+"Jogging" = "Jog";
+"Pause" = "Pause";
+"Speed" = "Speed";
+"Power" = "Force";
+"Mirror" = "Mirror";
+"DotCount" = "Dimension";
+"Bezier" = "Arc";
+"Type" = "Type";
+"Pivot" = "Pivot";
+"Other" = "Other";
+
+"ctrl-field-calendar.title" = "Calendar";
+"ctrl-field-serial.title" = "Serial";
+"ctrl-field-pivot-cw.title" = "Clockwise";
+"ctrl-field-pivot-ccw.title" = "Counterclockwise";
+"ctrl-field-preview-replication.title" = "Copy";
+"ctrl-field-preview-deletion.title" = "Delete";
+
+
+/* Marking */
+
+"Completed marking successfully." = "Completed marking successfully.";
+"Terminated marking abnormally." = "Terminated marking abnormally.";
+"Push the start button on the marking head." = "Push the start button on the marking head.";
+"Marking file is empty." = "No marking data.";
+"Failed to send marking file." = "Failed sending the marking file.";
+
+/* Preferences */
+
+"ctrl-preferences.title" = "Preferences";
+"ctrl-preferences-table-section-1.title" = "Application behavior";
+"ctrl-preferences-table-section-2.title" = "Other";
+
+"ctrl-preferences-models-segment-1.title" = "Administrator";
+"ctrl-preferences-models-segment-2.title" = "Operator";
+
+/* About this app */
+
+"ctrl-about-this-app.title" = "About this app";
+"ctrl-about-this-app-table-section-1.title" = "Version";
+"ctrl-about-this-app-table-section-2.title" = "Builder";
+
+/* Calendar */
+
+"ctrl-calendar-menu.title" = "Calendar";
+"ctrl-calendar-insertion.title" = "Put a symbol to text";
+"ctrl-calendar-shifts.title" = "Shift";
+"ctrl-calendar-shift.title" = "Shift";
+"ctrl-calendar-year.title" = "Year";
+"ctrl-calendar-month.title" = "Month";
+"ctrl-calendar-day.title" = "Day";
+
+/* Serial */
+
+"ctrl-serial-menu.title" = "Serial";
+
+"ctrl-serial-insertion.title" = "Put a symbol to text";
+
+"ctrl-serial-editor-formats-segment-1.title" = "0001";
+"ctrl-serial-editor-formats-segment-2.title" = "・・・1";
+"ctrl-serial-editor-formats-segment-3.title" = "1・・・";
+
+"ctrl-serial-editor-counter-clearing-conditions-segment-1.title" = "Max";
+"ctrl-serial-editor-counter-clearing-conditions-segment-2.title" = "Year";
+"ctrl-serial-editor-counter-clearing-conditions-segment-3.title" = "Month";
+"ctrl-serial-editor-counter-clearing-conditions-segment-4.title" = "Day";
+
+
+/*--------- Fukai ---------*/
+"validation.undefined" = "Found undefined error.";
+
+"validation.qr-code.invalid-character" = "Found disuse letter(s) in QR code.";
+"validation.qr-code.text-length-out-of-range" = "Found over the limit 80 letters.";
+
+"validation.data-matrix.invalid-character" = "Found disuse letter(s) in Data Matrix.";
+"validation.data-matrix.text-length-out-of-range" = "Found over the limit 80 letters.";
+
+"validation.common.text-length-out-of-range" = "Found over the limit 50 letters.";
+
+
+/* font title */
+"field-font.tc-font"  = "MB Font";
+"field-font.5x7-font" = "5x7 Font";
+"field-font.pc-font"  = "PC Font";
+"field-font.barcode"  = "2D code";
+
+/* ファイル名表記 */
+"file-category.autosave" = "Auto Save";
+"file-category.latest-marking-file" = "Latest Marking File";
+"file-category.local" = "Local";
+"file-category.remote" = "Controller";
+
+/* 設定 - ソレノイドの種類 */
+"ctrl-preferences-solenoid-type-0" = "Standard";
+"ctrl-preferences-solenoid-type-1" = "BSD";
+
+/* ナビゲーションバー / 戻るボタンの設定 */
+"navi.back" = "Back";
+
+/* wifi 接続できたが，他の端末が使用している状態 */
+"communication.excluded-me" = "This controller is used by another computer.";
+
+/* 通信開始 */
+"communication.start"="Starting communication";
+
+/* 通信終了 */
+"communication.terminate"="Terminating communication";
+
+/* 通信エラー */
+"communication.abort"="Failed communication{0}";
+

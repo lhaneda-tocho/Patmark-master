@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/actionsheet_retrieve"
+        android:background="@drawable/actionsheet_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_retrieve"
+        android:textSize="@dimen/action_sheet_button_textsize"
+        android:gravity="center"
+        android:layout_weight="1" />
+    <Button
+        android:id="@+id/actionsheet_replace"
+        android:background="@drawable/actionsheet_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_replace"
+        android:textSize="@dimen/action_sheet_button_textsize"
+        android:gravity="center"
+        android:layout_weight="1" />
+    <Button
+        android:id="@+id/actionsheet_rename"
+        android:background="@drawable/actionsheet_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_rename"
+        android:textSize="@dimen/action_sheet_button_textsize"
+        android:gravity="center"
+        android:layout_weight="1" />
+    <Button
+        android:id="@+id/actionsheet_clear"
+        android:background="@drawable/actionsheet_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/label_clear"
+        android:textSize="@dimen/action_sheet_button_textsize"
+        android:textColor="@android:color/holo_red_dark"
+        android:gravity="center"
+        android:layout_weight="1" />
+</LinearLayout>

@@ -1,0 +1,29 @@
+﻿<#@ include file="$(ProjectDir)/Template/Include/CommandTemplate.tt" #>
+<# GenerateHeader(); #>
+<# GenerateCommandExecutor(()=>{#>
+    // Read Commands
+<#
+   Generate(CommandLoad.File(ReadCommandFile), (cmd)=>{
+#>
+        public async Task<<#= cmd.ReturnValueClass #>> <#= cmd.Title #>(<#= cmd.GenArguments() #>)
+        {
+            Console.WriteLine("Core Command <#= cmd.Title #>");
+
+            // data
+            MemoryAddress address = <#= cmd.Address #>;
+            var           timeout = <#= cmd.Timeout #>;
+            var        retryCount = <#= cmd.NumOfRetry #>;
+            short        dataSize = <#= cmd.GenData(space: 36) #>;
+
+            var res = new <#= cmd.ReturnValueClass #>(await Read(
+                    new ReadingCommandBuilder(address, dataSize)
+                    .Build(timeout, retryCount, enableBeforeExcluding: enableBeforeExcluding)
+                    , address
+            ));
+
+<#  if(cmd.Delay > 0){ #>
+            await Task.Delay(<#= cmd.Delay #>);
+<#  } #>
+            return res;
+        }
+<#  }); });#>

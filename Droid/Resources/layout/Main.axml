@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:auto="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        auto:aspectRatio="1.00">
+        <TokyoChokoku.Patmark.Droid.Presenter.Ruler.RulerView
+            android:id="@+id/rulerView__"
+            android:background="#ffffff"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingTop="25pt"
+            android:paddingLeft="25pt">
+            <TokyoChokoku.Patmark.Droid.Presenter.FieldPreview.FieldPreView
+                android:id="@+id/fieldPreview__"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                auto:aspectRatio="1.00" />
+        </FrameLayout>
+    <!--<android.support.percent.PercentFrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </android.support.percent.PercentFrameLayout>-->
+    </TokyoChokoku.Patmark.Droid.Custom.FixedAspectFrameLayout>
+</LinearLayout>

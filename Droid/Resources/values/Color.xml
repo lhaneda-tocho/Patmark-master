@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <color name="patmark_main">#D95009</color>
+    <color name="patmark_sub">#666666</color>
+    <color name="patmark_suppressed">#7B7B81</color>
+</resources>

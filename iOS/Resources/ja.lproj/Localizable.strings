@@ -1,0 +1,148 @@
+/* Japanese */
+
+/* ================================================== */
+/* 一般 */
+/* ================================================== */
+
+"OK" = "OK";
+"Back" = "戻る";
+"Save" = "保存";
+"Cancel" = "キャンセル";
+"Fit"="合わせる";
+"Ignore"= "無視";
+"Apply"="適用";
+
+/* ================================================== */
+/* 機種 */
+/* ================================================== */
+"Patmark:80x20" = "Patmark plus";
+"Patmark:33x15" = "Patmark";
+"Patmark:15x15" = "Patmark mini";
+
+/* ================================================== */
+/* タイトル */
+/* ================================================== */
+
+"ctrl-settings.title" = "設定";
+"ctrl-settings-default-marking-parameter.title" = "打刻パラメータ";
+"ctrl-files.title" = "ファイル";
+"ctrl-file-local.title" = "ローカルファイル";
+"ctrl-file-remote.title" = "Patmarkファイル";
+
+/* ================================================== */
+/* 画面 */
+/* ================================================== */
+
+
+/* ファイル */
+
+"Save as" = "名前をつけて保存";
+"Overwrite" = "保存/上書き";
+"Rename" = "名前の変更";
+"Delete" = "削除";
+"Read" = "読込み";
+"Confirm" = "確認";
+"File name" = "ファイル名";
+"Enter a file name." = "ファイル名を入力してください。";
+"An file has same name is already exists. Are you sure to overwrite?" = "同じ名前のファイルがあります。上書きしますか？";
+"msg_serialField_writeFileSelectorLocal" = "シリアルが含まれているファイルは、ローカルには保存できません。";
+
+
+/* このアプリについて */
+
+/*
+"ctrl-about-this-app.title" = "このアプリについて";
+"ctrl-about-this-app-table-section-1.title" = "バージョン";
+"ctrl-about-this-app-table-section-2.title" = "製造元";
+*/
+
+
+/* ================================================== */
+/* フィールドタイプ */
+/* ================================================== */
+
+"FieldTypeName_Text" = "テキスト";
+"FieldTypeName_OuterArcText" = "テキスト（外円弧）";
+"FieldTypeName_InnerArcText" = "テキスト（内円弧）";
+"FieldTypeName_XVerticalText" = "縦書きテキスト（X方向）";
+"FieldTypeName_YVerticalText" = "縦書きテキスト（Y方向）";
+"FieldTypeName_QrCode" = "QRコード";
+"FieldTypeName_DataMatrix" = "データマトリクス";
+"FieldTypeName_Rectangle" = "矩形";
+"FieldTypeName_Circle" = "円";
+"FieldTypeName_Line" = "線";
+"FieldTypeName_Ellipse" = "楕円";
+"FieldTypeName_Triangle" = "三角";
+"FieldTypeName_Bypass" = "バイパス";
+"FieldTypeName_Unknown" = "不明";
+
+
+/* ================================================== */
+/* ファイルの出処 */
+/* ================================================== */
+
+"file-category.autosave" = "自動保存";
+"file-category.latest-marking-file" = "最新打刻ファイル";
+"file-category.local" = "ローカル";
+"file-category.remote" = "Patmark";
+
+
+/* ================================================== */
+/* メッセージ */
+/* ================================================== */
+
+/* 通信 */
+
+"communication.required"="Patmarkに接続してください。";
+"communication.excluded-me" = "他のデバイスがこのPatmarkを使用しています。";
+"communication.start"="通信を開始します";
+"communication.terminate"="通信を終了します";
+"There is no response from the Patmark. Check the connection." = "Patmarkとうまく通信できませんでした。接続を確認してください。";
+"Protected to send." = "打刻中は打刻データを送信できません。";
+"Protected to communicate." = "打刻中はファイルを送受信できません。";
+
+/* 打刻 */
+
+"Push the start button on the marking head." = "Patmarkの起動ボタンで打刻開始します。";
+"Marking file is empty." = "打刻データがありません。";
+"Failed to send marking file." = "打刻データを送信できませんでした。";
+"FontError" = "\"{0}\" のフォントがPatmarkにありません。PC版ソフトからフォントデータをインストールしてください。";
+
+/* ファイル */
+
+"Cleared successfully." = "削除しました。";
+"Saved successfully." = "保存しました。";
+"Edited successfully." = "変更しました。";
+"Read successfully." = "読込みました。";
+"Choose your operation." = "選択してください。";
+
+"File is empty." = "ファイルが空です。";
+"The file was cleared." = "プレビューをクリアしました。";
+
+"This name is not available." = "ファイル名に使用できない文字があります。";
+"This file was created in advance mode and can not be edited." = "Patmarkファイルは編集できません。";
+
+/* 設定 */
+"Machine model no."="機種";
+"Choose machine model no."="機種を選択してください。";
+
+"Change of machine model" = "確認";
+"Do you change machine model?" = "打刻領域が異なる機種と接続しました。プレビューの大きさをこの機種に合わせますか。";
+
+"RemoteFileMenuController.ErrorMessage" = "{0}, {1}, {2}, {3} または {4} の半角文字のみ入力可能です。";
+"RemoteFileMenuController.Space" = "スペース";
+
+"appsetting.preference.fail_to_hold" = "機種設定の保存に失敗しました。";
+"appsetting.controller.fail_to_check" = "接続された機種の確認に失敗しました。";
+"appsetting.controller.different" = "接続中のデバイスは、現在の設定とは異なるモデルです。";
+
+/* ================================================== */
+/* 処理中オーバーレイ */
+/* ================================================== */
+
+"Now in process." = "処理中です。";
+
+
+
+/* Validation */
+"validation.on_text_sizes_too_large" = "文字の大きさを {0}mm 以下にしてください。";

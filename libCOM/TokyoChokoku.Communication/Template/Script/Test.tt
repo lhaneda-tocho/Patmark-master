@@ -1,0 +1,11 @@
+﻿<#@ include file="$(ProjectDir)/Template/Include/CommandTemplate.tt" #>
+// ProjectDir = <#= ProjectDir #>
+// (Write)    = <#= WriteCommandFile #>
+// (Read )    = <#= ReadCommandFile  #>
+<# GenerateHeader(); #>
+    // Tango Chan
+<# GenerateCommandExecutor(()=>{#>
+<#   Generate(CommandLoad.File(ReadCommandFile), (cmd)=>{#>
+    // public async Task<<#= cmd.ReturnValueClass #>> <#= cmd.Title #>(<#= cmd.GenArguments() #>)
+<#   });#>
+<# }); #>

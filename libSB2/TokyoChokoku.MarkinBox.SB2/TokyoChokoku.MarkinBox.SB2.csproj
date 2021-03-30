@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssetTargetFallback>$(AssetTargetFallback);portable-net45+win8+wpa81+wp8</AssetTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="csharp-monad" Version="1.0.1" />
+    <PackageReference Include="MathNet.Numerics" Version="4.9.0" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.7.0" />
+    <PackageReference Include="Sprache" Version="2.2.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants\TokyoChokoku.MarkinBox.Sketchbook.SharedConstants.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\IO\Wrapper\TemplateWrappers.designer.cs">
+      <DependentUpon>..\..\..\..\Models\IO\Wrapper\TemplateWrappers.tt</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="FieldList.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>FieldList.designer.txt</LastGenOutput>
+    </None>
+    <None Update="FieldList.designer.txt">
+      <DependentUpon>FieldList.tt</DependentUpon>
+    </None>
+    <None Update="Global.ttinclude">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Global.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Calendar\Stores\CalendarStores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CalendarStores.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Communication\TemplateCommands.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateCommands.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Field\TemplateField.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateField.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\FieldVisitor\CommonFieldVisitor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CommonFieldVisitor.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\FieldVisitor\IFieldVIsitor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IFieldVIsitor.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\FieldVisitor\IMutableFieldVisitor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IMutableFieldVisitor.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Parameter\TemplateBaseParameter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateBaseParameter.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Parameter\TemplateMutableParameter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateMutableParameter.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Parameter\TemplateParameter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateParameter.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Properties\Stores\Stores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Stores.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateGeometryValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateGeometryValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateMarkingPropertyValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateMarkingPropertyValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateMarkupTextValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateMarkupTextValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldUtilizer\TextStoreCollector.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextStoreCollector.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\IO\Factory\TemplateFieldFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateFieldFactory.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\IO\Text\MBDataTextizerTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MBDataTextizerTemplate.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\IO\Wrapper\TemplateWrappers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateWrappers.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Serial\Connections\SerialConnections.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerialConnections.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Serial\Stores\SerialStores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerialStores.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Calendar\Stores\CalendarStores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CalendarStores.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Communication\TemplateCommands.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateCommands.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Field\TemplateField.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateField.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\FieldVisitor\CommonFieldVisitor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CommonFieldVisitor.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\FieldVisitor\IFieldVIsitor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IFieldVIsitor.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\FieldVisitor\IMutableFieldVisitor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>IMutableFieldVisitor.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Parameter\TemplateBaseParameter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateBaseParameter.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Parameter\TemplateMutableParameter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateMutableParameter.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Parameter\TemplateParameter.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateParameter.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Properties\Stores\Stores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Stores.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateGeometryValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateGeometryValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateMarkingPropertyValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateMarkingPropertyValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateMarkupTextValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateMarkupTextValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldStructure\Validator\TemplateValidator.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateValidator.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\FieldUtilizer\TextStoreCollector.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TextStoreCollector.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\IO\Factory\TemplateFieldFactory.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateFieldFactory.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\IO\Text\MBDataTextizerTemplate.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>MBDataTextizerTemplate.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\IO\Wrapper\TemplateWrappers.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>TemplateWrappers.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Serial\Connections\SerialConnections.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerialConnections.designer.cs</LastGenOutput>
+    </None>
+    <None Update="Models\Serial\Stores\SerialStores.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SerialStores.designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Models\IO\Wrapper\TemplateWrappers.designer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Global.cs">
+      <DependentUpon>Global.ttinclude</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Calendar\Stores\CalendarStores.designer.cs">
+      <DependentUpon>..\..\..\..\Models\Calendar\Stores\CalendarStores.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Communication\TemplateCommands.designer.cs">
+      <DependentUpon>..\..\..\Models\Communication\TemplateCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Field\TemplateField.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Field\TemplateField.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\FieldVisitor\CommonFieldVisitor.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\FieldVisitor\CommonFieldVisitor.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\FieldVisitor\IFieldVIsitor.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\FieldVisitor\IFieldVIsitor.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\FieldVisitor\IMutableFieldVisitor.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\FieldVisitor\IMutableFieldVisitor.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Parameter\TemplateBaseParameter.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Parameter\TemplateBaseParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Parameter\TemplateMutableParameter.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Parameter\TemplateMutableParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Parameter\TemplateParameter.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Parameter\TemplateParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Properties\Stores\Stores.designer.cs">
+      <DependentUpon>..\..\..\..\..\Models\FieldStructure\Properties\Stores\Stores.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateGeometryValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateGeometryValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateMarkingPropertyValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateMarkingPropertyValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateMarkupTextValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateMarkupTextValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldUtilizer\TextStoreCollector.designer.cs">
+      <DependentUpon>..\..\..\Models\FieldUtilizer\TextStoreCollector.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\IO\Factory\TemplateFieldFactory.designer.cs">
+      <DependentUpon>..\..\..\..\Models\IO\Factory\TemplateFieldFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\IO\Text\MBDataTextizerTemplate.designer.cs">
+      <DependentUpon>..\..\..\..\Models\IO\Text\MBDataTextizerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Serial\Connections\SerialConnections.designer.cs">
+      <DependentUpon>..\..\..\..\Models\Serial\Connections\SerialConnections.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Serial\Stores\SerialStores.designer.cs">
+      <DependentUpon>..\..\..\..\Models\Serial\Stores\SerialStores.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Calendar\Stores\CalendarStores.designer.cs">
+      <DependentUpon>..\..\..\..\Models\Calendar\Stores\CalendarStores.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Communication\TemplateCommands.designer.cs">
+      <DependentUpon>..\..\..\Models\Communication\TemplateCommands.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Field\TemplateField.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Field\TemplateField.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\FieldVisitor\CommonFieldVisitor.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\FieldVisitor\CommonFieldVisitor.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\FieldVisitor\IFieldVIsitor.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\FieldVisitor\IFieldVIsitor.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\FieldVisitor\IMutableFieldVisitor.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\FieldVisitor\IMutableFieldVisitor.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Parameter\TemplateBaseParameter.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Parameter\TemplateBaseParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Parameter\TemplateMutableParameter.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Parameter\TemplateMutableParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Parameter\TemplateParameter.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Parameter\TemplateParameter.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Properties\Stores\Stores.designer.cs">
+      <DependentUpon>..\..\..\..\..\Models\FieldStructure\Properties\Stores\Stores.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateGeometryValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateGeometryValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateMarkingPropertyValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateMarkingPropertyValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateMarkupTextValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateMarkupTextValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldStructure\Validator\TemplateValidator.designer.cs">
+      <DependentUpon>..\..\..\..\Models\FieldStructure\Validator\TemplateValidator.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\FieldUtilizer\TextStoreCollector.designer.cs">
+      <DependentUpon>..\..\..\Models\FieldUtilizer\TextStoreCollector.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\IO\Factory\TemplateFieldFactory.designer.cs">
+      <DependentUpon>..\..\..\..\Models\IO\Factory\TemplateFieldFactory.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\IO\Text\MBDataTextizerTemplate.designer.cs">
+      <DependentUpon>..\..\..\..\Models\IO\Text\MBDataTextizerTemplate.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Serial\Connections\SerialConnections.designer.cs">
+      <DependentUpon>..\..\..\..\Models\Serial\Connections\SerialConnections.tt</DependentUpon>
+    </Compile>
+    <Compile Update="Models\Serial\Stores\SerialStores.designer.cs">
+      <DependentUpon>..\..\..\..\Models\Serial\Stores\SerialStores.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Extension\" />
+    <Folder Include="Libs\" />
+    <Folder Include="Models\" />
+    <Folder Include="Utils\" />
+    <Folder Include="AvailableCharacters\" />
+  </ItemGroup>
+</Project>
