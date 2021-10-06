@@ -1,0 +1,148 @@
+/* Japanese */
+
+/* ================================================== */
+/* 一般 */
+/* ================================================== */
+
+"OK" = "OK";
+"Back" = "Geri";
+"Save" = "Kaydet";
+"Cancel" = "İptal";
+"Fit"="Sığdır";
+"Ignore"= "Yoksay";
+"Apply"="Uygula";
+
+/* ================================================== */
+/* 機種 */
+/* ================================================== */
+"Patmark:80x20" = "Patmark plus";
+"Patmark:33x15" = "Patmark";
+"Patmark:15x15" = "Patmark mini";
+
+/* ================================================== */
+/* タイトル */
+/* ================================================== */
+
+"ctrl-settings.title" = "Ayarlar";
+"ctrl-settings-default-marking-parameter.title" = "Markalama parametreleri";
+"ctrl-files.title" = "Dosya";
+"ctrl-file-local.title" = "Lokal dosya";
+"ctrl-file-remote.title" = "Patmark dosyası";
+
+/* ================================================== */
+/* 画面 */
+/* ================================================== */
+
+
+/* ファイル */
+
+"Save as" = "Farklı kaydet";
+"Overwrite" = "Değiştir";
+"Rename" = "Yeniden adlandır";
+"Delete" = "Sil";
+"Read" = "Getir";
+"Confirm" = "Onay";
+"File name" = "Dosya adı";
+"Enter a file name." = "Dosya adı giriniz";
+"An file has same name is already exists. Are you sure to overwrite?" = "Aynı isimli dosya bulundu. Değiştirmek istiyormusunuz?";
+"msg_serialField_writeFileSelectorLocal" = "Bu dosya seri içerir ve lokal olarak kaydedilemez.";
+
+
+/* このアプリについて */
+
+/*
+"ctrl-about-this-app.title" = "App Hakkında";
+"ctrl-about-this-app-table-section-1.title" = "Sürüm";
+"ctrl-about-this-app-table-section-2.title" = "Geliştirici";
+*/
+
+
+/* ================================================== */
+/* フィールドタイプ */
+/* ================================================== */
+
+"FieldTypeName_Text" = "Yazı";
+"FieldTypeName_OuterArcText" = "Dışbükey yazı";
+"FieldTypeName_InnerArcText" = "İçbükey yazı";
+"FieldTypeName_XVerticalText" = "X Dikey yazı";
+"FieldTypeName_YVerticalText" = "Y dikey yazı";
+"FieldTypeName_QrCode" = "QR kod";
+"FieldTypeName_DataMatrix" = "Data matrix";
+"FieldTypeName_Rectangle" = "Dikdörtgen";
+"FieldTypeName_Circle" = "Daire";
+"FieldTypeName_Line" = "Çizgi";
+"FieldTypeName_Ellipse" = "Oval";
+"FieldTypeName_Triangle" = "Üçgen";
+"FieldTypeName_Bypass" = "Bypass";
+"FieldTypeName_Unknown" = "Bilinmeyen";
+
+
+/* ================================================== */
+/* ファイルの出処 */
+/* ================================================== */
+
+"file-category.autosave" = "Otomatik Kaydet";
+"file-category.latest-marking-file" = "En son markalama datası";
+"file-category.local" = "Lokal";
+"file-category.remote" = "Patmark";
+
+
+/* ================================================== */
+/* メッセージ */
+/* ================================================== */
+
+/* 通信 */
+
+"communication.required"="Lütfen Patmark cihazına bağlanın.";
+"communication.excluded-me" = "Şuanda başka bir cihaz bağlı.";
+"communication.start"="Bağlantı kuruluyor.";
+"communication.terminate"="Bağlantı sonlandırılıyor.";
+"There is no response from the Patmark. Check the connection." = "Patmark ile iletişim kurulamıyor. Bağlantıyı kontrol edin.";
+"Protected to send." = "Markalama işlemi devam ederken veri gönderilemez.";
+"Protected to communicate." = "Markalama işlemi devam ederken dosya açma ve kaydetme yapılamaz.";
+
+/* 打刻 */
+
+"Push the start button on the marking head." = "Patmark üzerinde start butonuna basın.";
+"Marking file is empty." = "Markalama datası yok.";
+"Failed to send marking file." = "Markalama datası gönderilemedi.";
+"FontError" = "\"{0}\" fontu bulunamadı, lütfen PC yazılımından font yükleyin.";
+
+/* ファイル */
+
+"Cleared successfully." = "Temizlendi";
+"Saved successfully." = "Kaydedildi";
+"Edited successfully." = "Düzenleme başarılı";
+"Read successfully." = "Açıldı";
+"Choose your operation." = "İşleminizi seçin";
+
+"File is empty." = "Markalama datası yok.";
+"The file was cleared." = "Önizleme verileri temizlendi.";
+
+"This name is not available." = "Dosya adında kullanılamaz karakter bulundu.";
+"This file was created in advance mode and can not be edited." = "Patmark dosyası düzenlenemedi.";
+
+/* 設定 */
+"Machine model no."="Makine modeli";
+"Choose machine model no."="Makine modeli seçiniz.";
+
+"Change of machine model" = "Onay";
+"Do you change machine model?" = "Bağlı makinenin farklı bir markalama alanı var. Makine ile uygun bir markalama alanı uyguluyor musunuz?";
+
+"RemoteFileMenuController.ErrorMessage" = "{0}, {1}, {2}, {3} ve {4} uygun.";
+"RemoteFileMenuController.Space" = "Boşluk";
+
+"appsetting.preference.fail_to_hold" = "Bu cihazda makine modeli kaydedilemedi.";
+"appsetting.controller.fail_to_check" = "Bağlı makine modeli kontrol edilemedi.";
+"appsetting.controller.different" = "Bağlı cihaz, mevcut ayarlarla farklı bir modeldir.";
+
+/* ================================================== */
+/* 処理中オーバーレイ */
+/* ================================================== */
+
+"Now in process." = "Şimdi işleniyor.";
+
+
+
+/* Validation */
+"validation.on_text_sizes_too_large" = "Karakter yüksekliğini {0}mm'nin altına ayarlayın.";

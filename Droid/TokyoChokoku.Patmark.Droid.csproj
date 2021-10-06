@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>TokyoChokoku.Patmark.Droid</RootNamespace>
     <AssemblyName>TokyoChokoku.Patmark.Droid</AssemblyName>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -256,6 +256,12 @@
     <Folder Include="Models\KeyValueStore\" />
     <Folder Include="ProgressAPIAndroid\" />
     <Folder Include="MachineModelExt\" />
+    <Folder Include="Resources\values-de\" />
+    <Folder Include="Resources\values-es\" />
+    <Folder Include="Resources\values-ko\" />
+    <Folder Include="Resources\values-pt\" />
+    <Folder Include="Resources\values-tr\" />
+    <Folder Include="Resources\values-zh-rCN\" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\button_border.xml" />
@@ -335,6 +341,18 @@
     <AndroidResource Include="Resources\layout\EmbossmentFieldListUI.axml" />
     <AndroidResource Include="Resources\layout\FieldList.axml" />
     <AndroidResource Include="Resources\layout\ProgressDialog.axml" />
+    <AndroidResource Include="Resources\values-de\Strings.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values-es\Strings.xml">
+      <SubType></SubType>
+      <Generator></Generator>
+    </AndroidResource>
+    <AndroidResource Include="Resources\values-ko\Strings.xml" />
+    <AndroidResource Include="Resources\values-pt\Strings.xml" />
+    <AndroidResource Include="Resources\values-tr\Strings.xml" />
+    <AndroidResource Include="Resources\values-zh-rCN\Strings.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets" Condition="Exists('..\packages\NETStandard.Library.2.0.3\build\netstandard2.0\NETStandard.Library.targets')" />

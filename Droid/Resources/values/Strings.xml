@@ -47,7 +47,7 @@
 
     <!-- file action -->
     <string name="label_saveas">Save as</string>
-    <string name="label_replace">Replace</string>
+    <string name="label_replace">Replace/Save</string>
     <string name="label_rename">Rename</string>
     <string name="label_clear">Delete</string>
     <string name="label_retrieve">Retrieve</string>
@@ -66,6 +66,7 @@
         <item>AppVersion       | App version</item>
         <item>RomVersion       | ROM version</item>
         <item>MachineModel     | Machine Model</item>
+        <item>AppInfo       | App Info</item>
     </string-array>
 
     <!-- 設定 -->

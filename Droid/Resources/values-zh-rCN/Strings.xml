@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="save">保存</string>
+    <string name="cancel">取消</string>
+    <string name="fit">对齐</string>
+    <string name="ignore">忽略</string>
+    <string name="apply">应用</string>
+
+    <!-- titles -->
+    <string name="fieldEditorActivity_name">输入文本</string>
+    <string name="embossmentActivity_name">预览</string>
+    <string name="settingsActivity_name">设置</string>
+    <string name="defaultMarkingParameterActivity_name">打刻参数</string>
+    <string name="fileCategorySelectionActivity_name">文件</string>
+    <string name="localFileMenuActivity_name">本地文件</string>
+    <string name="remoteFileMenuActivity_name">Patmark文件</string>
+
+    <!-- 機種 -->
+    <string name="patmark_80x20">Patmark plus</string>
+    <string name="patmark_33x15">Patmark</string>
+    <string name="patmark_15x15">Patmark mini</string>
+    
+    <!-- labels --> 
+    <string name="label_textSize">字符大小</string>
+    <string name="label_force">打刻力度</string>
+    <string name="label_quality">质量</string>
+
+    <string name="label_clear_preview_file">清除</string>
+    <string name="label_files">文件</string>
+    <string name="label_settings">设置</string>
+    <string name="label_wifi">Wifi</string>
+
+    <string name="label_reload">重新读取</string>
+    
+    <string name="label_changeOfMachineModel">确认</string>
+
+    <!-- message -->
+    <string name="label_doYouChangeMachineModel">和打刻区域不同的机型连接了。预览的大小是否适合此机型。</string>
+
+    <!-- ファイルメニュー -->
+    <string name="label_file_menu_local">本地文件</string>
+    <string name="label_file_menu_remote">Patmark文件</string>
+    <string name="label_file_menu_latest">读取最新打刻数据</string>
+    <string name="msg_serialField_writeFileSelectorLocal">含有序列号的文件无法在本地文件保存</string>
+
+    <string name="RemoteFileMenuDialogManager_ErrorMessage">只能输入{0}、{1}、{2}、{3}或{4}的半角字符。</string>  
+    <string name="RemoteFileMenuDialogManager_Space">空格</string>
+
+    <!--  file action  -->
+    <string name="label_saveas">另存为</string>
+    <string name="label_replace">保存/覆盖</string>
+    <string name="label_rename">重命名</string>
+    <string name="label_clear">删除</string>
+    <string name="label_retrieve">读取</string>
+    <string name="message_saveas">请输入文件名</string>
+    <string name="message_editName">请输入文件名</string>
+    <string name="hint_saveas_textField">文件名</string>
+    <string name="label_saveOverCheck">有同名文件</string>
+    <string name="message_saveOverCheck">是否覆盖</string>
+
+<!-- 設定の選択肢 -->
+    <string-array name="settings_menu">
+        <item>MarkingParameter | 打刻参数</item>
+        <item>AppVersion       | 应用版本</item>
+        <item>RomVersion       | ROM版本</item>
+        <item>MachineModel     | 机型</item>
+        <item>AppInfo       | 应用信息</item>
+    </string-array>
+
+    <!-- 設定 -->
+    <string name="label_machine_model_no_title">机型</string>
+    <string name="label_machine_model_no_message">请选择机型</string>
+
+    
+<!-- ロード済みファイルの種類 -->
+    <string name="file_source_label_local">本地文件</string>
+    <string name="file_source_label_remote">Patmark文件</string>
+    <string name="file_source_label_latest">最新打刻文件</string>
+
+
+    <!--
+    フィールドタイプ
+    -->
+
+    <string name="FieldTypeName_Text">文本</string>
+    <string name="FieldTypeName_OuterArcText">文本（外圆弧）</string>
+    <string name="FieldTypeName_InnerArcText">文本（内圆弧）</string>
+    <string name="FieldTypeName_XVerticalText">纵向文本（X方向）</string>
+    <string name="FieldTypeName_YVerticalText">纵向文本（Y方向）</string>
+    <string name="FieldTypeName_QrCode">二维码</string>
+    <string name="FieldTypeName_DataMatrix">数据矩阵</string>
+    <string name="FieldTypeName_Rectangle">矩形</string>
+    <string name="FieldTypeName_Circle">圆</string>
+    <string name="FieldTypeName_Line">线</string>
+    <string name="FieldTypeName_Ellipse">椭圆</string>
+    <string name="FieldTypeName_Triangle">三角</string>
+    <string name="FieldTypeName_Bypass">旁路</string>
+    <string name="FieldTypeName_Unknown">未知</string>
+
+    
+    <!--
+    Toast
+    -->
+
+    <!-- 通信 -->
+    <string name="toast_communication_required">请连接Patmark。</string>
+    <string name="toast_communication_excluded_me">其他设备正在使用这个Partmark。</string>
+    <string name="toast_communication_started">开始通信</string>
+    <string name="toast_communication_terminated">结束通信</string>
+    <string name="toast_communication_timed_out">没能和Partmark顺利通信。请确认连接。</string>
+    <string name="toast_font_error">\“{0}\”的字体不在Partmark中。请从PC版软件安装字体数据。</string>
+    <string name="toast_send_protected">打时不能发送打刻数据。</string>
+    <string name="toast_communication_protected">打刻时不能收发文件。</string>
+
+    <!-- 打刻 -->
+    <!--<string name="toast_marking_succeed">打刻が完了しました。</string>-->
+    <!--<string name="toast_marking_failed">打刻が異常終了しました。</string>-->
+    <string name="toast_ready_to_mark">用Partmark的启动按钮开始打刻。</string>
+    <string name="toast_marking_file_is_empty">没有打刻数据</string>
+    <string name="toast_failed_to_send_marking_file">无法发送打刻数据</string>
+
+    <!-- ファイル編集 -->
+    <string name="toast_cleared">已删除</string>
+    <string name="toast_saved">已保存</string>
+    <string name="toast_edited">已变更</string>
+    <string name="toast_read">已读取</string>
+    <string name="toast_failed_to_clear">无法删除</string>
+    <string name="toast_failed_to_save">无法保存</string>
+    <string name="toast_failed_to_edit">无法更改</string>
+    <string name="toast_failed_to_read">不能读取</string>
+
+    <string name="toast_file_is_empty">没有打刻数据</string>
+    <string name="toast_current_file_cleared">已清除预览</string>
+
+    <string name="toast_invalidFileName">有些字符不能用于文件名</string>
+    <string name="toast_advance_mode_file_can_not_be_edited">无法编辑Partmark文件</string>
+
+    <!-- 設定 -->
+    <string name="toast_appsetting_controller_fail_to_hold">机型设置保存失败</string>
+    <string name="toast_appsetting_controller_fail_to_check">确认连接的机型失败</string>
+    <string name="toast_appsetting_controller_different">连接中的设备是与当前设置不同的型号</string>
+    
+    <!-- バリデーション -->
+    <string name="toast_validation_on_text_sizes_too_large">请将文字的大小设置为{0}mm以下</string>
+
+    <!--
+    処理中オーバーレイ
+    -->
+
+    <string name="overlay_now_processing">处理中</string>    
+
+</resources>

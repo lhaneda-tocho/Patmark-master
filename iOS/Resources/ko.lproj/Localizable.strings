@@ -1,0 +1,148 @@
+/* Japanese */
+
+/* ================================================== */
+/* 一般 */
+/* ================================================== */
+
+"OK" = "OK";
+"Back" = "돌아 가기";
+"Save" = "저장";
+"Cancel" = "취소";
+"Fit"="적합";
+"Ignore"= "무시";
+"Apply"="적용";
+
+/* ================================================== */
+/* 機種 */
+/* ================================================== */
+"Patmark:80x20" = "Patmark plus";
+"Patmark:33x15" = "Patmark";
+"Patmark:15x15" = "Patmark mini";
+
+/* ================================================== */
+/* タイトル */
+/* ================================================== */
+
+"ctrl-settings.title" = "설정";
+"ctrl-settings-default-marking-parameter.title" = "마킹 파라미터";
+"ctrl-files.title" = "파일";
+"ctrl-file-local.title" = "로컬 파일";
+"ctrl-file-remote.title" = "Patmark 파일";
+
+/* ================================================== */
+/* 画面 */
+/* ================================================== */
+
+
+/* ファイル */
+
+"Save as" = "다른 이름으로 저장";
+"Overwrite" = "덮어쓰기";
+"Rename" = "이름 바꾸기";
+"Delete" = "삭제";
+"Read" = "읽기";
+"Confirm" = "확인";
+"File name" = "파일 이름";
+"Enter a file name." = "파일 이름을 입력하십시오.";
+"An file has same name is already exists. Are you sure to overwrite?" = "동일한 이름의 파일이 있습니다. 계속 교체하시겠습니까?";
+"msg_serialField_writeFileSelectorLocal" = "이 파일에는 일련 번호가 포함되어 있으며 로컬에 저장할 수 없습니다.";
+
+
+/* このアプリについて */
+
+/*
+"ctrl-about-this-app.title" = "앱 정보";
+"ctrl-about-this-app-table-section-1.title" = "버전";
+"ctrl-about-this-app-table-section-2.title" = "개발자";
+*/
+
+
+/* ================================================== */
+/* フィールドタイプ */
+/* ================================================== */
+
+"FieldTypeName_Text" = "텍스트 크기";
+"FieldTypeName_OuterArcText" = "외부 호 텍스트";
+"FieldTypeName_InnerArcText" = "내부 호 텍스트";
+"FieldTypeName_XVerticalText" = "X 세로 텍스트";
+"FieldTypeName_YVerticalText" = "Y 세로 텍스트";
+"FieldTypeName_QrCode" = "QR 코드";
+"FieldTypeName_DataMatrix" = "데이터 매트릭스";
+"FieldTypeName_Rectangle" = "직사각형";
+"FieldTypeName_Circle" = "원";
+"FieldTypeName_Line" = "선";
+"FieldTypeName_Ellipse" = "타원";
+"FieldTypeName_Triangle" = "삼각형";
+"FieldTypeName_Bypass" = "바이패스";
+"FieldTypeName_Unknown" = "알 수 없음";
+
+
+/* ================================================== */
+/* ファイルの出処 */
+/* ================================================== */
+
+"file-category.autosave" = "자동 저장";
+"file-category.latest-marking-file" = "최신 마킹 파일";
+"file-category.local" = "로컬";
+"file-category.remote" = "Patmark";
+
+
+/* ================================================== */
+/* メッセージ */
+/* ================================================== */
+
+/* 通信 */
+
+"communication.required"="Patmark에 연결하십시오.";
+"communication.excluded-me" = "다른 장치가 사용 중입니다.";
+"communication.start"="통신을 시작합니다.";
+"communication.terminate"="통신을 종료합니다.";
+"There is no response from the Patmark. Check the connection." = "Patmark와 통신 할 수 없습니다. 연결상태를 확인하십시오.";
+"Protected to send." = "마킹 중에는 마킹 데이터를 보낼 수 없습니다.";
+"Protected to communicate." = "마킹 중에는 파일을 저장하고 읽을 수 없습니다.";
+
+/* 打刻 */
+
+"Push the start button on the marking head." = "Patmark의 시작 버튼을 누릅니다.";
+"Marking file is empty." = "마킹 데이터가 없습니다.";
+"Failed to send marking file." = "마킹 데이터를 보내지 못했습니다.";
+"FontError" = "Patmark에 \"{0}\" 글꼴이 없습니다. PC 소프트웨어에서 글꼴 파일을 설치하십시오.";
+
+/* ファイル */
+
+"Cleared successfully." = "성공적으로 지워졌습니다.";
+"Saved successfully." = "성공적으로 저장되었습니다.";
+"Edited successfully." = "성공적으로 편집되었습니다.";
+"Read successfully." = "성공적으로 읽었습니다.";
+"Choose your operation." = "작업 선택";
+
+"File is empty." = "파일이 비어 있습니다.";
+"The file was cleared." = "미리보기 데이터를 삭제했습니다.";
+
+"This name is not available." = "파일 이름에 사용할 수없는 문자가 있습니다.";
+"This file was created in advance mode and can not be edited." = "Patmark 파일을 편집 할 수 없습니다.";
+
+/* 設定 */
+"Machine model no."="기계 모델";
+"Choose machine model no."="기계 모델을 선택하십시오.";
+
+"Change of machine model" = "확인";
+"Do you change machine model?" = "연결된 장비의 마킹 영역이 다릅니다. 기계에 맞는 마킹 영역을 적용하시겠습니까?";
+
+"RemoteFileMenuController.ErrorMessage" = "{0}, {1}, {2}, {3}, {4}을(를) 사용할 수 있습니다.";
+"RemoteFileMenuController.Space" = "공간";
+
+"appsetting.preference.fail_to_hold" = "이 장치에 기계 모델을 저장하지 못했습니다.";
+"appsetting.controller.fail_to_check" = "연결된 기계 모델을 확인하지 못했습니다.";
+"appsetting.controller.different" = "연결된 장치가 현재 설정과 다른 모델입니다.";
+
+/* ================================================== */
+/* 処理中オーバーレイ */
+/* ================================================== */
+
+"Now in process." = "지금 처리 중입니다.";
+
+
+
+/* Validation */
+"validation.on_text_sizes_too_large" = "문자 높이를 {0} mm 미만으로 설정하십시오.";

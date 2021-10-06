@@ -1,0 +1,148 @@
+/* Japanese */
+
+/* ================================================== */
+/* 一般 */
+/* ================================================== */
+
+"OK" = "OK";
+"Back" = "戻る";
+"Save" = "Guardar";
+"Cancel" = "Cancelar";
+"Fit"="Ajustar";
+"Ignore"= "Ignorar";
+"Apply"="Aplicar";
+
+/* ================================================== */
+/* 機種 */
+/* ================================================== */
+"Patmark:80x20" = "Patmark plus";
+"Patmark:33x15" = "Patmark";
+"Patmark:15x15" = "Patmark mini";
+
+/* ================================================== */
+/* タイトル */
+/* ================================================== */
+
+"ctrl-settings.title" = "Configuración";
+"ctrl-settings-default-marking-parameter.title" = "Parámetro de marcado";
+"ctrl-files.title" = "Archivo";
+"ctrl-file-local.title" = "Archivo local";
+"ctrl-file-remote.title" = "Archivo de Patmark";
+
+/* ================================================== */
+/* 画面 */
+/* ================================================== */
+
+
+/* ファイル */
+
+"Save as" = "Guardar como";
+"Overwrite" = "Reemplazar";
+"Rename" = "Renombrar";
+"Delete" = "Borrar";
+"Read" = "Leer";
+"Confirm" = "Confirmación";
+"File name" = "Nombre del archivo";
+"Enter a file name." = "Ingrese un nombre al archivo";
+"An file has same name is already exists. Are you sure to overwrite?" = "Se encontró un archivo con el mismo nombre. Quiere continuar para reemplazarlo?";
+"msg_serialField_writeFileSelectorLocal" = "El archivo contiene un dato serial y no puede guardarse localmente.";
+
+
+/* このアプリについて */
+
+/*
+"ctrl-about-this-app.title" = "Acerca de esta aplicación";
+"ctrl-about-this-app-table-section-1.title" = "Versión";
+"ctrl-about-this-app-table-section-2.title" = "Fabricante";
+*/
+
+
+/* ================================================== */
+/* フィールドタイプ */
+/* ================================================== */
+
+"FieldTypeName_Text" = "Texto";
+"FieldTypeName_OuterArcText" = "Texto en arco exterior";
+"FieldTypeName_InnerArcText" = "Texto en arco interior";
+"FieldTypeName_XVerticalText" = "X Texto vertical";
+"FieldTypeName_YVerticalText" = "Y Texto vertical";
+"FieldTypeName_QrCode" = "Código QR";
+"FieldTypeName_DataMatrix" = "Matriíz de datos";
+"FieldTypeName_Rectangle" = "Rectángulo";
+"FieldTypeName_Circle" = "Círculo";
+"FieldTypeName_Line" = "Línea";
+"FieldTypeName_Ellipse" = "Ovalo";
+"FieldTypeName_Triangle" = "Tríángulo";
+"FieldTypeName_Bypass" = "Desviación";
+"FieldTypeName_Unknown" = "Desconocido";
+
+
+/* ================================================== */
+/* ファイルの出処 */
+/* ================================================== */
+
+"file-category.autosave" = "Auto guardado";
+"file-category.latest-marking-file" = "Ultimo archivo de marcado";
+"file-category.local" = "Local";
+"file-category.remote" = "Patmark";
+
+
+/* ================================================== */
+/* メッセージ */
+/* ================================================== */
+
+/* 通信 */
+
+"communication.required"="Por favor conectarse a la PATMARK.";
+"communication.excluded-me" = "Otro dispositivo esta conectado con esta marcadora.";
+"communication.start"="Iniciando comunicación.";
+"communication.terminate"="Terminando comunicación.";
+"There is no response from the Patmark. Check the connection." = "Incapaz de establecer comunicación con la Patmark. Favor de revisar conexión.";
+"Protected to send." = "Incapaz de enviar datos mientras está marcando.";
+"Protected to communicate." = "Incapaz de guardar y leer un archivo mientras marca.";
+
+/* 打刻 */
+
+"Push the start button on the marking head." = "Presione el botón de inicio en la Patmark.";
+"Marking file is empty." = "No hay datos de marcado.";
+"Failed to send marking file." = "Falla en el envío de datos.";
+"FontError" = "No \"{0}\" se encontro esta fuente en Patmark. Por favor instale la fuente desde el programa de la PC.";
+
+/* ファイル */
+
+"Cleared successfully." = "Borrado exitoso.";
+"Saved successfully." = "Guardado exitoso.";
+"Edited successfully." = "Edición exitosa.";
+"Read successfully." = "Lectura exitosa.";
+"Choose your operation." = "Selecciona tu operación.";
+
+"File is empty." = "Archvio vacío.";
+"The file was cleared." = "Dato previo borrado.";
+
+"This name is not available." = "Un caracter inusual se encontró en el nombre del archivo.";
+"This file was created in advance mode and can not be edited." = "Incapaz de editar el archivo de Patmark.";
+
+/* 設定 */
+"Machine model no."="Modelo de Marcadora";
+"Choose machine model no."="Seleccione un modelo de marcadora.";
+
+"Change of machine model" = "Confirmación";
+"Do you change machine model?" = "La maquina conectada tiene una área diferente de marcado.";
+
+"RemoteFileMenuController.ErrorMessage" = "{0}, {1}, {2}, {3} y {4} están disponibles.";
+"RemoteFileMenuController.Space" = "espacio";
+
+"appsetting.preference.fail_to_hold" = "Falla en salvar el modelo de maquina en este dispositivo.";
+"appsetting.controller.fail_to_check" = "Eroor al comprobar la conexión con el modelo de la marcadora.";
+"appsetting.controller.different" = "La marcadora conectada es un modelo diferente a la configurada actualmente.";
+
+/* ================================================== */
+/* 処理中オーバーレイ */
+/* ================================================== */
+
+"Now in process." = "Procesando ahora.";
+
+
+
+/* Validation */
+"validation.on_text_sizes_too_large" = "Establezca la altura del carácter debajo de  {0}mm.";

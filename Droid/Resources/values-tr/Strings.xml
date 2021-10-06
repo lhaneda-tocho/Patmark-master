@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="save">Kaydet</string>
+    <string name="cancel">\İptal</string>
+    <string name="fit">Sığdır</string>
+    <string name="ignore">Yoksay</string>
+    <string name="apply">Uygula</string>
+
+    <!-- titles -->
+    <string name="fieldEditorActivity_name">Yazı girişi</string>
+    <string name="embossmentActivity_name">Ön izleme</string>
+    <string name="settingsActivity_name">Ayarlar</string>
+    <string name="defaultMarkingParameterActivity_name">Markalama parametreleri</string>
+    <string name="fileCategorySelectionActivity_name">Dosya</string>
+    <string name="localFileMenuActivity_name">Lokal dosya</string>
+    <string name="remoteFileMenuActivity_name">Patmark dosyası</string>
+
+    <!-- 機種 -->
+    <string name="patmark_80x20">Patmark plus</string>
+    <string name="patmark_33x15">Patmark</string>
+    <string name="patmark_15x15">Patmark mini</string>
+    
+    <!-- labels --> 
+    <string name="label_textSize">Yazı boyutu</string>
+    <string name="label_force">Güç</string>
+    <string name="label_quality">Nokta sıklığı</string>
+
+    <string name="label_clear_preview_file">Temizle</string>
+    <string name="label_files">Dosya</string>
+    <string name="label_settings">Ayarlar</string>
+    <string name="label_wifi">Wifi</string>
+
+    <string name="label_reload">Yeniden yükle</string>
+    
+    <string name="label_changeOfMachineModel">Onay</string>
+
+    <!-- message -->
+    <string name="label_doYouChangeMachineModel">Bağlı makinenin farklı bir markalama alanı var. Makine ile uygun bir markalama alanı uyguluyor musunuz?</string>
+
+    <!-- ファイルメニュー -->
+    <string name="label_file_menu_local">Lokal dosya</string>
+    <string name="label_file_menu_remote">Patmark dosyası</string>
+    <string name="label_file_menu_latest">Son markalama datasını getir</string>
+    <string name="msg_serialField_writeFileSelectorLocal">Bu dosya seri içerir ve lokal olarak kaydedilemez.</string>
+
+    <string name="RemoteFileMenuDialogManager_ErrorMessage">{0}, {1}, {2}, {3} ve {4} uygun.</string>
+    <string name="RemoteFileMenuDialogManager_Space">Boşluk</string>
+
+    <!--  file action  -->
+    <string name="label_saveas">Farklı kaydet</string>
+    <string name="label_replace">Değiştir</string>
+    <string name="label_rename">Yeniden adlandır</string>
+    <string name="label_clear">Sil</string>
+    <string name="label_retrieve">Getir</string>
+    <string name="message_saveas">Dosya adı giriniz</string>
+    <string name="message_editName">Dosya adı giriniz</string>
+    <string name="hint_saveas_textField">Dosya adı</string>
+    <string name="label_saveOverCheck">Aynı isimli dosya bulundu</string>
+    <string name="message_saveOverCheck">Değiştirmek istiyormusunuz?</string>
+
+<!-- 設定の選択肢 -->
+    <string-array name="settings_menu">
+        <item>MarkingParameter | Markalama parametreleri</item>
+        <item>AppVersion       | App sürümü</item>
+        <item>RomVersion       | Rom sürümü</item>
+        <item>MachineModel     | Makine modeli</item>
+        <item>AppInfo      | Uyguluma bilgileri</item>
+    </string-array>
+
+    <!-- 設定 -->
+    <string name="label_machine_model_no_title">Makine modeli</string>
+    <string name="label_machine_model_no_message">Makine modeli seçiniz</string>
+
+    
+<!-- ロード済みファイルの種類 -->
+    <string name="file_source_label_local">Lokal dosya</string>
+    <string name="file_source_label_remote">Patmark dosyası</string>
+    <string name="file_source_label_latest">Son markalama datası</string>
+
+
+    <!--
+    フィールドタイプ
+    -->
+
+    <string name="FieldTypeName_Text">Yazı</string>
+    <string name="FieldTypeName_OuterArcText">Dışbükey yazı</string>
+    <string name="FieldTypeName_InnerArcText">İçbükey yazı</string>
+    <string name="FieldTypeName_XVerticalText">X Dikey yazı</string>
+    <string name="FieldTypeName_YVerticalText">Y dikey yazı</string>
+    <string name="FieldTypeName_QrCode">QR kod</string>
+    <string name="FieldTypeName_DataMatrix">Data matrix</string>
+    <string name="FieldTypeName_Rectangle">Dikdörtgen</string>
+    <string name="FieldTypeName_Circle">Daire</string>
+    <string name="FieldTypeName_Line">Çizgi</string>
+    <string name="FieldTypeName_Ellipse">Oval</string>
+    <string name="FieldTypeName_Triangle">Üçgen</string>
+    <string name="FieldTypeName_Bypass">Bypass</string>
+    <string name="FieldTypeName_Unknown">Bilinmeyen</string>
+
+    
+    <!--
+    Toast
+    -->
+
+    <!-- 通信 -->
+    <string name="toast_communication_required">Lütfen Patmark cihazına bağlanın.</string>
+    <string name="toast_communication_excluded_me">Şuanda başka bir cihaz bağlı.</string>
+    <string name="toast_communication_started">Bağlantı kuruluyor.</string>
+    <string name="toast_communication_terminated">Bağlantı sonlandırılıyor.</string>
+    <string name="toast_communication_timed_out">Patmark ile iletişim kurulamıyor. Bağlantıyı kontrol edin.</string>
+    <string name="toast_font_error">\"{0}\" fontu bulunamadı, lütfen PC yazılımından font yükleyin.</string>
+    <string name="toast_send_protected">Markalama işlemi devam ederken veri gönderilemez.</string>
+    <string name="toast_communication_protected">Markalama işlemi devam ederken dosya açma ve kaydetme yapılamaz.</string>
+
+    <!-- 打刻 -->
+    <!--<string name="toast_marking_succeed">打刻が完了しました。</string>-->
+    <!--<string name="toast_marking_failed">打刻が異常終了しました。</string>-->
+    <string name="toast_ready_to_mark">Patmark üzerinde start butonuna basın.</string>
+    <string name="toast_marking_file_is_empty">Markalama datası yok.</string>
+    <string name="toast_failed_to_send_marking_file">Markalama datası gönderilemedi.</string>
+
+    <!-- ファイル編集 -->
+    <string name="toast_cleared">Temizlendi</string>
+    <string name="toast_saved">Kaydedildi</string>
+    <string name="toast_edited">Düzenleme başarılı</string>
+    <string name="toast_read">Açıldı</string>
+    <string name="toast_failed_to_clear">Temizlenemedi</string>
+    <string name="toast_failed_to_save">Kaydedilemedi</string>
+    <string name="toast_failed_to_edit">Düzenlenemedi</string>
+    <string name="toast_failed_to_read">Açılamadı</string>
+
+    <string name="toast_file_is_empty">Boş dosya</string>
+    <string name="toast_current_file_cleared">Önizleme verileri temizlendi.</string>
+
+    <string name="toast_invalidFileName">Dosya adında kullanılamaz karakter bulundu.</string>
+    <string name="toast_advance_mode_file_can_not_be_edited">Patmark dosyası düzenlenemedi.</string>
+
+    <!-- 設定 -->
+    <string name="toast_appsetting_controller_fail_to_hold">Bu cihazda makine modeli kaydedilemedi.</string>
+    <string name="toast_appsetting_controller_fail_to_check">Bağlı makine modeli kontrol edilemedi.</string>
+    <string name="toast_appsetting_controller_different">Bağlı cihaz, mevcut ayarlarla farklı bir modeldir.</string>
+    
+    <!-- バリデーション -->
+    <string name="toast_validation_on_text_sizes_too_large">Karakter yüksekliğini {0}mm\'nin altına ayarlayın.</string>
+
+    <!--
+    処理中オーバーレイ
+    -->
+
+    <string name="overlay_now_processing">Şimdi işleniyor.</string>    
+
+</resources>

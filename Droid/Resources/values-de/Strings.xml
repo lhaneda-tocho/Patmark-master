@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="save">speichern</string>
+    <string name="cancel">abbrechen</string>
+    <string name="fit">anpassen</string>
+    <string name="ignore">ignorieren</string>
+    <string name="apply">anwenden</string>
+
+    <!-- titles -->
+    <string name="fieldEditorActivity_name">Text eingeben</string>
+    <string name="embossmentActivity_name">Vorschau</string>
+    <string name="settingsActivity_name">Einstellungen</string>
+    <string name="defaultMarkingParameterActivity_name">Markierparameter</string>
+    <string name="fileCategorySelectionActivity_name">Datei</string>
+    <string name="localFileMenuActivity_name">Lokale Datei</string>
+    <string name="remoteFileMenuActivity_name">Patmark Datei</string>
+
+    <!-- 機種 -->
+    <string name="patmark_80x20">Patmark plus</string>
+    <string name="patmark_33x15">Patmark</string>
+    <string name="patmark_15x15">Patmark mini</string>
+    
+    <!-- labels --> 
+    <string name="label_textSize">Texthöhe</string>
+    <string name="label_force">Einschlagstärke</string>
+    <string name="label_quality">Qualität</string>
+
+    <string name="label_clear_preview_file">Löschen</string>
+    <string name="label_files">Datei</string>
+    <string name="label_settings">Einstellungen</string>
+    <string name="label_wifi">Wifi</string>
+
+    <string name="label_reload">Erneut laden</string>
+    
+    <string name="label_changeOfMachineModel">Bestätigung</string>
+
+    <!-- message -->
+    <string name="label_doYouChangeMachineModel">Die verbundene Maschine hat ein anderes Beschriftungsfeld. Soll das Modell angepasst werden?</string>
+
+    <!-- ファイルメニュー -->
+    <string name="label_file_menu_local">Lokale Datei</string>
+    <string name="label_file_menu_remote">Patmark Datei</string>
+    <string name="label_file_menu_latest">Abrufen der letzten Markierdatei</string>
+    <string name="msg_serialField_writeFileSelectorLocal">Diese Datei enthält eine Seriennummer und kann nicht lokal gespeichert werden.</string>
+
+    <string name="RemoteFileMenuDialogManager_ErrorMessage">{0}, {1}, {2}, {3} and {4} sind verfügbar.</string>
+    <string name="RemoteFileMenuDialogManager_Space">Leerzeichen</string>
+
+    <!--  file action  -->
+    <string name="label_saveas">Speichern als</string>
+    <string name="label_replace">Austauschen</string>
+    <string name="label_rename">Umbenennen</string>
+    <string name="label_clear">Löschen</string>
+    <string name="label_retrieve">Abrufen</string>
+    <string name="message_saveas">Geben Sie einen Dateinamen ein.</string>
+    <string name="message_editName">Geben Sie einen Dateinamen ein.</string>
+    <string name="hint_saveas_textField">Nombre del archivo</string>
+    <string name="label_saveOverCheck">Se encontró un archivo con el mismo nombre</string>
+    <string name="message_saveOverCheck">Quiere continuar para reemplazarlo?</string>
+
+<!-- 設定の選択肢 -->
+    <string-array name="settings_menu">
+        <item>MarkingParameter | Parámetro de marcado</item>
+        <item>AppVersion       | Versión de aplicación</item>
+        <item>RomVersion       | Versión ROM</item>
+        <item>MachineModel     | Maschinen Modell</item>
+        <item>AppInfo       | App-Info</item>
+    </string-array>
+
+    <!-- 設定 -->
+    <string name="label_machine_model_no_title">Maschinenmodell</string>
+    <string name="label_machine_model_no_message">Wählen Sie ein Maschinenmodell aus.</string>
+
+    
+<!-- ロード済みファイルの種類 -->
+    <string name="file_source_label_local">Lokale Datei</string>
+    <string name="file_source_label_remote">Patmark Datei</string>
+    <string name="file_source_label_latest">Zuletzt markierte Datei</string>
+
+
+    <!--
+    フィールドタイプ
+    -->
+
+    <string name="FieldTypeName_Text">Text</string>
+    <string name="FieldTypeName_OuterArcText">Bogentext von Außen lesbar</string>
+    <string name="FieldTypeName_InnerArcText">Bogentext von Innen lesbar</string>
+    <string name="FieldTypeName_XVerticalText">X Vertikaler Text</string>
+    <string name="FieldTypeName_YVerticalText">Y Vertikaler Text</string>
+    <string name="FieldTypeName_QrCode">QR Code</string>
+    <string name="FieldTypeName_DataMatrix">Data Matrix</string>
+    <string name="FieldTypeName_Rectangle">Rechteck</string>
+    <string name="FieldTypeName_Circle">Kreis</string>
+    <string name="FieldTypeName_Line">Linie</string>
+    <string name="FieldTypeName_Ellipse">Ellipse</string>
+    <string name="FieldTypeName_Triangle">Dreieck</string>
+    <string name="FieldTypeName_Bypass">Umfahren</string>
+    <string name="FieldTypeName_Unknown">Unbekannt</string>
+
+    
+    <!--
+    Toast
+    -->
+
+    <!-- 通信 -->
+    <string name="toast_communication_required">Bitte verbinden Sie den Patmark.</string>
+    <string name="toast_communication_excluded_me">Ein anderes Gerät ist nun verbunden.</string>
+    <string name="toast_communication_started">Kommunikation wird gestartet.</string>
+    <string name="toast_communication_terminated">Kommunikation beendet.</string>
+    <string name="toast_communication_timed_out">Die Kommunikation mit dem Patmark ist nicht möglich. Überprüfen Sie die Verbindung.</string>
+    <string name="toast_font_error">\Die  \"{0}\" Schriftdatei wurde im Patmark nicht gefunden. Bitte installieren Sie die Schriftdatei aus der Windows Software.</string>
+    <string name="toast_send_protected">Das Senden von Markierdaten während der Markierung ist nicht möglich.</string>
+    <string name="toast_communication_protected">Die Markierdatei kann während dem Markieren nicht gespeichert und gelesen werden.</string>
+
+    <!-- 打刻 -->
+    <!--<string name="toast_marking_succeed">打刻が完了しました。</string>-->
+    <!--<string name="toast_marking_failed">打刻が異常終了しました。</string>-->
+    <string name="toast_ready_to_mark">Drücken Sie die Starttaste am Patmark.</string>
+    <string name="toast_marking_file_is_empty">Keine Markierdaten.</string>
+    <string name="toast_failed_to_send_marking_file">Das senden von Markierdaten ist fehlgeschlagen.</string>
+
+    <!-- ファイル編集 -->
+    <string name="toast_cleared">Erfolgreich gelöscht.</string>
+    <string name="toast_saved">Erfolgreich gespeichert.</string>
+    <string name="toast_edited">Erfolgreich editiert.</string>
+    <string name="toast_read">Erfolgreich gelesen.</string>
+    <string name="toast_failed_to_clear">Löschen fehlgeschlagen.</string>
+    <string name="toast_failed_to_save">Speichern fehlgeschlagen.</string>
+    <string name="toast_failed_to_edit">Editieren fehlgeschlagen.</string>
+    <string name="toast_failed_to_read">Lesen fehlgeschlagen.</string>
+
+    <string name="toast_file_is_empty">Leere Datei.</string>
+    <string name="toast_current_file_cleared">Die Vorschaudaten wurden gelöscht.</string>
+
+    <string name="toast_invalidFileName">Im Dateinamen wurde ein nicht verwendbares Zeichen gefunden.</string>
+    <string name="toast_advance_mode_file_can_not_be_edited">Die Patmark-Datei kann nicht bearbeitet werden.</string>
+
+    <!-- 設定 -->
+    <string name="toast_appsetting_controller_fail_to_hold">Das Maschinenmodell konnte nicht auf diesem Gerät gespeichert werden.</string>
+    <string name="toast_appsetting_controller_fail_to_check">Fehlgeschlagene Überprüfung des angeschlossenen Maschinenmodells.</string>
+    <string name="toast_appsetting_controller_different">Das angeschlossene Gerät ist ein anderes Modell mit aktuellen Einstellungen.</string>
+    
+    <!-- バリデーション -->
+    <string name="toast_validation_on_text_sizes_too_large">Stellen Sie die Zeichenhöhe auf unter {0}mm ein.</string>
+
+    <!--
+    処理中オーバーレイ
+    -->
+
+    <string name="overlay_now_processing">Wird verarbeitet.</string>    
+
+</resources>

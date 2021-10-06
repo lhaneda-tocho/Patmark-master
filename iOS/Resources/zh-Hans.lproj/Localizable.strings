@@ -1,0 +1,148 @@
+/* Japanese */
+
+/* ================================================== */
+/* 一般 */
+/* ================================================== */
+
+"OK" = "OK";
+"Back" = "返回";
+"Save" = "保存";
+"Cancel" = "取消";
+"Fit"="对齐";
+"Ignore"= "忽略";
+"Apply"="应用";
+
+/* ================================================== */
+/* 機種 */
+/* ================================================== */
+"Patmark:80x20" = "Patmark plus";
+"Patmark:33x15" = "Patmark";
+"Patmark:15x15" = "Patmark mini";
+
+/* ================================================== */
+/* タイトル */
+/* ================================================== */
+
+"ctrl-settings.title" = "设置";
+"ctrl-settings-default-marking-parameter.title" = "打刻参数";
+"ctrl-files.title" = "文件";
+"ctrl-file-local.title" = "本地文件";
+"ctrl-file-remote.title" = "Patmark文件";
+
+/* ================================================== */
+/* 画面 */
+/* ================================================== */
+
+
+/* ファイル */
+
+"Save as" = "另存为";
+"Overwrite" = "保存/覆盖";
+"Rename" = "重命名";
+"Delete" = "删除";
+"Read" = "读取";
+"Confirm" = "确认";
+"File name" = "文件名";
+"Enter a file name." = "请输入文件名";
+"An file has same name is already exists. Are you sure to overwrite?" = "有同名文件。是否覆盖？";
+"msg_serialField_writeFileSelectorLocal" = "含有序列号的文件无法在本地文件保存。";
+
+
+/* このアプリについて */
+
+/*
+"ctrl-about-this-app.title" = "关于这应用";
+"ctrl-about-this-app-table-section-1.title" = "版本";
+"ctrl-about-this-app-table-section-2.title" = "制造商";
+*/
+
+
+/* ================================================== */
+/* フィールドタイプ */
+/* ================================================== */
+
+"FieldTypeName_Text" = "文本";
+"FieldTypeName_OuterArcText" = "文本（外圆弧）";
+"FieldTypeName_InnerArcText" = "文本（内圆弧）";
+"FieldTypeName_XVerticalText" = "纵向文本（X方向）";
+"FieldTypeName_YVerticalText" = "纵向文本（Y方向）";
+"FieldTypeName_QrCode" = "Q二维码";
+"FieldTypeName_DataMatrix" = "数据矩阵";
+"FieldTypeName_Rectangle" = "矩形";
+"FieldTypeName_Circle" = "圆";
+"FieldTypeName_Line" = "线";
+"FieldTypeName_Ellipse" = "椭圆";
+"FieldTypeName_Triangle" = "三角";
+"FieldTypeName_Bypass" = "旁路";
+"FieldTypeName_Unknown" = "未知";
+
+
+/* ================================================== */
+/* ファイルの出処 */
+/* ================================================== */
+
+"file-category.autosave" = "自动保存";
+"file-category.latest-marking-file" = "最新打刻文件";
+"file-category.local" = "本地文件";
+"file-category.remote" = "Patmark";
+
+
+/* ================================================== */
+/* メッセージ */
+/* ================================================== */
+
+/* 通信 */
+
+"communication.required"="请连接Patmark。";
+"communication.excluded-me" = "其他设备正在使用这个Partmark。";
+"communication.start"="开始通信";
+"communication.terminate"="结束通信";
+"There is no response from the Patmark. Check the connection." = "没能和Partmark顺利通信。请确认连接。";
+"Protected to send." = "打时不能发送打刻数据。";
+"Protected to communicate." = "打刻时不能收发文件。";
+
+/* 打刻 */
+
+"Push the start button on the marking head." = "用Partmark的启动按钮开始打刻。";
+"Marking file is empty." = "没有打刻数据。";
+"Failed to send marking file." = "无法发送打刻数据。";
+"FontError" = "\"{0}\"的字体不在Partmark中。请从PC版软件安装字体数据。";
+
+/* ファイル */
+
+"Cleared successfully." = "已删除。";
+"Saved successfully." = "已保存。";
+"Edited successfully." = "已变更。";
+"Read successfully." = "已读取。";
+"Choose your operation." = "请选择。";
+
+"File is empty." = "フ已清空文件。";
+"The file was cleared." = "已清除预览。";
+
+"This name is not available." = "有些字符不能用于文件名。";
+"This file was created in advance mode and can not be edited." = "P无法编辑Partmark文件。";
+
+/* 設定 */
+"Machine model no."="机型";
+"Choose machine model no."="请选择机型。";
+
+"Change of machine model" = "确认";
+"Do you change machine model?" = "和打刻区域不同的机型连接了。预览的大小是否适合此机型。";
+
+"RemoteFileMenuController.ErrorMessage" = "只能输入{0}、{1}、{2}、{3}或{4}的半角字符。";
+"RemoteFileMenuController.Space" = "空格";
+
+"appsetting.preference.fail_to_hold" = "机型设置保存失败。";
+"appsetting.controller.fail_to_check" = "接确认连接的机型失败。";
+"appsetting.controller.different" = "连接中的设备是与当前设置不同的型号。";
+
+/* ================================================== */
+/* 処理中オーバーレイ */
+/* ================================================== */
+
+"Now in process." = "处理中";
+
+
+
+/* Validation */
+"validation.on_text_sizes_too_large" = "请将文字的大小设置为{0}mm以下。";

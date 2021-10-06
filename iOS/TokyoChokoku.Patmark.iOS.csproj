@@ -278,6 +278,12 @@
     <Folder Include="Strings\" />
     <Folder Include="Presenter\FieldList\" />
     <Folder Include="Presenter\TextInputFilter\" />
+    <Folder Include="Resources\es.lproj\" />
+    <Folder Include="Resources\ko.lproj\" />
+    <Folder Include="Resources\de.lproj\" />
+    <Folder Include="Resources\tr.lproj\" />
+    <Folder Include="Resources\zh-Hans.lproj\" />
+    <Folder Include="Resources\pt-BR.lproj\" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\Base.lproj\Patmark.storyboard">
@@ -422,6 +428,120 @@
     <BundleResource Include="Resources\ja.lproj\MachineModelNoView.strings">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\es.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\es.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\es.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\es.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\es.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\es.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\es.lproj\RemoteFile.strings" />
+    <BundleResource Include="Resources\ko.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ko.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ko.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ko.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ko.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ko.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\ko.lproj\RemoteFile.strings" />
+    <BundleResource Include="Resources\de.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\de.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\de.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\de.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\de.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\de.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\de.lproj\RemoteFile.strings" />
+    <BundleResource Include="Resources\tr.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\tr.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\tr.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\tr.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\tr.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\tr.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\tr.lproj\RemoteFile.strings" />
+    <BundleResource Include="Resources\zh-Hans.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\zh-Hans.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\zh-Hans.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\zh-Hans.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\zh-Hans.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\zh-Hans.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\zh-Hans.lproj\RemoteFile.strings" />
+    <BundleResource Include="Resources\pt-BR.lproj\DefaultMarkingParameterController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\pt-BR.lproj\EmbossmentController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\pt-BR.lproj\EmbossmentUIController.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\pt-BR.lproj\Localizable.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\pt-BR.lproj\MachineModelNoView.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\pt-BR.lproj\Patmark.strings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <BundleResource Include="Resources\pt-BR.lproj\RemoteFile.strings" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\libBPPG\LibBinaryPPGFile\LibBinaryPPGFile.csproj">

@@ -34,6 +34,7 @@ namespace TokyoChokoku.Patmark.iOS
             SetCellSelectable(AppVersion);
             SetCellSelectable(RomVersion);
             SetCellUnselectable(ModelNoSetting);
+            SetCellSelectable(AppLanguage);
 
 
             // Modelオブジェクト初期化 & Viewへ設定
@@ -69,6 +70,10 @@ namespace TokyoChokoku.Patmark.iOS
                 else if (cell == ModelNoSetting)
                 {
                     ShowModelNoSetting();
+                }
+                else if (cell == AppLanguage)
+                {
+                    ShowLanguageSetting();
                 }
             } finally {
                 // 選択状態解除
@@ -228,7 +233,14 @@ namespace TokyoChokoku.Patmark.iOS
             this.ModelNoSetting.MachineModel = spec;
         }
 
-
+        /// <summary>
+        /// Opens Application Settings
+        /// </summary>
+        void ShowLanguageSetting()
+        {
+            //MyToast.ShowMessage("communication.required", duration: 1.8);
+            UIApplication.SharedApplication.OpenUrl(new NSUrl(UIApplication.OpenSettingsUrlString));
+        }
 
 
     }

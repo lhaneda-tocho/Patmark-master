@@ -1,0 +1,9 @@
+
+/* Class = "UILabel"; text = "Text Size"; ObjectID = "135"; */
+"135.text" = "Tamaño del texto";
+
+/* Class = "UILabel"; text = "Force"; ObjectID = "136"; */
+"136.text" = "Fuerza";
+
+/* Class = "UILabel"; text = "Quality"; ObjectID = "137"; */
+"137.text" = "Calidad";

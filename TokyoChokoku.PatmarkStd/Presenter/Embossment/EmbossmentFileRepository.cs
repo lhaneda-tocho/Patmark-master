@@ -45,14 +45,38 @@ namespace TokyoChokoku.Patmark.Presenter.Embossment
             }
             // ファイルの内容に合わせてプレビュー・打刻用データを生成します。
             var fields = file.Owner.Serializable;
-            var dataEnu =  from field in fields.Take(1)
-                           select EmbossmentData.Create(
-                                      EmbossmentMode.FromMBData(field),
-                                      field.Text
-                                  );
-
-            // 参照型の場合, FirstOrDefaultは 要素がない時に null を返す.
-            return dataEnu.FirstOrDefault() ?? EmbossmentData.Empty;
+            if (fields.Count() > 1)
+            {
+                var first = fields.First();
+                ushort mode = first.Mode;
+                // ushort mode is flnm in MBDATA defined as a hex value
+                // mode : 0 = Text or Logo; 400 = QR code; 800 = DM
+                if (mode == 0)
+                {
+                    ///
+                    var dataEnu = from field in fields.Take(1)
+                                  select EmbossmentData.Create(
+                                             EmbossmentMode.FromMBData(field),
+                                             field.Text
+                                         );
+                    return dataEnu.FirstOrDefault() ?? EmbossmentData.Empty;
+                }
+                else
+                {
+                    //var dataEnu = EmbossmentData.Create(
+                    //                    new EmbossmentMode(),
+                    //                    ""
+                    //                    );
+                    return EmbossmentData.Empty;
+                }
+            } else
+            {
+                return EmbossmentData.Empty;
+            }
+            //} else {
+            //    // 参照型の場合, FirstOrDefaultは 要素がない時に null を返す.
+            //    return dataEnu.FirstOrDefault() ?? EmbossmentData.Empty;
+            //}
         }
 
         /// <summary>

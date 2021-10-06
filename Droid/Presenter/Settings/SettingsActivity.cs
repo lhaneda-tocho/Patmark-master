@@ -128,7 +128,8 @@ namespace TokyoChokoku.Patmark.Droid.Presenter
             "MarkingParameter",
             "AppVersion",
             "RomVersion",
-            "MachineModel"
+            "MachineModel",
+            "AppInfo"
         };
 
 
@@ -226,6 +227,9 @@ namespace TokyoChokoku.Patmark.Droid.Presenter
                     case "MachineModel":
                         ShowModelNoSetting(menu, adapter);
                         break;
+                    case "AppInfo":
+                        ShowAppInfo();
+                        break;
                     default:
                         break;
                 }
@@ -298,6 +302,18 @@ namespace TokyoChokoku.Patmark.Droid.Presenter
             }
 
             ShowModelNoSettingStatic(this, Setting, DidHoldOnPreference);
+        }
+
+        /// <summary>
+        /// アプリのInfoページへ移動
+        /// </summary>
+        void ShowAppInfo()
+        {
+            //redirect user to app info settings
+            StartActivity(new Intent(
+                Android.Provider.Settings.ActionApplicationDetailsSettings,
+                Android.Net.Uri.Parse("package:" + Android.App.Application.Context.PackageName)
+            ));
         }
 
 

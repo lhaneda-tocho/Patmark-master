@@ -40,7 +40,7 @@
 "Overwrite" = "保存/上書き";
 "Rename" = "名前の変更";
 "Delete" = "削除";
-"Read" = "読込み";
+"Read" = "読み込み";
 "Confirm" = "確認";
 "File name" = "ファイル名";
 "Enter a file name." = "ファイル名を入力してください。";
@@ -113,7 +113,7 @@
 "Cleared successfully." = "削除しました。";
 "Saved successfully." = "保存しました。";
 "Edited successfully." = "変更しました。";
-"Read successfully." = "読込みました。";
+"Read successfully." = "読み込みました。";
 "Choose your operation." = "選択してください。";
 
 "File is empty." = "ファイルが空です。";
